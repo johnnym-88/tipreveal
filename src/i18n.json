@@ -39,7 +39,7 @@
   "no_country": "לא נמצאה מדינה. נסו שם אחר.",
   "quick_favs_label": "★ המועדפים שלי",
   "quick_aria_favs": "המועדפים שלי",
-  "quick_aria_pop": "יעדים פופולריים",
+  "quick_aria_pop": "יעדים לדוגמא",
   "related_aria": "יעדים נוספים",
   "norm_pct": "{flag} <strong>{place}</strong> נהוג <strong>להשאיר {range}</strong>",
   "norm_round": "{flag} <strong>{place}</strong> נהוג <strong>{range}</strong>",
@@ -157,7 +157,9 @@
   },
   "date_locale": "he-IL",
   "num_locale": "he-IL",
-  "dir": "rtl"
+  "dir": "rtl",
+  "h1_abroad": "בחו״ל?",
+  "quick_examples_label": "יעדים לדוגמא:"
  },
  "en": {
   "tagline": "Restaurant tip calculator for travelers",
@@ -199,7 +201,7 @@
   "no_country": "No country found. Try another name.",
   "quick_favs_label": "★ My favorites",
   "quick_aria_favs": "My favorites",
-  "quick_aria_pop": "Popular destinations",
+  "quick_aria_pop": "Example destinations",
   "related_aria": "More destinations",
   "norm_pct": "{flag} <strong>{place},</strong> the customary tip is <strong>{range}</strong>",
   "norm_round": "{flag} <strong>{place},</strong> <strong>{range}</strong>",
@@ -318,6 +320,8 @@
   ],
   "date_locale": "en-US",
   "num_locale": "en-US",
-  "dir": "ltr"
+  "dir": "ltr",
+  "h1_abroad": "abroad?",
+  "quick_examples_label": "Example destinations:"
  }
 }

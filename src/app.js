@@ -13,9 +13,9 @@
   var place = function (c) { return S.placeOf(c, lang, L, true); };
   var money = function (v, c) { return S.money(v, c, L.num_locale); };
   var urlOf = function (c) { return (isHe ? "" : "/en") + "/tip/" + c.slug; };
-  var QUICK = ["Greece", "Cyprus", "Thailand", "United States", "Italy", "Georgia", "United Arab Emirates", "Hungary"];
+  var QUICK = ["Greece", "Cyprus", "Thailand", "Czech Republic", "Hungary", "United States", "Israel", "United Kingdom", "Japan"];
 
-  var cur = null, pct = 12, people = 1, userPct = false, billTouched = false, favs = [], noteTimer = null, active = 0, filtered = [];
+  var h1Dynamic = false, cur = null, pct = 12, people = 1, userPct = false, billTouched = false, favs = [], noteTimer = null, active = 0, filtered = [];
 
   function billVal() {
     var v = parseFloat(($("#bill").value || "").replace(/[^\d.]/g, ""));
@@ -29,16 +29,16 @@
   function sampleMid(c) { return (S.SAMPLE[c.code] || [50, 100, 200])[1]; }
 
   /* ---------- country ---------- */
-  function setCountry(c) {
+  function setCountry(c, fromUser) {
     cur = c;
-    store.set("tipreveal-country", c.en);
+    if (fromUser) store.set("tipreveal-country", c.en);
     if (favs.indexOf(c.en) >= 0) store.set("tipreveal-lastfav", c.en);
     var a = c.accent || "#7C3AED", st = document.documentElement.style;
     st.setProperty("--accent", a); st.setProperty("--on-accent", S.onAccent(a)); st.setProperty("--accent-text", S.accentText(a));
     var tc = document.querySelector('meta[name="theme-color"]'); if (tc) tc.content = a;
     $("#c-flag").textContent = c.flag; $("#c-name").textContent = nm(c); $("#sym").textContent = c.sym;
     syncFavBtn();
-    if (P.type === "home") $("#h-place").textContent = S.placeOf(c, lang, L, false) + "?";
+    if (P.type === "home" && (fromUser || h1Dynamic)) { h1Dynamic = true; $("#h-place").textContent = S.placeOf(c, lang, L, false) + "?"; }
     document.querySelectorAll("#quick button").forEach(function (b) { b.setAttribute("aria-pressed", b.dataset.en === c.en); });
 
     var rg = c.type === "percentage" ? '<bdi dir="ltr">' + S.pctRange(c) + "</bdi>" : S.rangePhrase(c, L);
@@ -124,18 +124,18 @@
   function renderQuick() {
     var list = favs.length ? favs : QUICK;
     $("#quick").setAttribute("aria-label", favs.length ? L.quick_aria_favs : L.quick_aria_pop);
-    $("#quick").innerHTML = (favs.length ? '<span class="ql">' + L.quick_favs_label + "</span>" : "") +
+    $("#quick").innerHTML = '<span class="ql">' + (favs.length ? L.quick_favs_label : L.quick_examples_label) + "</span>" +
       list.map(function (en) {
         var c = DATA.find(function (d) { return d.en === en; });
         return c ? '<button type="button" data-en="' + en + '" aria-pressed="' + (!!cur && cur.en === en) + '">' + c.flag + " " + nm(c) + "</button>" : "";
       }).join("");
     $("#quick").querySelectorAll("button").forEach(function (b) {
-      b.onclick = function () { setCountry(DATA.find(function (d) { return d.en === b.dataset.en; })); };
+      b.onclick = function () { setCountry(DATA.find(function (d) { return d.en === b.dataset.en; }), true); };
     });
   }
 
   /* ---------- combobox ---------- */
-  function choose(c) { if (P.type === "country") { location.href = urlOf(c); } else { setCountry(c); } }
+  function choose(c) { if (P.type === "country") { location.href = urlOf(c); } else { setCountry(c, true); } }
   function openCombo(o) {
     $("#combo").classList.toggle("open", o); $("#combo-btn").setAttribute("aria-expanded", o);
     if (o) { $("#combo-q").value = ""; renderList(""); setTimeout(function () { $("#combo-q").focus(); }, 0); }
@@ -214,6 +214,7 @@
       renderQuick();
       var lastFav = store.get("tipreveal-lastfav"), saved = store.get("tipreveal-country"), pick;
       if (favs.length) pick = favs.indexOf(lastFav) >= 0 ? lastFav : favs[0];
+      h1Dynamic = !!(pick || saved);  // returning visitors see their country in the headline; new visitors see the generic one
       start = DATA.find(function (d) { return d.en === pick; }) || DATA.find(function (d) { return d.en === saved; }) ||
         DATA.find(function (d) { return d.en === "Israel"; }) || DATA[0];
     }
