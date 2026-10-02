@@ -1,0 +1,2692 @@
+[
+ {
+  "slug": "israel",
+  "he": "ישראל",
+  "en": "Israel",
+  "flag": "🇮🇱",
+  "code": "ILS",
+  "sym": "₪",
+  "cur_he": "שקל חדש",
+  "cur_en": "Israeli New Shekel",
+  "region": "mena",
+  "accent": "#2563EB",
+  "type": "percentage",
+  "min": 12,
+  "max": 15,
+  "default": 12,
+  "status": "expected",
+  "sc": "uncommon",
+  "sc_pct": null,
+  "after": "optional_small_extra",
+  "conf": "high",
+  "verified": "2026-09-29",
+  "note_he": "12% הוא המינימום המקובל, 15% לשירות מצוין (נפוץ בתל אביב). השירות בדרך כלל לא כלול בחשבון. לא כל מסעדה מאפשרת להוסיף טיפ באשראי – כדאי מזומן.",
+  "note_en": "12% is the accepted minimum; 15% for excellent service (common in Tel Aviv). Service is usually not included in the bill. Not every restaurant lets you add a tip by card, so carry some cash.",
+  "sources": [
+   {
+    "name": "וואלה! כסף – גובה הטיפ המקובל 12%-15% (2025)",
+    "url": "https://finance.walla.co.il/item/3746730",
+    "name_en": "Walla! Finance – the common tip is 12%–15% (2025, Hebrew)"
+   },
+   {
+    "name": "Time Out תל אביב – הקוד האתי: דיני מסעדות (12% מינימום)",
+    "url": "https://timeout.co.il/%D7%94%D7%A7%D7%95%D7%93-%D7%94%D7%90%D7%AA%D7%99-%D7%93%D7%99%D7%A0%D7%99-%D7%9E%D7%A1%D7%A2%D7%93%D7%95%D7%AA/",
+    "name_en": "Time Out Tel Aviv – The ethical code: restaurants (12% minimum, Hebrew)"
+   },
+   {
+    "name": "Dan Hotels – Tipping in Israel (Aug 2025)",
+    "url": "https://www.danhotels.com/Blog/tipping-in-israel-who-when-and-how-much-to-tip/"
+   }
+  ]
+ },
+ {
+  "slug": "united-states",
+  "he": "ארצות הברית",
+  "en": "United States",
+  "flag": "🇺🇸",
+  "code": "USD",
+  "sym": "$",
+  "cur_he": "דולר אמריקאי",
+  "cur_en": "US Dollar",
+  "region": "americas",
+  "accent": "#D7263D",
+  "type": "percentage",
+  "min": 18,
+  "max": 20,
+  "default": 18,
+  "status": "expected",
+  "sc": "sometimes",
+  "sc_pct": 18,
+  "after": "no_additional_tip",
+  "conf": "high",
+  "verified": "2026-09-29",
+  "note_he": "טיפ הוא חלק מהשכר של המלצר, ולכן 18%–20% הוא הטווח המקובל במסעדות עם שירות שולחן. הממוצע בפועל: 19.3% (Toast, Q1 2026). מחשבים על הסכום לפני מס. בקבוצות גדולות ובחלק מהמקומות מתווסף 'gratuity' אוטומטי – אז לא מוסיפים.",
+  "note_en": "Tips are part of a server's wages, so 18%–20% is the norm at sit-down restaurants. The actual average is 19.3% (Toast, Q1 2026). Calculate on the pre-tax amount. An automatic 'gratuity' is added for large parties and at some venues; if it's there, add nothing.",
+  "sources": [
+   {
+    "name": "Toast – Average tip percentage, Q1 2026 (19.3% full-service)",
+    "url": "https://pos.toasttab.com/zh-us/blog/on-the-line/what-is-the-average-tip-percentage"
+   },
+   {
+    "name": "Toast – Restaurant tipping guide 2026",
+    "url": "https://pos.toasttab.com/blog/on-the-line/restaurant-tipping-guide"
+   },
+   {
+    "name": "WTOP citing Emily Post Institute – Ultimate guide to tipping (2022)",
+    "url": "https://wtop.com/news/2022/05/the-ultimate-guide-to-tipping"
+   }
+  ]
+ },
+ {
+  "slug": "canada",
+  "he": "קנדה",
+  "en": "Canada",
+  "flag": "🇨🇦",
+  "code": "CAD",
+  "sym": "C$",
+  "cur_he": "דולר קנדי",
+  "cur_en": "Canadian Dollar",
+  "region": "americas",
+  "accent": "#E63946",
+  "type": "percentage",
+  "min": 15,
+  "max": 20,
+  "default": 18,
+  "status": "expected",
+  "sc": "uncommon",
+  "sc_pct": null,
+  "after": "no_additional_tip",
+  "conf": "high",
+  "verified": "2026-09-29",
+  "note_he": "כמו בארה\"ב: 15%–20% הוא הסטנדרט. לעיתים דמי שירות כלולים בקבוצות – בדקו את החשבון.",
+  "note_en": "Same as the US: 15%–20% is the standard. Large groups are sometimes charged a service fee, so check the bill.",
+  "sources": [
+   {
+    "name": "Skyscanner – Tipping in Canada",
+    "url": "https://www.skyscanner.com/flights/advice/tipping-in-canada"
+   },
+   {
+    "name": "Canoo – Tipping in Canada: when and where",
+    "url": "https://old.canoo.ca/tipping-in-canada-when-and-where/"
+   },
+   {
+    "name": "ynet – מדריך טיפים בעולם (ישן)",
+    "url": "https://www.ynet.co.il/articles/0,7340,L-4106880,00.html",
+    "name_en": "ynet – Guide to tipping around the world (old, Hebrew)"
+   }
+  ]
+ },
+ {
+  "slug": "united-kingdom",
+  "he": "בריטניה",
+  "en": "United Kingdom",
+  "flag": "🇬🇧",
+  "code": "GBP",
+  "sym": "£",
+  "cur_he": "ליש\"ט",
+  "cur_en": "Pound Sterling",
+  "region": "europe_west",
+  "accent": "#1D3F8F",
+  "type": "percentage",
+  "min": 10,
+  "max": 12.5,
+  "default": 10,
+  "status": "customary",
+  "sc": "common",
+  "sc_pct": 12.5,
+  "after": "no_additional_tip",
+  "conf": "high",
+  "verified": "2026-09-29",
+  "note_he": "ברוב המסעדות (במיוחד בלונדון) מתווספים 12.5% דמי שירות 'discretionary' – אז לא מוסיפים טיפ. אם אין – 10%–12.5%. בפאבים עם הזמנה בבר לא נותנים טיפ. מאז 2024 החוק מחייב שכל הטיפים ודמי השירות יגיעו לעובדים.",
+  "note_en": "Most restaurants (especially in London) add a 12.5% 'discretionary' service charge, so you don't add a tip. If there isn't one, leave 10%–12.5%. No tip for pub drinks ordered at the bar. Since 2024, the law requires all tips and service charges to go to staff.",
+  "sources": [
+   {
+    "name": "Bloomberg via BNN – The UK has a new tipping law (Oct 2024)",
+    "url": "https://bnnbloomberg.ca/business/2024/10/16/the-uk-has-a-new-tipping-law-so-are-you-paying-more-now"
+   },
+   {
+    "name": "UK legislation.gov.uk – Employment (Allocation of Tips) Act 2023",
+    "url": "https://www.legislation.gov.uk/ukpga/2023/13/contents/data.html"
+   },
+   {
+    "name": "EF Go Ahead Tours – A-Z guide to tipping etiquette in Europe (2019)",
+    "url": "https://www.goaheadtours.ca/travel-blog/articles/tipping-in-europe-guide"
+   }
+  ]
+ },
+ {
+  "slug": "ireland",
+  "he": "אירלנד",
+  "en": "Ireland",
+  "flag": "🇮🇪",
+  "code": "EUR",
+  "sym": "€",
+  "cur_he": "אירו",
+  "cur_en": "Euro",
+  "region": "europe_west",
+  "accent": "#169B62",
+  "type": "percentage",
+  "min": 10,
+  "max": 10,
+  "default": 10,
+  "status": "customary",
+  "sc": "sometimes",
+  "sc_pct": null,
+  "after": "no_additional_tip",
+  "conf": "medium",
+  "verified": "2026-09-29",
+  "note_he": "כ-10% אם השירות לא כלול. לעיתים (בעיקר בקבוצות) דמי שירות כבר בחשבון.",
+  "note_en": "About 10% if service isn't included. Large groups are sometimes charged a service fee already.",
+  "sources": [
+   {
+    "name": "EF Go Ahead Tours – A-Z guide to tipping etiquette in Europe (2019)",
+    "url": "https://www.goaheadtours.ca/travel-blog/articles/tipping-in-europe-guide"
+   },
+   {
+    "name": "The Savvy Backpacker – Tipping in Europe",
+    "url": "https://thesavvybackpacker.com/guide-tipping-gratuity-restaurants-europe/"
+   }
+  ]
+ },
+ {
+  "slug": "france",
+  "he": "צרפת",
+  "en": "France",
+  "flag": "🇫🇷",
+  "code": "EUR",
+  "sym": "€",
+  "cur_he": "אירו",
+  "cur_en": "Euro",
+  "region": "europe_west",
+  "accent": "#2451B7",
+  "type": "round_up",
+  "min": 0,
+  "max": 10,
+  "default": 0,
+  "status": "optional",
+  "sc": "included_in_price",
+  "sc_pct": 15,
+  "after": "optional_small_extra",
+  "conf": "high",
+  "verified": "2026-09-29",
+  "note_he": "השירות (כ-15%) כלול במחירים לפי חוק – 'service compris'. טיפ הוא בונוס: לעגל למעלה או להשאיר 1–2 יורו; עד 10% במסעדה יוקרתית על שירות מצוין.",
+  "note_en": "Service (about 15%) is included in prices by law ('service compris'). A tip is a bonus: round up or leave €1–2; up to 10% at a high-end restaurant for excellent service.",
+  "sources": [
+   {
+    "name": "N26 – Tipping in France",
+    "url": "https://n26.com/en-de/blog/tipping-in-france"
+   },
+   {
+    "name": "Taste of France – Tipping in France / service compris",
+    "url": "https://tasteoffrancemag.com/trending/tipping-in-france-what-you-need-to-know-about-service-compris/"
+   },
+   {
+    "name": "EF Go Ahead Tours – A-Z guide to tipping etiquette in Europe (2019)",
+    "url": "https://www.goaheadtours.ca/travel-blog/articles/tipping-in-europe-guide"
+   }
+  ]
+ },
+ {
+  "slug": "italy",
+  "he": "איטליה",
+  "en": "Italy",
+  "flag": "🇮🇹",
+  "code": "EUR",
+  "sym": "€",
+  "cur_he": "אירו",
+  "cur_en": "Euro",
+  "region": "europe_west",
+  "accent": "#0E9F6E",
+  "type": "percentage",
+  "min": 5,
+  "max": 10,
+  "default": 5,
+  "status": "optional",
+  "sc": "sometimes",
+  "sc_pct": null,
+  "after": "no_additional_tip",
+  "conf": "medium",
+  "verified": "2026-09-29",
+  "note_he": "טיפ צנוע: עיגול או כמה מטבעות, לא יותר מ-10%. 'Coperto' זה דמי שולחן/לחם – לא טיפ! אם מופיע 'Servizio' – השירות כבר שולם.",
+  "note_en": "Tipping is modest: round up or leave a few coins, never more than 10%. 'Coperto' is a table/bread charge, not a tip. If the bill shows 'Servizio', service is already paid.",
+  "sources": [
+   {
+    "name": "Migros – Tipping on holiday (country guide)",
+    "url": "https://corporate.migros.ch/en/story/tipping-on-holiday"
+   },
+   {
+    "name": "EF Go Ahead Tours – A-Z guide to tipping etiquette in Europe (2019)",
+    "url": "https://www.goaheadtours.ca/travel-blog/articles/tipping-in-europe-guide"
+   },
+   {
+    "name": "Rick Steves – Tipping in Europe",
+    "url": "https://www.ricksteves.com/travel-tips/money/tipping-in-europe"
+   }
+  ]
+ },
+ {
+  "slug": "spain",
+  "he": "ספרד",
+  "en": "Spain",
+  "flag": "🇪🇸",
+  "code": "EUR",
+  "sym": "€",
+  "cur_he": "אירו",
+  "cur_en": "Euro",
+  "region": "europe_west",
+  "accent": "#F2A900",
+  "type": "percentage",
+  "min": 5,
+  "max": 10,
+  "default": 5,
+  "status": "optional",
+  "sc": "uncommon",
+  "sc_pct": null,
+  "after": "no_additional_tip",
+  "conf": "medium",
+  "verified": "2026-09-29",
+  "note_he": "במקומות פשוטים מעגלים למעלה; 5%–10% במסעדות טובות. לא להשאיר טיפ אינו נחשב גס רוח.",
+  "note_en": "At casual places people round up; 5%–10% at better restaurants. Leaving nothing isn't rude.",
+  "sources": [
+   {
+    "name": "EF Go Ahead Tours – A-Z guide to tipping etiquette in Europe (2019)",
+    "url": "https://www.goaheadtours.ca/travel-blog/articles/tipping-in-europe-guide"
+   },
+   {
+    "name": "Rick Steves – Tipping in Europe",
+    "url": "https://www.ricksteves.com/travel-tips/money/tipping-in-europe"
+   }
+  ]
+ },
+ {
+  "slug": "portugal",
+  "he": "פורטוגל",
+  "en": "Portugal",
+  "flag": "🇵🇹",
+  "code": "EUR",
+  "sym": "€",
+  "cur_he": "אירו",
+  "cur_en": "Euro",
+  "region": "europe_west",
+  "accent": "#0B7A3E",
+  "type": "percentage",
+  "min": 5,
+  "max": 10,
+  "default": 5,
+  "status": "appreciated",
+  "sc": "uncommon",
+  "sc_pct": null,
+  "after": "no_additional_tip",
+  "conf": "medium",
+  "verified": "2026-09-29",
+  "note_he": "עד 10% מוערך; השירות בדרך כלל לא כלול בחשבון.",
+  "note_en": "Up to 10% is appreciated; service is usually not included in the bill.",
+  "sources": [
+   {
+    "name": "EF Go Ahead Tours – A-Z guide to tipping etiquette in Europe (2019)",
+    "url": "https://www.goaheadtours.ca/travel-blog/articles/tipping-in-europe-guide"
+   },
+   {
+    "name": "Rick Steves – Tipping in Europe",
+    "url": "https://www.ricksteves.com/travel-tips/money/tipping-in-europe"
+   }
+  ]
+ },
+ {
+  "slug": "germany",
+  "he": "גרמניה",
+  "en": "Germany",
+  "flag": "🇩🇪",
+  "code": "EUR",
+  "sym": "€",
+  "cur_he": "אירו",
+  "cur_en": "Euro",
+  "region": "europe_west",
+  "accent": "#F2B705",
+  "type": "percentage",
+  "min": 5,
+  "max": 10,
+  "default": 10,
+  "status": "customary",
+  "sc": "included_in_price",
+  "sc_pct": null,
+  "after": "add_tip_anyway",
+  "conf": "high",
+  "verified": "2026-09-29",
+  "note_he": "5%–10% מקובל. לא משאירים מטבעות על השולחן – אומרים למלצר את הסכום הכולל שרוצים לשלם ('Stimmt so'). השירות כלול במחיר, אבל טיפ עדיין נהוג.",
+  "note_en": "5%–10% is customary. Don't leave coins on the table; tell the server the total you want to pay ('Stimmt so'). Service is included in the price, but a tip is still the norm.",
+  "sources": [
+   {
+    "name": "Migros – Tipping on holiday (country guide)",
+    "url": "https://corporate.migros.ch/en/story/tipping-on-holiday"
+   },
+   {
+    "name": "EF Go Ahead Tours – A-Z guide to tipping etiquette in Europe (2019)",
+    "url": "https://www.goaheadtours.ca/travel-blog/articles/tipping-in-europe-guide"
+   },
+   {
+    "name": "Rick Steves – Tipping in Europe",
+    "url": "https://www.ricksteves.com/travel-tips/money/tipping-in-europe"
+   }
+  ]
+ },
+ {
+  "slug": "netherlands",
+  "he": "הולנד",
+  "en": "Netherlands",
+  "flag": "🇳🇱",
+  "code": "EUR",
+  "sym": "€",
+  "cur_he": "אירו",
+  "cur_en": "Euro",
+  "region": "europe_west",
+  "accent": "#F26B1D",
+  "type": "percentage",
+  "min": 5,
+  "max": 10,
+  "default": 5,
+  "status": "optional",
+  "sc": "included_in_price",
+  "sc_pct": null,
+  "after": "optional_small_extra",
+  "conf": "medium",
+  "verified": "2026-09-29",
+  "note_he": "השירות כלול. מעגלים למעלה, או 5%–10% על שירות טוב במסעדה טובה.",
+  "note_en": "Service is included. Round up, or leave 5%–10% for good service at a nicer restaurant.",
+  "sources": [
+   {
+    "name": "EF Go Ahead Tours – A-Z guide to tipping etiquette in Europe (2019)",
+    "url": "https://www.goaheadtours.ca/travel-blog/articles/tipping-in-europe-guide"
+   },
+   {
+    "name": "The Savvy Backpacker – Tipping in Europe",
+    "url": "https://thesavvybackpacker.com/guide-tipping-gratuity-restaurants-europe/"
+   }
+  ]
+ },
+ {
+  "slug": "switzerland",
+  "he": "שווייץ",
+  "en": "Switzerland",
+  "flag": "🇨🇭",
+  "code": "CHF",
+  "sym": "CHF",
+  "cur_he": "פרנק שווייצרי",
+  "cur_en": "Swiss Franc",
+  "region": "europe_west",
+  "accent": "#E4002B",
+  "type": "round_up",
+  "min": 0,
+  "max": 10,
+  "default": 0,
+  "status": "optional",
+  "sc": "included_in_price",
+  "sc_pct": null,
+  "after": "optional_small_extra",
+  "conf": "medium",
+  "verified": "2026-09-29",
+  "note_he": "השירות כלול במחירים לפי חוק. מעגלים למעלה (למשל 47 → 50 פרנק) או 5%–10% על שירות יוצא דופן.",
+  "note_en": "Service is included in prices by law. Round up (for example 47 → 50 francs) or leave 5%–10% for exceptional service.",
+  "sources": [
+   {
+    "name": "EF Go Ahead Tours – A-Z guide to tipping etiquette in Europe (2019)",
+    "url": "https://www.goaheadtours.ca/travel-blog/articles/tipping-in-europe-guide"
+   },
+   {
+    "name": "Newly Swissed – Complete guide to tipping in Switzerland",
+    "url": "https://www.newlyswissed.com/complete-guide-to-tipping-in-switzerland/"
+   },
+   {
+    "name": "SmarterTravel – Switzerland tipping guide",
+    "url": "https://www.smartertravel.com/tipping-switzerland-switzerland-tipping-guide/"
+   }
+  ]
+ },
+ {
+  "slug": "austria",
+  "he": "אוסטריה",
+  "en": "Austria",
+  "flag": "🇦🇹",
+  "code": "EUR",
+  "sym": "€",
+  "cur_he": "אירו",
+  "cur_en": "Euro",
+  "region": "europe_west",
+  "accent": "#D6203A",
+  "type": "percentage",
+  "min": 5,
+  "max": 10,
+  "default": 10,
+  "status": "customary",
+  "sc": "included_in_price",
+  "sc_pct": null,
+  "after": "add_tip_anyway",
+  "conf": "high",
+  "verified": "2026-09-29",
+  "note_he": "כ-10% מקובל; אומרים למלצר את הסכום הכולל בזמן התשלום. גם כשהשירות כלול, נהוג להוסיף.",
+  "note_en": "About 10% is customary; tell the server the total when you pay. Even when service is included, adding a tip is the norm.",
+  "sources": [
+   {
+    "name": "Migros – Tipping on holiday (country guide)",
+    "url": "https://corporate.migros.ch/en/story/tipping-on-holiday"
+   },
+   {
+    "name": "EF Go Ahead Tours – A-Z guide to tipping etiquette in Europe (2019)",
+    "url": "https://www.goaheadtours.ca/travel-blog/articles/tipping-in-europe-guide"
+   },
+   {
+    "name": "N26 – Ultimate guide to tipping in Europe",
+    "url": "https://n26.com/en-fr/blog/tipping-in-europe"
+   }
+  ]
+ },
+ {
+  "slug": "greece",
+  "he": "יוון",
+  "en": "Greece",
+  "flag": "🇬🇷",
+  "code": "EUR",
+  "sym": "€",
+  "cur_he": "אירו",
+  "cur_en": "Euro",
+  "region": "europe_east",
+  "accent": "#2F6FDE",
+  "type": "percentage",
+  "min": 5,
+  "max": 10,
+  "default": 10,
+  "status": "customary",
+  "sc": "uncommon",
+  "sc_pct": null,
+  "after": "no_additional_tip",
+  "conf": "medium",
+  "verified": "2026-09-29",
+  "note_he": "מקומיים משאירים 5%–10% או מעגלים; באזורי תיירות 10%–15% נפוץ. עדיף במזומן – טיפ באשראי לא תמיד מגיע למלצר. שורות 'לחם'/'כיסוי' אינן טיפ.",
+  "note_en": "Locals leave 5%–10% or round up; in tourist areas 10%–15% is common. Cash is better, since card tips don't always reach the server. 'Bread' or 'cover' lines on the bill are not tips.",
+  "sources": [
+   {
+    "name": "Celebrity Cruises – Tipping in Greece",
+    "url": "https://www.celebritycruises.com/blog/tipping-in-greece"
+   },
+   {
+    "name": "Intrepid Travel – Tipping in Greece",
+    "url": "https://intrepidtravel.com/en/greece/tipping-in-greece"
+   },
+   {
+    "name": "Migros – Tipping on holiday (country guide)",
+    "url": "https://corporate.migros.ch/en/story/tipping-on-holiday"
+   }
+  ]
+ },
+ {
+  "slug": "czech-republic",
+  "he": "צ'כיה",
+  "en": "Czech Republic",
+  "flag": "🇨🇿",
+  "code": "CZK",
+  "sym": "Kč",
+  "cur_he": "קורונה צ'כית",
+  "cur_en": "Czech Koruna",
+  "region": "europe_east",
+  "accent": "#2E5EAA",
+  "type": "percentage",
+  "min": 5,
+  "max": 10,
+  "default": 10,
+  "status": "customary",
+  "sc": "uncommon",
+  "sc_pct": null,
+  "after": "no_additional_tip",
+  "conf": "medium",
+  "verified": "2026-09-29",
+  "note_he": "5%–10%, או עיגול לסכום נוח. אומרים למלצר את הסכום הכולל כשמשלמים. 'Service not included' על החשבון זה רגיל.",
+  "note_en": "5%–10%, or round up to a convenient amount. Tell the server the total you want to pay. 'Service not included' on the bill is normal.",
+  "sources": [
+   {
+    "name": "Avantgarde Prague – Tipping in Prague",
+    "url": "https://www.avantgarde-prague.com/tipping-in-prague/"
+   },
+   {
+    "name": "Prague Behind the Scenes – Tipping in Prague",
+    "url": "https://www.praguebehindthescenes.com/?p=6650"
+   },
+   {
+    "name": "View from Prague – Tipping etiquette",
+    "url": "https://www.viewfromprague.com/tipping-etiquette/"
+   }
+  ]
+ },
+ {
+  "slug": "hungary",
+  "he": "הונגריה",
+  "en": "Hungary",
+  "flag": "🇭🇺",
+  "code": "HUF",
+  "sym": "Ft",
+  "cur_he": "פורינט",
+  "cur_en": "Hungarian Forint",
+  "region": "europe_east",
+  "accent": "#3A8E4C",
+  "type": "percentage",
+  "min": 10,
+  "max": 15,
+  "default": 10,
+  "status": "customary",
+  "sc": "common",
+  "sc_pct": 12.5,
+  "after": "no_additional_tip",
+  "conf": "high",
+  "verified": "2026-09-29",
+  "note_he": "בהרבה מסעדות בבודפשט מתווספים 10%–15% (לרוב 12.5%) 'szervizdíj' – אז לא מוסיפים! אם אין – 10%–15%. לא משאירים טיפ על השולחן, אלא נותנים ביד.",
+  "note_en": "Many Budapest restaurants add a 10%–15% service charge (often 12.5%, 'szervizdíj'), so don't add a tip on top! If there isn't one, leave 10%–15%. Hand the tip over rather than leaving it on the table.",
+  "sources": [
+   {
+    "name": "We Love Budapest – Gratuity guide Hungary",
+    "url": "https://welovebudapest.com/en/toplist/gratuity-guide-how-much-to-tip-in-hungary"
+   },
+   {
+    "name": "Budapest.com – FAQ: tipping and payments in Hungary",
+    "url": "https://www.budapest.com/en/faq/faq-tipping-and-payments-in-hungary"
+   },
+   {
+    "name": "JustBudapest – Tipping",
+    "url": "https://justbudapest.com/tipping/"
+   }
+  ]
+ },
+ {
+  "slug": "poland",
+  "he": "פולין",
+  "en": "Poland",
+  "flag": "🇵🇱",
+  "code": "PLN",
+  "sym": "zł",
+  "cur_he": "זלוטי",
+  "cur_en": "Polish Zloty",
+  "region": "europe_east",
+  "accent": "#DC143C",
+  "type": "percentage",
+  "min": 5,
+  "max": 10,
+  "default": 10,
+  "status": "customary",
+  "sc": "uncommon",
+  "sc_pct": null,
+  "after": "no_additional_tip",
+  "conf": "high",
+  "verified": "2026-09-29",
+  "note_he": "5%–10%, או עיגול. זהירות: אמירת 'דז'ינקואה' (תודה) כשמוסרים מזומן = 'תשאיר את העודף'. בקבוצות לעיתים מתווספים 10%.",
+  "note_en": "5%–10%, or round up. Careful: saying 'dziękuję' (thank you) while handing over cash means 'keep the change'. Large groups are sometimes charged 10%.",
+  "sources": [
+   {
+    "name": "Careers in Poland – A few tips on tipping in Poland",
+    "url": "https://www.careersinpoland.com/article/customs/a-few-tips-on-tipping-in-poland"
+   },
+   {
+    "name": "In Your Pocket Warsaw – Tipping tribulations",
+    "url": "https://www.inyourpocket.com/warsaw/Tipping-Tribulations_72657f"
+   },
+   {
+    "name": "EF Go Ahead Tours – A-Z guide to tipping etiquette in Europe (2019)",
+    "url": "https://www.goaheadtours.ca/travel-blog/articles/tipping-in-europe-guide"
+   }
+  ]
+ },
+ {
+  "slug": "russia",
+  "he": "רוסיה",
+  "en": "Russia",
+  "flag": "🇷🇺",
+  "code": "RUB",
+  "sym": "₽",
+  "cur_he": "רובל",
+  "cur_en": "Russian Ruble",
+  "region": "europe_east",
+  "accent": "#3050B8",
+  "type": "percentage",
+  "min": 5,
+  "max": 10,
+  "default": 10,
+  "status": "customary",
+  "sc": "uncommon",
+  "sc_pct": null,
+  "after": "no_additional_tip",
+  "conf": "medium",
+  "verified": "2026-09-29",
+  "note_he": "5%–10% במזומן, ישירות למלצר. כרטיסי אשראי זרים בדרך כלל לא עובדים ברוסיה – תכננו מזומן.",
+  "note_en": "5%–10% in cash, handed directly to the server. Foreign-issued cards generally don't work in Russia, so plan for cash.",
+  "sources": [
+   {
+    "name": "Firebird Tours – Tipping in Russia",
+    "url": "https://www.firebirdtours.com/node/1162424"
+   },
+   {
+    "name": "EF Go Ahead Tours – A-Z guide to tipping etiquette in Europe (2019)",
+    "url": "https://www.goaheadtours.ca/travel-blog/articles/tipping-in-europe-guide"
+   },
+   {
+    "name": "The Moscow Times – What's the deal with tipping (2016)",
+    "url": "https://themoscowtimes.com/articles/moscow-lifehack-whats-the-deal-with-tipping-52824"
+   }
+  ]
+ },
+ {
+  "slug": "ukraine",
+  "he": "אוקראינה",
+  "en": "Ukraine",
+  "flag": "🇺🇦",
+  "code": "UAH",
+  "sym": "₴",
+  "cur_he": "הריבנה",
+  "cur_en": "Ukrainian Hryvnia",
+  "region": "europe_east",
+  "accent": "#F5C400",
+  "type": "percentage",
+  "min": 5,
+  "max": 10,
+  "default": 10,
+  "status": "appreciated",
+  "sc": "uncommon",
+  "sc_pct": null,
+  "after": "no_additional_tip",
+  "conf": "medium",
+  "verified": "2026-09-29",
+  "note_he": "טיפ לא חובה, אבל 10% מוערך על שירות טוב. שימו לב: יש אזהרות מסע בגלל המלחמה.",
+  "note_en": "Tipping isn't required, but 10% is appreciated for good service. Note that travel warnings are in effect because of the war.",
+  "sources": [
+   {
+    "name": "CIA World Factbook – Ukraine Travel Facts (2024, PDF)",
+    "url": "https://cia.gov/the-world-factbook/static/b0ee05fa6e28b9b9720977bf50dda66e/UP-travel-facts.pdf"
+   },
+   {
+    "name": "Global Road Warrior – Ukraine tipping",
+    "url": "https://globalroadwarrior.com/ebsco/ukraine/tipping.html"
+   },
+   {
+    "name": "Matador Network – What to tip your waiter almost everywhere",
+    "url": "https://matadornetwork.com/abroad/what-to-tip-your-waiter-almost-everywhere-in-the-world"
+   }
+  ]
+ },
+ {
+  "slug": "turkey",
+  "he": "טורקיה",
+  "en": "Turkey",
+  "flag": "🇹🇷",
+  "code": "TRY",
+  "sym": "₺",
+  "cur_he": "לירה טורקית",
+  "cur_en": "Turkish Lira",
+  "region": "mena",
+  "accent": "#E30A17",
+  "type": "percentage",
+  "min": 5,
+  "max": 10,
+  "default": 10,
+  "status": "customary",
+  "sc": "sometimes",
+  "sc_pct": null,
+  "after": "no_additional_tip",
+  "conf": "medium",
+  "verified": "2026-09-29",
+  "note_he": "5%–10% הוא הנורמה; במסעדות תיירותיות 10%–15% נפוץ. עדיף מזומן. אם מופיע 'Servis ücreti' – השירות כבר בחשבון.",
+  "note_en": "5%–10% is the norm; 10%–15% is common in tourist restaurants. Cash is better. If the bill shows 'Servis ücreti', service is already included.",
+  "sources": [
+   {
+    "name": "Turkey Travel Planner – Tipping in Turkey",
+    "url": "https://turkeytravelplanner.com/details/money/tipping.html"
+   },
+   {
+    "name": "Chasing the Donkey – Tipping in Turkey",
+    "url": "https://www.chasingthedonkey.com/Tipping-In-Turkey-How-To-Tip-In-Turkey/"
+   },
+   {
+    "name": "Antalya Transfer – Turkey tipping guide 2026",
+    "url": "https://antalyatransfer.taxi/en/blog/turkey-tipping-guide-who-when-how-much-tourist-etiquette-2026"
+   }
+  ]
+ },
+ {
+  "slug": "montenegro",
+  "he": "מונטנגרו",
+  "en": "Montenegro",
+  "flag": "🇲🇪",
+  "code": "EUR",
+  "sym": "€",
+  "cur_he": "אירו",
+  "cur_en": "Euro",
+  "region": "europe_east",
+  "accent": "#B8860B",
+  "type": "percentage",
+  "min": 5,
+  "max": 10,
+  "default": 10,
+  "status": "appreciated",
+  "sc": "uncommon",
+  "sc_pct": null,
+  "after": "no_additional_tip",
+  "conf": "medium",
+  "verified": "2026-09-29",
+  "note_he": "דמי שירות בדרך כלל לא כלולים, ולכן 10% מוערך.",
+  "note_en": "Service charges are usually not included, so 10% is appreciated.",
+  "sources": [
+   {
+    "name": "CIA World Factbook – Montenegro Travel Facts",
+    "url": "https://www.cia.gov/the-world-factbook/countries/montenegro/travel-facts"
+   },
+   {
+    "name": "EF Go Ahead Tours – A-Z guide to tipping etiquette in Europe (2019)",
+    "url": "https://www.goaheadtours.ca/travel-blog/articles/tipping-in-europe-guide"
+   },
+   {
+    "name": "Chasing the Donkey – Tipping in Montenegro",
+    "url": "https://chasingthedonkey.com/tipping-in-montenegro-how-to-tip-in-montenegro"
+   }
+  ]
+ },
+ {
+  "slug": "cyprus",
+  "he": "קפריסין",
+  "en": "Cyprus",
+  "flag": "🇨🇾",
+  "code": "EUR",
+  "sym": "€",
+  "cur_he": "אירו",
+  "cur_en": "Euro",
+  "region": "europe_east",
+  "accent": "#D97B20",
+  "type": "percentage",
+  "min": 5,
+  "max": 10,
+  "default": 5,
+  "status": "optional",
+  "sc": "common",
+  "sc_pct": 10,
+  "after": "optional_small_extra",
+  "conf": "medium",
+  "verified": "2026-09-29",
+  "note_he": "לפי חוק מ-1968 דמי השירות כלולים בחשבון, ולכן טיפ הוא רשות. מקובל לעגל או להשאיר 5%–10% (או 2–3 יורו) על שירות טוב.",
+  "note_en": "By a 1968 law, service charges are included in the bill, so a tip is optional. It's common to round up or leave 5%–10% (or €2–3) for good service.",
+  "sources": [
+   {
+    "name": "Cyprus Mail – Essential tips for Cyprus visitors (Dec 2025)",
+    "url": "https://cyprus-mail.com/2025/12/16/essential-tips-customs-and-useful-words-for-cyprus-visitors"
+   },
+   {
+    "name": "CIA World Factbook – Cyprus Travel Facts",
+    "url": "https://www.cia.gov:443/the-world-factbook/countries/cyprus/travel-facts"
+   },
+   {
+    "name": "Paphos Life – Tipping point for waiting staff (חוק 1968)",
+    "url": "https://www.paphoslife.com/news/tipping_point_for_waiting_staff"
+   }
+  ]
+ },
+ {
+  "slug": "albania",
+  "he": "אלבניה",
+  "en": "Albania",
+  "flag": "🇦🇱",
+  "code": "ALL",
+  "sym": "L",
+  "cur_he": "לק אלבני",
+  "cur_en": "Albanian Lek",
+  "region": "europe_east",
+  "accent": "#E41E20",
+  "type": "percentage",
+  "min": 5,
+  "max": 10,
+  "default": 5,
+  "status": "appreciated",
+  "sc": "uncommon",
+  "sc_pct": null,
+  "after": "no_additional_tip",
+  "conf": "medium",
+  "verified": "2026-09-29",
+  "note_he": "מעגלים לשטר הקרוב או עד 10% – מוערך, לא חובה.",
+  "note_en": "Round up to the nearest note or leave up to 10%: appreciated, not required.",
+  "sources": [
+   {
+    "name": "EF Go Ahead Tours – A-Z guide to tipping etiquette in Europe (2019)",
+    "url": "https://www.goaheadtours.ca/travel-blog/articles/tipping-in-europe-guide"
+   },
+   {
+    "name": "Chasing the Donkey – Tipping in Albania",
+    "url": "https://www.chasingthedonkey.com/tipping-in-albania-how-to-tip-in-albania/"
+   }
+  ]
+ },
+ {
+  "slug": "georgia",
+  "he": "גאורגיה",
+  "en": "Georgia",
+  "flag": "🇬🇪",
+  "code": "GEL",
+  "sym": "₾",
+  "cur_he": "לארי",
+  "cur_en": "Georgian Lari",
+  "region": "mena",
+  "accent": "#E2231A",
+  "type": "percentage",
+  "min": 10,
+  "max": 15,
+  "default": 10,
+  "status": "customary",
+  "sc": "common",
+  "sc_pct": 10,
+  "after": "varies",
+  "conf": "medium",
+  "verified": "2026-09-29",
+  "note_he": "10% הופך לנורמה בטביליסי. הרבה מסעדות מוסיפות 10%–18% דמי שירות (מופיע בתפריט). המקורות חלוקים אם זה מגיע למלצרים – מומלץ להשאיר תוספת קטנה במזומן.",
+  "note_en": "10% is becoming the norm in Tbilisi. Many restaurants add a 10%–18% service charge (shown on the menu). Sources disagree on whether it reaches the waiters, so a small extra cash tip is recommended.",
+  "sources": [
+   {
+    "name": "Sakhva Travel – Tipping in Georgia",
+    "url": "https://sakhva-travel.com/en/blog/tipping-in-georgia/"
+   },
+   {
+    "name": "Wander-Lush – Tips for eating out in Tbilisi",
+    "url": "https://wander-lush.org/tips-for-eating-out-in-tbilisi-georgia/"
+   },
+   {
+    "name": "Red Fedora Diary – Best restaurants in Tbilisi (tipping section)",
+    "url": "https://www.redfedoradiary.com/best-restaurants-in-tbilisi-georgian-food/"
+   }
+  ]
+ },
+ {
+  "slug": "azerbaijan",
+  "he": "אזרבייג'ן",
+  "en": "Azerbaijan",
+  "flag": "🇦🇿",
+  "code": "AZN",
+  "sym": "₼",
+  "cur_he": "מנאט",
+  "cur_en": "Azerbaijani Manat",
+  "region": "mena",
+  "accent": "#00A3DD",
+  "type": "percentage",
+  "min": 5,
+  "max": 10,
+  "default": 10,
+  "status": "appreciated",
+  "sc": "common",
+  "sc_pct": 10,
+  "after": "no_additional_tip",
+  "conf": "medium",
+  "verified": "2026-09-29",
+  "note_he": "הרבה מסעדות בבאקו מוסיפות 10% שירות – בדקו את החשבון. אם אין, 5%–10% על שירות טוב. לפי ה-CIA טיפ אינו נפוץ בקרב מקומיים.",
+  "note_en": "Many Baku restaurants add 10% service, so check the bill. If there isn't one, leave 5%–10% for good service. According to the CIA, tipping is not common among locals.",
+  "sources": [
+   {
+    "name": "Daytrip – Baku destination page",
+    "url": "https://daytrip.com/zh/transfers/baku-az"
+   },
+   {
+    "name": "CIA World Factbook – Azerbaijan Travel Facts (PDF)",
+    "url": "https://cia.gov/the-world-factbook/static/a9cabf9f946b5a992173d2b12cf98208/AJ-travel-facts.pdf"
+   },
+   {
+    "name": "Abercrombie & Kent – Azerbaijan essential information (PDF)",
+    "url": "https://www.Abercrombiekent.com/-/media/ak/media-for-prod/destinations/information-pdfs/europe/ei-azerbaijan.pdf"
+   }
+  ]
+ },
+ {
+  "slug": "bulgaria",
+  "he": "בולגריה",
+  "en": "Bulgaria",
+  "flag": "🇧🇬",
+  "code": "EUR",
+  "sym": "€",
+  "cur_he": "אירו",
+  "cur_en": "Euro",
+  "region": "europe_east",
+  "accent": "#00966E",
+  "type": "percentage",
+  "min": 10,
+  "max": 15,
+  "default": 10,
+  "status": "customary",
+  "sc": "sometimes",
+  "sc_pct": null,
+  "after": "no_additional_tip",
+  "conf": "medium",
+  "verified": "2026-09-29",
+  "note_he": "10% סטנדרטי, 15% על שירות מצוין. מ-1.1.2026 המטבע הוא אירו (לא לבה).",
+  "note_en": "10% is standard, 15% for excellent service. Since 1 January 2026 the currency is the euro (not the lev).",
+  "sources": [
+   {
+    "name": "Chasing the Donkey – Tipping in Bulgaria",
+    "url": "https://www.chasingthedonkey.com/tipping-in-bulgaria-how-to-tip-in-bulgaria/"
+   },
+   {
+    "name": "GuideBG – Cultural dos and don'ts in Bulgaria",
+    "url": "https://www.guidebg.com/cultural-dos-and-donts-in-bulgaria"
+   },
+   {
+    "name": "Loudavým krokem – Bulgaria prices after the euro (2026)",
+    "url": "https://loudavymkrokem.cz/nl/prijzen-vakantie-bulgarije/"
+   }
+  ]
+ },
+ {
+  "slug": "croatia",
+  "he": "קרואטיה",
+  "en": "Croatia",
+  "flag": "🇭🇷",
+  "code": "EUR",
+  "sym": "€",
+  "cur_he": "אירו",
+  "cur_en": "Euro",
+  "region": "europe_east",
+  "accent": "#1D4FA3",
+  "type": "percentage",
+  "min": 5,
+  "max": 10,
+  "default": 10,
+  "status": "customary",
+  "sc": "uncommon",
+  "sc_pct": null,
+  "after": "no_additional_tip",
+  "conf": "medium",
+  "verified": "2026-09-29",
+  "note_he": "כ-10% על שירות טוב (עד 15% במסעדה יוקרתית). עדיף מזומן. אם כתוב 'Napojnica uračunata' – הטיפ כלול.",
+  "note_en": "About 10% for good service (up to 15% at a high-end restaurant). Cash is better. If the bill says 'Napojnica uračunata', the tip is included.",
+  "sources": [
+   {
+    "name": "Wise – Tipping in Croatia",
+    "url": "https://wise.com/us/travel-money/tip-calculator/croatia"
+   },
+   {
+    "name": "Croatia Week – Tipping in Croatia",
+    "url": "https://www.croatiaweek.com/tipping-in-croatia-what-to-do/"
+   },
+   {
+    "name": "Chasing the Donkey – How to tip in Croatia",
+    "url": "https://www.chasingthedonkey.com/how-to-tip-in-croatia-tipping-in-croatia/"
+   }
+  ]
+ },
+ {
+  "slug": "romania",
+  "he": "רומניה",
+  "en": "Romania",
+  "flag": "🇷🇴",
+  "code": "RON",
+  "sym": "lei",
+  "cur_he": "לאו רומני",
+  "cur_en": "Romanian Leu",
+  "region": "europe_east",
+  "accent": "#F2B600",
+  "type": "percentage",
+  "min": 5,
+  "max": 10,
+  "default": 10,
+  "status": "customary",
+  "sc": "uncommon",
+  "sc_pct": null,
+  "after": "no_additional_tip",
+  "conf": "high",
+  "verified": "2026-09-29",
+  "note_he": "5%–10% (כלל ה-10%). לפי החוק החשבון מציע לבחור טיפ בין 0% ל-15% – זו בחירה שלכם, לא חובה.",
+  "note_en": "5%–10% (the 10% rule). By law the bill lets you choose a tip between 0% and 15%: it's your choice, not an obligation.",
+  "sources": [
+   {
+    "name": "Sofia Adventures – Tipping in Romania",
+    "url": "https://sofiaadventures.com/tipping-in-romania/"
+   },
+   {
+    "name": "Romania Experience – Tipping in Romania",
+    "url": "https://www.romaniaexperience.com/?p=2571"
+   },
+   {
+    "name": "BZI.ro – חוק הטיפ ברומניה: 0%–15% לבחירת הלקוח",
+    "url": "https://www.bzi.ro/ce-suma-a-fost-obligat-sa-lase-bacsis-un-client-pentru-o-nota-de-159-de-lei-intr-un-restaurant-din-centrul-vechi-din-bucuresti-4635239",
+    "name_en": "BZI.ro – Romania's tip rule: 0%–15%, the customer's choice (Romanian)"
+   }
+  ]
+ },
+ {
+  "slug": "serbia",
+  "he": "סרביה",
+  "en": "Serbia",
+  "flag": "🇷🇸",
+  "code": "RSD",
+  "sym": "RSD",
+  "cur_he": "דינר סרבי",
+  "cur_en": "Serbian Dinar",
+  "region": "europe_east",
+  "accent": "#C6363C",
+  "type": "percentage",
+  "min": 10,
+  "max": 15,
+  "default": 10,
+  "status": "customary",
+  "sc": "uncommon",
+  "sc_pct": null,
+  "after": "no_additional_tip",
+  "conf": "high",
+  "verified": "2026-09-29",
+  "note_he": "10%–15% אם הייתם מרוצים; דמי שירות בדרך כלל לא בחשבון. טיפ בכרטיס לרוב לא אפשרי – הביאו מזומן.",
+  "note_en": "10%–15% if you were happy; service charges are usually not on the bill. Card tipping often isn't possible, so bring cash.",
+  "sources": [
+   {
+    "name": "CIA World Factbook – Serbia Travel Facts",
+    "url": "https://www.cia.gov:443/the-world-factbook/countries/serbia/travel-facts"
+   },
+   {
+    "name": "On The Go Tours – Serbia travel tips",
+    "url": "https://www.onthegotours.com/us/Serbia/Guides/Travel-Tips-and-Useful-Info"
+   },
+   {
+    "name": "Chasing the Donkey – Tipping in Serbia",
+    "url": "https://www.chasingthedonkey.com/tipping-in-serbia-how-to-tip-in-serbia/"
+   }
+  ]
+ },
+ {
+  "slug": "slovenia",
+  "he": "סלובניה",
+  "en": "Slovenia",
+  "flag": "🇸🇮",
+  "code": "EUR",
+  "sym": "€",
+  "cur_he": "אירו",
+  "cur_en": "Euro",
+  "region": "europe_east",
+  "accent": "#1B5BAA",
+  "type": "percentage",
+  "min": 5,
+  "max": 10,
+  "default": 10,
+  "status": "appreciated",
+  "sc": "sometimes",
+  "sc_pct": null,
+  "after": "no_additional_tip",
+  "conf": "medium",
+  "verified": "2026-09-29",
+  "note_he": "בערים ובאזורי תיירות כ-10% (15% על שירות מצוין); במקומות אחרים מעגלים.",
+  "note_en": "In cities and tourist areas about 10% (15% for excellent service); elsewhere people round up.",
+  "sources": [
+   {
+    "name": "CIA World Factbook – Slovenia Travel Facts (PDF)",
+    "url": "https://www.cia.gov/the-world-factbook/static/f5eda3b0e5fe694d1481da4619701838/SI-travel-facts.pdf"
+   },
+   {
+    "name": "Daytrip – Ljubljana destination page",
+    "url": "https://daytrip.com/zh/transfers/ljubljana-si"
+   },
+   {
+    "name": "EF Go Ahead Tours – A-Z guide to tipping etiquette in Europe (2019)",
+    "url": "https://www.goaheadtours.ca/travel-blog/articles/tipping-in-europe-guide"
+   }
+  ]
+ },
+ {
+  "slug": "slovakia",
+  "he": "סלובקיה",
+  "en": "Slovakia",
+  "flag": "🇸🇰",
+  "code": "EUR",
+  "sym": "€",
+  "cur_he": "אירו",
+  "cur_en": "Euro",
+  "region": "europe_east",
+  "accent": "#0B4EA2",
+  "type": "percentage",
+  "min": 5,
+  "max": 10,
+  "default": 10,
+  "status": "customary",
+  "sc": "uncommon",
+  "sc_pct": null,
+  "after": "no_additional_tip",
+  "conf": "medium",
+  "verified": "2026-09-29",
+  "note_he": "מקומיים מעגלים ביורו-שניים; מתיירים מקובל 10%. ה-CIA מציין 10%–20% – מקור מקומי אומר ש-20% זה יותר מדי.",
+  "note_en": "Locals round up by a euro or two; visitors usually leave 10%. The CIA says 10%–20%, but a local source says 20% is too much.",
+  "sources": [
+   {
+    "name": "Rough Guides – Slovakia culture & etiquette",
+    "url": "https://www.roughguides.com/slovakia/culture-etiquette/"
+   },
+   {
+    "name": "The Slovak Spectator – Tips for restaurants",
+    "url": "https://spectacular.sme.sk/en/blogs/advices-restaurants-slovakia"
+   },
+   {
+    "name": "CIA World Factbook – Slovakia Travel Facts (2024, PDF)",
+    "url": "https://www.cia.gov/the-world-factbook/about/archives/2024/static/68a4a61c2906254cc58ebda1727b7571/LO-travel-facts.pdf"
+   }
+  ]
+ },
+ {
+  "slug": "belgium",
+  "he": "בלגיה",
+  "en": "Belgium",
+  "flag": "🇧🇪",
+  "code": "EUR",
+  "sym": "€",
+  "cur_he": "אירו",
+  "cur_en": "Euro",
+  "region": "europe_west",
+  "accent": "#FDDA24",
+  "type": "round_up",
+  "min": 0,
+  "max": 10,
+  "default": 0,
+  "status": "optional",
+  "sc": "included_in_price",
+  "sc_pct": null,
+  "after": "optional_small_extra",
+  "conf": "medium",
+  "verified": "2026-09-29",
+  "note_he": "השירות כלול. מעגלים למעלה, או עד 10% על שירות יוצא דופן.",
+  "note_en": "Service is included. Round up, or leave up to 10% for exceptional service.",
+  "sources": [
+   {
+    "name": "EF Go Ahead Tours – A-Z guide to tipping etiquette in Europe (2019)",
+    "url": "https://www.goaheadtours.ca/travel-blog/articles/tipping-in-europe-guide"
+   },
+   {
+    "name": "The Savvy Backpacker – Tipping in Europe",
+    "url": "https://thesavvybackpacker.com/guide-tipping-gratuity-restaurants-europe/"
+   }
+  ]
+ },
+ {
+  "slug": "denmark",
+  "he": "דנמרק",
+  "en": "Denmark",
+  "flag": "🇩🇰",
+  "code": "DKK",
+  "sym": "kr.",
+  "cur_he": "כתר דני",
+  "cur_en": "Danish Krone",
+  "region": "europe_west",
+  "accent": "#C8102E",
+  "type": "none",
+  "min": 0,
+  "max": 0,
+  "default": 0,
+  "status": "not_customary",
+  "sc": "included_in_price",
+  "sc_pct": null,
+  "after": "no_additional_tip",
+  "conf": "high",
+  "verified": "2026-09-29",
+  "note_he": "טיפ אינו מסורת (VisitCopenhagen). השירות כלול לפי חוק. אפשר לעגל, ועד 10% רק על שירות יוצא דופן.",
+  "note_en": "Tipping isn't a tradition (VisitCopenhagen). Service is included by law. You can round up, and up to 10% only for extraordinary service.",
+  "sources": [
+   {
+    "name": "Your Mileage May Vary (Aug 2026) quoting VisitCopenhagen",
+    "url": "https://yourmileagemayvary.com/2026/08/15/destinations-where-tipping-isnt-expected/"
+   },
+   {
+    "name": "Scandification – Tipping in Denmark",
+    "url": "https://scandification.com/tipping-in-denmark-do-you-tip-in-denmark/"
+   },
+   {
+    "name": "EF Go Ahead Tours – A-Z guide to tipping etiquette in Europe (2019)",
+    "url": "https://www.goaheadtours.ca/travel-blog/articles/tipping-in-europe-guide"
+   }
+  ]
+ },
+ {
+  "slug": "sweden",
+  "he": "שוודיה",
+  "en": "Sweden",
+  "flag": "🇸🇪",
+  "code": "SEK",
+  "sym": "kr",
+  "cur_he": "כתר שוודי",
+  "cur_en": "Swedish Krona",
+  "region": "europe_west",
+  "accent": "#006AA7",
+  "type": "round_up",
+  "min": 0,
+  "max": 10,
+  "default": 0,
+  "status": "optional",
+  "sc": "included_in_price",
+  "sc_pct": null,
+  "after": "no_additional_tip",
+  "conf": "high",
+  "verified": "2026-09-29",
+  "note_he": "Visit Sweden: טיפ תמיד מתקבל בברכה אבל לא מצופה. רבים מעגלים; 5%–10% נחשב נדיב.",
+  "note_en": "Visit Sweden: tips are always welcome but not expected. Many people round up; 5%–10% is considered generous.",
+  "sources": [
+   {
+    "name": "Your Mileage May Vary (Jun 2025) quoting Visit Sweden",
+    "url": "https://yourmileagemayvary.com/2025/06/23/tip-fatigue-is-real-here-are-12-countries-where-gratuities-arent-expected/"
+   },
+   {
+    "name": "Take Me To Sweden – Tipping in Sweden",
+    "url": "https://www.takemetosweden.be/en/tipping-in-sweden/"
+   },
+   {
+    "name": "EF Go Ahead Tours – A-Z guide to tipping etiquette in Europe (2019)",
+    "url": "https://www.goaheadtours.ca/travel-blog/articles/tipping-in-europe-guide"
+   }
+  ]
+ },
+ {
+  "slug": "lithuania",
+  "he": "ליטא",
+  "en": "Lithuania",
+  "flag": "🇱🇹",
+  "code": "EUR",
+  "sym": "€",
+  "cur_he": "אירו",
+  "cur_en": "Euro",
+  "region": "europe_east",
+  "accent": "#FDB913",
+  "type": "percentage",
+  "min": 5,
+  "max": 10,
+  "default": 10,
+  "status": "customary",
+  "sc": "uncommon",
+  "sc_pct": null,
+  "after": "no_additional_tip",
+  "conf": "medium",
+  "verified": "2026-09-29",
+  "note_he": "10% מתאים במסעדות ובברים (CIA). בדקו אם דמי שירות כבר כלולים.",
+  "note_en": "10% is appropriate in restaurants and bars (CIA). Check whether a service charge is already included.",
+  "sources": [
+   {
+    "name": "CIA World Factbook – Lithuania Travel Facts",
+    "url": "https://www.cia.gov:443/the-world-factbook/countries/lithuania/travel-facts"
+   },
+   {
+    "name": "International House Vilnius – Tipping etiquette in Lithuania",
+    "url": "https://ihvilnius.lt/understanding-tipping-etiquette-in-lithuania"
+   },
+   {
+    "name": "EF Go Ahead Tours – A-Z guide to tipping etiquette in Europe (2019)",
+    "url": "https://www.goaheadtours.ca/travel-blog/articles/tipping-in-europe-guide"
+   }
+  ]
+ },
+ {
+  "slug": "latvia",
+  "he": "לטביה",
+  "en": "Latvia",
+  "flag": "🇱🇻",
+  "code": "EUR",
+  "sym": "€",
+  "cur_he": "אירו",
+  "cur_en": "Euro",
+  "region": "europe_east",
+  "accent": "#9E3039",
+  "type": "percentage",
+  "min": 5,
+  "max": 10,
+  "default": 10,
+  "status": "appreciated",
+  "sc": "sometimes",
+  "sc_pct": null,
+  "after": "no_additional_tip",
+  "conf": "medium",
+  "verified": "2026-09-29",
+  "note_he": "10% על שירות שולחן טוב מוערך; בבר מעגלים.",
+  "note_en": "10% for good table service is appreciated; at a bar people round up.",
+  "sources": [
+   {
+    "name": "CIA World Factbook – Latvia Travel Facts",
+    "url": "https://www.cia.gov/the-world-factbook/countries/latvia/travel-facts"
+   },
+   {
+    "name": "EF Go Ahead Tours – A-Z guide to tipping etiquette in Europe (2019)",
+    "url": "https://www.goaheadtours.ca/travel-blog/articles/tipping-in-europe-guide"
+   }
+  ]
+ },
+ {
+  "slug": "moldova",
+  "he": "מולדובה",
+  "en": "Moldova",
+  "flag": "🇲🇩",
+  "code": "MDL",
+  "sym": "L",
+  "cur_he": "לאו מולדובני",
+  "cur_en": "Moldovan Leu",
+  "region": "europe_east",
+  "accent": "#0046AE",
+  "type": "percentage",
+  "min": 5,
+  "max": 10,
+  "default": 10,
+  "status": "customary",
+  "sc": "common",
+  "sc_pct": null,
+  "after": "add_tip_anyway",
+  "conf": "medium",
+  "verified": "2026-09-29",
+  "note_he": "לפי ה-CIA דמי שירות כלולים לעיתים קרובות, ובכל זאת מצופה עוד 5%–10%.",
+  "note_en": "According to the CIA, service charges are often included, yet another 5%–10% is still expected.",
+  "sources": [
+   {
+    "name": "CIA World Factbook – Moldova Travel Facts (PDF)",
+    "url": "https://www.cia.gov/the-world-factbook/static/e0c90fa9ebf8d1bbadb75096d1c39212/MD-travel-facts.pdf"
+   },
+   {
+    "name": "ATM Fee Saver community forum – Moldova daily costs (supplementary only)",
+    "url": "https://explore.atmfeesaver.com/community/money-travel-in-europe-travel-budgets/cash-per-day-in-moldova/"
+   }
+  ]
+ },
+ {
+  "slug": "belarus",
+  "he": "בלארוס",
+  "en": "Belarus",
+  "flag": "🇧🇾",
+  "code": "BYN",
+  "sym": "Br",
+  "cur_he": "רובל בלארוסי",
+  "cur_en": "Belarusian Ruble",
+  "region": "europe_east",
+  "accent": "#C8313E",
+  "type": "percentage",
+  "min": 5,
+  "max": 10,
+  "default": 5,
+  "status": "appreciated",
+  "sc": "uncommon",
+  "sc_pct": null,
+  "after": "no_additional_tip",
+  "conf": "medium",
+  "verified": "2026-09-29",
+  "note_he": "טיפ לגמרי לפי שיקול דעת; דמי שירות לא מתווספים אוטומטית. כ-5% (CIA) עד 10% (In Your Pocket).",
+  "note_en": "Tipping is entirely discretionary; service charges aren't added automatically. About 5% (CIA) to 10% (In Your Pocket).",
+  "sources": [
+   {
+    "name": "CIA World Factbook – Belarus Travel Facts (Dec 2024, PDF)",
+    "url": "https://cia.gov/the-world-factbook/static/e4fee91f726dcf59143e470e51afcc9d/BO-travel-facts.pdf"
+   },
+   {
+    "name": "In Your Pocket Minsk – Basics",
+    "url": "https://www.inyourpocket.com/minsk/Basics"
+   }
+  ]
+ },
+ {
+  "slug": "bosnia-and-herzegovina",
+  "he": "בוסניה והרצגובינה",
+  "en": "Bosnia and Herzegovina",
+  "flag": "🇧🇦",
+  "code": "BAM",
+  "sym": "KM",
+  "cur_he": "מארק בר-המרה",
+  "cur_en": "Convertible Mark",
+  "region": "europe_east",
+  "accent": "#0A3F9C",
+  "type": "percentage",
+  "min": 5,
+  "max": 10,
+  "default": 10,
+  "status": "customary",
+  "sc": "sometimes",
+  "sc_pct": null,
+  "after": "no_additional_tip",
+  "conf": "medium",
+  "verified": "2026-09-29",
+  "note_he": "כ-10% כשמרוצים. במקומות יוקרתיים בערים לעיתים דמי שירות כבר כלולים.",
+  "note_en": "About 10% when you're happy. At upscale city venues a service charge is sometimes already included.",
+  "sources": [
+   {
+    "name": "EF Go Ahead Tours – A-Z guide to tipping etiquette in Europe (2019)",
+    "url": "https://www.goaheadtours.ca/travel-blog/articles/tipping-in-europe-guide"
+   },
+   {
+    "name": "Europe Express – Tipping in Europe guide (PDF, undated)",
+    "url": "https://booking.europeexpress.com/flyers/ee-tipping-in-europe-guide.pdf"
+   },
+   {
+    "name": "Chasing the Donkey – Tipping in Bosnia & Herzegovina",
+    "url": "https://www.chasingthedonkey.com/tipping-in-bosnia-herzegovina/"
+   }
+  ]
+ },
+ {
+  "slug": "armenia",
+  "he": "ארמניה",
+  "en": "Armenia",
+  "flag": "🇦🇲",
+  "code": "AMD",
+  "sym": "֏",
+  "cur_he": "דראם",
+  "cur_en": "Armenian Dram",
+  "region": "mena",
+  "accent": "#F28C00",
+  "type": "percentage",
+  "min": 10,
+  "max": 15,
+  "default": 10,
+  "status": "customary",
+  "sc": "sometimes",
+  "sc_pct": 10,
+  "after": "add_tip_anyway",
+  "conf": "medium",
+  "verified": "2026-09-29",
+  "note_he": "בירוואן כ-10% נחשב מנומס (ה-CIA: 10%–20% מקובל). מסעדות מוסיפות לפעמים דמי שירות – זה לא טיפ. השאירו מזומן גם כשמשלמים באשראי.",
+  "note_en": "In Yerevan about 10% is considered polite (CIA: 10%–20% is accepted). Restaurants sometimes add a service charge; that is not a tip. Leave cash even if you pay by card.",
+  "sources": [
+   {
+    "name": "Armenia Discovery – Social norms (May 2026)",
+    "url": "https://armeniadiscovery.com/en/useful-info/social-norms"
+   },
+   {
+    "name": "CIA World Factbook – Armenia Travel Facts (PDF)",
+    "url": "https://www.cia.gov/the-world-factbook/static/30d1022d6cc335cd8e6aa74f71c0231a/AM-travel-facts.pdf"
+   },
+   {
+    "name": "Daytrip – Yerevan destination page",
+    "url": "https://daytrip.com/zh/transfers/yerevan-am"
+   }
+  ]
+ },
+ {
+  "slug": "united-arab-emirates",
+  "he": "איחוד האמירויות",
+  "en": "United Arab Emirates",
+  "flag": "🇦🇪",
+  "code": "AED",
+  "sym": "AED",
+  "cur_he": "דירהם",
+  "cur_en": "UAE Dirham",
+  "region": "mena",
+  "accent": "#00843D",
+  "type": "percentage",
+  "min": 10,
+  "max": 15,
+  "default": 10,
+  "status": "customary",
+  "sc": "sometimes",
+  "sc_pct": 10,
+  "after": "optional_small_extra",
+  "conf": "high",
+  "verified": "2026-09-29",
+  "note_he": "Visit Dubai: 10%–15% נהוג, אבל לא חובה. במלונות ובמסעדות יוקרה מתווספים לרוב 10% שירות (מתחלק בין כל הצוות) – תוספת קטנה במזומן רשות.",
+  "note_en": "Visit Dubai: 10%–15% is customary but not compulsory. Hotels and upscale restaurants usually add a 10% service charge (shared among all staff); a small extra cash tip is optional.",
+  "sources": [
+   {
+    "name": "Visit Dubai (Dubai Dept. of Economy & Tourism) – Tipping in Dubai",
+    "url": "https://visitdubai.com/cs/articles/tipping-in-dubai"
+   },
+   {
+    "name": "Visit Abu Dhabi (DCT Abu Dhabi) – Taxes, service charges & tipping",
+    "url": "https://visitabudhabi.ae/en/plan-your-trip/essential-info/taxes-service-charges-and-tipping"
+   },
+   {
+    "name": "The National (UAE) – 10% service charge is not a tip for your waiter",
+    "url": "https://www.thenationalnews.com/uae/10-service-charge-is-not-a-tip-for-your-waiter-1.122243/"
+   }
+  ]
+ },
+ {
+  "slug": "thailand",
+  "he": "תאילנד",
+  "en": "Thailand",
+  "flag": "🇹🇭",
+  "code": "THB",
+  "sym": "฿",
+  "cur_he": "באט",
+  "cur_en": "Thai Baht",
+  "region": "asia",
+  "accent": "#2D3A8C",
+  "type": "percentage",
+  "min": 5,
+  "max": 10,
+  "default": 10,
+  "status": "appreciated",
+  "sc": "sometimes",
+  "sc_pct": 10,
+  "after": "no_additional_tip",
+  "conf": "medium",
+  "verified": "2026-09-29",
+  "note_he": "באוכל רחוב ובמסעדות מקומיות לא נהוג – משאירים עודף. במסעדות בינוניות 5%–10%. במלונות ובמקומות יוקרה מתווספים 10% שירות + מע\"מ ('++').",
+  "note_en": "At street food stalls and local eateries tipping isn't customary; leave your change. At mid-range places 5%–10%. Hotels and upscale venues add 10% service plus VAT (shown as '++').",
+  "sources": [
+   {
+    "name": "Culture Trip – When and how much to tip in Thailand",
+    "url": "https://theculturetrip.com/articles/etiquette-101-when-and-how-much-to-tip-in-thailand"
+   },
+   {
+    "name": "Radical Storage – Tipping in Thailand",
+    "url": "https://radicalstorage.com/travel/tipping-in-thailand/"
+   }
+  ]
+ },
+ {
+  "slug": "vietnam",
+  "he": "וייטנאם",
+  "en": "Vietnam",
+  "flag": "🇻🇳",
+  "code": "VND",
+  "sym": "₫",
+  "cur_he": "דונג",
+  "cur_en": "Vietnamese Dong",
+  "region": "asia",
+  "accent": "#DA251D",
+  "type": "percentage",
+  "min": 5,
+  "max": 10,
+  "default": 5,
+  "status": "appreciated",
+  "sc": "sometimes",
+  "sc_pct": null,
+  "after": "no_additional_tip",
+  "conf": "medium",
+  "verified": "2026-09-29",
+  "note_he": "במסעדות מקומיות לא מצופה; 5%–10% מוערך במקומות תיירותיים/יוקרתיים. יש מקומות שמוסיפים 5%–10% שירות.",
+  "note_en": "At local restaurants it isn't expected; 5%–10% is appreciated at tourist or upscale places. Some places add a 5%–10% service charge.",
+  "sources": [
+   {
+    "name": "Local Vietnam – Tipping in Vietnam",
+    "url": "https://localvietnam.com/blog/tipping-in-vietnam/"
+   },
+   {
+    "name": "No1 Currency – Tipping in Vietnam",
+    "url": "https://www.no1currency.com/vietnam-travel-guide/tipping-in-vietnam/"
+   }
+  ]
+ },
+ {
+  "slug": "japan",
+  "he": "יפן",
+  "en": "Japan",
+  "flag": "🇯🇵",
+  "code": "JPY",
+  "sym": "¥",
+  "cur_he": "ין יפני",
+  "cur_en": "Japanese Yen",
+  "region": "asia",
+  "accent": "#BC002D",
+  "type": "none",
+  "min": 0,
+  "max": 0,
+  "default": 0,
+  "status": "not_customary",
+  "sc": "sometimes",
+  "sc_pct": null,
+  "after": "no_additional_tip",
+  "conf": "high",
+  "verified": "2026-09-29",
+  "note_he": "לא נהוג לתת טיפ (לפי ארגון התיירות היפני). כסף שיישאר על השולחן עלול לחזור אליכם. 'תודה' מנומסת עדיפה.",
+  "note_en": "Tipping isn't customary (per the Japan National Tourism Organization). Money left on the table may be returned to you. A polite 'thank you' is better.",
+  "sources": [
+   {
+    "name": "JNTO – Tipping in Japan (Portuguese page, full text)",
+    "url": "https://www.japan.travel/pt/plan/tipping-in-japan/"
+   },
+   {
+    "name": "Arabian Business – Global Tipping Guide: Japan",
+    "url": "https://arabianbusiness.com/lists/global-tipping-guide-how-gulf-states-compare-512703-htmlitemid512666"
+   }
+  ]
+ },
+ {
+  "slug": "south-korea",
+  "he": "דרום קוריאה",
+  "en": "South Korea",
+  "flag": "🇰🇷",
+  "code": "KRW",
+  "sym": "₩",
+  "cur_he": "וון",
+  "cur_en": "South Korean Won",
+  "region": "asia",
+  "accent": "#0047A0",
+  "type": "none",
+  "min": 0,
+  "max": 0,
+  "default": 0,
+  "status": "not_customary",
+  "sc": "sometimes",
+  "sc_pct": 10,
+  "after": "no_additional_tip",
+  "conf": "high",
+  "verified": "2026-09-29",
+  "note_he": "לא נהוג בשום רמה; לפעמים יסרבו לקבל. במלונות ובמסעדות יוקרה ייתכנו 10% דמי שירות – ואין צורך להוסיף.",
+  "note_en": "Not customary at any level; a tip may be declined. Hotels and upscale restaurants may add a 10% service charge, so there's no need to add more.",
+  "sources": [
+   {
+    "name": "The Soul of Seoul – Guide to tipping in Korea",
+    "url": "https://thesoulofseoul.net/guide-tipping-in-korea/"
+   },
+   {
+    "name": "SmarterTravel – South Korea tipping guide",
+    "url": "https://www.smartertravel.com/tipping-in-south-korea-the-south-korea-tipping-guide/"
+   },
+   {
+    "name": "Red Savannah – South Korea travel advice",
+    "url": "https://www.redsavannah.com/asia/south-korea/south-korea-travel-advice"
+   }
+  ]
+ },
+ {
+  "slug": "singapore",
+  "he": "סינגפור",
+  "en": "Singapore",
+  "flag": "🇸🇬",
+  "code": "SGD",
+  "sym": "S$",
+  "cur_he": "דולר סינגפורי",
+  "cur_en": "Singapore Dollar",
+  "region": "asia",
+  "accent": "#EF3340",
+  "type": "none",
+  "min": 0,
+  "max": 0,
+  "default": 0,
+  "status": "not_customary",
+  "sc": "common",
+  "sc_pct": 10,
+  "after": "no_additional_tip",
+  "conf": "high",
+  "verified": "2026-09-29",
+  "note_he": "לא נהוג (לפי רשות התיירות של סינגפור). '++' בתפריט = 10% שירות + 9% GST. במרכזי הוקר אין שירות ואין טיפ.",
+  "note_en": "Not customary (per the Singapore Tourism Board). '++' on a menu means 10% service plus 9% GST. Hawker centres have no service charge and no tipping.",
+  "sources": [
+   {
+    "name": "Visit Singapore (Singapore Tourism Board) – Singapore Insider Q4 2019",
+    "url": "https://www.visitsingapore.com/content/dam/desktop/global/about-singapore/traveller-information/q4-singapore-insider-2019-en.pdf"
+   },
+   {
+    "name": "Visit Singapore (STB) – Business travel post-arrival brochure",
+    "url": "https://www.visitsingapore.com/content/dam/MICE/Global/downloads/BT_Post_Arrival_Brochure.pdf"
+   },
+   {
+    "name": "Travelfish – Singapore for beginners (Nov 2025)",
+    "url": "https://www.travelfish.org/beginners/singapore"
+   }
+  ]
+ },
+ {
+  "slug": "india",
+  "he": "הודו",
+  "en": "India",
+  "flag": "🇮🇳",
+  "code": "INR",
+  "sym": "₹",
+  "cur_he": "רופי",
+  "cur_en": "Indian Rupee",
+  "region": "asia",
+  "accent": "#FF9933",
+  "type": "percentage",
+  "min": 5,
+  "max": 10,
+  "default": 10,
+  "status": "appreciated",
+  "sc": "sometimes",
+  "sc_pct": null,
+  "after": "no_additional_tip",
+  "conf": "medium",
+  "verified": "2026-09-29",
+  "note_he": "טיפ וולונטרי, 5%–10%. לפי הרגולציה מסעדות אסור להוסיף דמי שירות אוטומטית – מותר לבקש להסיר אותם.",
+  "note_en": "Tipping is voluntary, 5%–10%. Under the regulations, restaurants may not add a service charge automatically, and you can ask to have it removed.",
+  "sources": [
+   {
+    "name": "International Travel News – Suggested tipping amounts worldwide",
+    "url": "https://www.intltravelnews.com/node/8316.html"
+   },
+   {
+    "name": "LiveLaw – Delhi High Court: service charge voluntary (28 Mar 2025)",
+    "url": "https://www.livelaw.in/amp/high-court/delhi-high-court/delhi-high-court-restaurant-service-charge-on-food-not-mandatory-287836"
+   },
+   {
+    "name": "Anantam IAS summary of PIB release 19 Jul 2026 – CCPA action on default service charges",
+    "url": "https://anantamias.com/current-affairs/ccpa-default-service-charge-restaurants/?pdf=1"
+   }
+  ]
+ },
+ {
+  "slug": "china",
+  "he": "סין",
+  "en": "China",
+  "flag": "🇨🇳",
+  "code": "CNY",
+  "sym": "¥",
+  "cur_he": "יואן",
+  "cur_en": "Chinese Yuan",
+  "region": "asia",
+  "accent": "#DE2910",
+  "type": "none",
+  "min": 0,
+  "max": 0,
+  "default": 0,
+  "status": "not_customary",
+  "sc": "sometimes",
+  "sc_pct": null,
+  "after": "no_additional_tip",
+  "conf": "high",
+  "verified": "2026-09-29",
+  "note_he": "בסין היבשתית לא נהוג לתת טיפ. בחלק מהמלונות והמסעדות הגדולות מתווספים 10%–15%.",
+  "note_en": "Tipping isn't customary in mainland China. Some hotels and larger restaurants add a 10%–15% surcharge.",
+  "sources": [
+   {
+    "name": "Intrepid Travel – Tipping in China",
+    "url": "https://www.intrepidtravel.com/ca/china/tipping-in-china"
+   },
+   {
+    "name": "ChinaTravel.com – How to tip in China (2021)",
+    "url": "https://www.chinatravel.com/guide/how-to-tip-in-china"
+   },
+   {
+    "name": "International Travel News – Suggested tipping amounts worldwide",
+    "url": "https://www.intltravelnews.com/node/8316.html"
+   }
+  ]
+ },
+ {
+  "slug": "philippines",
+  "he": "הפיליפינים",
+  "en": "Philippines",
+  "flag": "🇵🇭",
+  "code": "PHP",
+  "sym": "₱",
+  "cur_he": "פסו פיליפיני",
+  "cur_en": "Philippine Peso",
+  "region": "asia",
+  "accent": "#0038A8",
+  "type": "percentage",
+  "min": 10,
+  "max": 10,
+  "default": 10,
+  "status": "customary",
+  "sc": "common",
+  "sc_pct": 10,
+  "after": "no_additional_tip",
+  "conf": "medium",
+  "verified": "2026-09-29",
+  "note_he": "ברוב המסעדות מתווספים 10% שירות – אז לא מוסיפים. אם אין – כ-10%, ישירות למלצר.",
+  "note_en": "Most restaurants add a 10% service charge, so don't add a tip. If there isn't one, leave about 10%, given directly to the server.",
+  "sources": [
+   {
+    "name": "Newport World Resorts – Tipping in the Philippines (Aug 2024)",
+    "url": "https://newportworldresorts.com/blog-articles/tipping-philippines-guide-travelers"
+   },
+   {
+    "name": "Oxford Business Group – Philippines facts for visitors (2012)",
+    "url": "https://oxfordbusinessgroup.com/reports/philippines/2012-report/economy/facts-for-visitors-some-helpful-tips-for-travelling"
+   },
+   {
+    "name": "Inquirer Plus – The state of tipping in the Philippines",
+    "url": "https://plus.inquirer.net/lifestyle/to-tip-or-not-to-tip/"
+   }
+  ]
+ },
+ {
+  "slug": "morocco",
+  "he": "מרוקו",
+  "en": "Morocco",
+  "flag": "🇲🇦",
+  "code": "MAD",
+  "sym": "DH",
+  "cur_he": "דירהם מרוקאי",
+  "cur_en": "Moroccan Dirham",
+  "region": "mena",
+  "accent": "#C1272D",
+  "type": "percentage",
+  "min": 10,
+  "max": 15,
+  "default": 10,
+  "status": "customary",
+  "sc": "sometimes",
+  "sc_pct": 10,
+  "after": "no_additional_tip",
+  "conf": "high",
+  "verified": "2026-09-29",
+  "note_he": "כ-10% הוא הנורמה; 10%–15% במקומות בינוניים ויוקרתיים. טיפ זעום (1–2 דירהם על חשבון גדול) עלול להעליב.",
+  "note_en": "About 10% is the norm; 10%–15% at mid-range and upscale places. A tiny tip (1–2 dirhams on a large bill) can cause offence.",
+  "sources": [
+   {
+    "name": "Intrepid Travel – Tipping in Morocco",
+    "url": "https://www.intrepidtravel.com/us/morocco/tipping-in-morocco"
+   },
+   {
+    "name": "Taste of Maroc – Tipping in Morocco",
+    "url": "https://tasteofmaroc.com/tipping-in-morocco/"
+   },
+   {
+    "name": "The Conversant Traveller – Tipping in Morocco",
+    "url": "https://www.conversanttraveller.com/tipping-in-morocco-how-much-to-tip-and-when/"
+   }
+  ]
+ },
+ {
+  "slug": "hong-kong",
+  "he": "הונג קונג",
+  "en": "Hong Kong",
+  "flag": "🇭🇰",
+  "code": "HKD",
+  "sym": "HK$",
+  "cur_he": "דולר הונג קונגי",
+  "cur_en": "Hong Kong Dollar",
+  "region": "asia",
+  "accent": "#E4007C",
+  "type": "percentage",
+  "min": 5,
+  "max": 10,
+  "default": 5,
+  "status": "optional",
+  "sc": "common",
+  "sc_pct": 10,
+  "after": "optional_small_extra",
+  "conf": "medium",
+  "verified": "2026-09-29",
+  "note_he": "רוב המסעדות מוסיפות 10% שירות – אין חובה להוסיף, אבל מקובל להשאיר עודף קטן. אם אין דמי שירות: 5%–10%.",
+  "note_en": "Most restaurants add a 10% service charge. You don't have to add more, but leaving small change is common. If there's no service charge: 5%–10%.",
+  "sources": [
+   {
+    "name": "International Travel News – Suggested tipping amounts worldwide",
+    "url": "https://www.intltravelnews.com/node/8316.html"
+   },
+   {
+    "name": "Hong Kong's Best (app content) – Tipping & tax",
+    "url": "https://touchscreentravels.com/apps/hong-kongs-best/20950/tipping-tax"
+   },
+   {
+    "name": "Cathay Pacific – Tipping culture in Hong Kong",
+    "url": "https://www.cathaypacific.com/cx/en_AE/inspiration/travel/guide-tipping-hong-kong.html"
+   }
+  ]
+ },
+ {
+  "slug": "egypt",
+  "he": "מצרים",
+  "en": "Egypt",
+  "flag": "🇪🇬",
+  "code": "EGP",
+  "sym": "E£",
+  "cur_he": "לירה מצרית",
+  "cur_en": "Egyptian Pound",
+  "region": "mena",
+  "accent": "#C09300",
+  "type": "percentage",
+  "min": 10,
+  "max": 15,
+  "default": 10,
+  "status": "customary",
+  "sc": "common",
+  "sc_pct": 12,
+  "after": "add_tip_anyway",
+  "conf": "medium",
+  "verified": "2026-10-02",
+  "note_he": "מקובל להשאיר 10%–15% (לפי ה-CIA). בהרבה מסעדות ובברים מתווספים 12% 'שירות' ומע\"מ, אבל מצפים לטיפ גם מעבר לזה. 'בקשיש' נפוץ מאוד גם מחוץ למסעדות.",
+  "note_en": "Leaving 10%–15% is customary (per the CIA). Many restaurants and bars add a 12% 'service' charge plus VAT, but a tip beyond that is still expected. 'Baksheesh' is very common outside restaurants too.",
+  "sources": [
+   {
+    "name": "CIA World Factbook – Egypt Travel Facts",
+    "url": "https://www.cia.gov:443/the-world-factbook/countries/egypt/travel-facts"
+   },
+   {
+    "name": "Oxford Business Group – Egypt facts for visitors (tipping & VAT)",
+    "url": "https://oxfordbusinessgroup.com/reports/egypt/-report/economy/facts-for-visitors-useful-tips-for-business-and-leisure-travellers-9"
+   }
+  ]
+ },
+ {
+  "slug": "jordan",
+  "he": "ירדן",
+  "en": "Jordan",
+  "flag": "🇯🇴",
+  "code": "JOD",
+  "sym": "JD",
+  "cur_he": "דינר ירדני",
+  "cur_en": "Jordanian Dinar",
+  "region": "mena",
+  "accent": "#007A3D",
+  "type": "percentage",
+  "min": 5,
+  "max": 10,
+  "default": 10,
+  "status": "customary",
+  "sc": "common",
+  "sc_pct": 10,
+  "after": "optional_small_extra",
+  "conf": "high",
+  "verified": "2026-10-02",
+  "note_he": "לפי רשות התיירות של ירדן: כ-10% בנוסף לחשבון, אלא אם כבר נוספו דמי שירות. במסעדות רבות מתווספים 10% שירות שלא תמיד מגיעים למלצר – אפשר להוסיף 5%–10% במזומן על שירות טוב.",
+  "note_en": "Per the Jordan Tourism Board: about 10% on top of the bill, unless a service charge is already added. Many restaurants add 10% service that doesn't always reach the waiter; you can add 5%–10% in cash for good service.",
+  "sources": [
+   {
+    "name": "Jordan Tourism Board (Visit Jordan) – Local customs",
+    "url": "https://en.visitjordan.com/page/11/Local-Customs"
+   },
+   {
+    "name": "TouristJordan – Do you need to tip in Jordan?",
+    "url": "https://www.touristjordan.com/need-tip-jordan/"
+   },
+   {
+    "name": "World Travel Guide – Restaurants in Amman",
+    "url": "https://worldtravelguide.net/guides/middle-east/jordan/amman/restaurants"
+   },
+   {
+    "name": "Goway – Jordan country quickfacts",
+    "url": "https://Goway.com/travel-information/africa-middle-east/jordan/country-quickfacts/"
+   }
+  ]
+ },
+ {
+  "slug": "mexico",
+  "he": "מקסיקו",
+  "en": "Mexico",
+  "flag": "🇲🇽",
+  "code": "MXN",
+  "sym": "MX$",
+  "cur_he": "פסו מקסיקני",
+  "cur_en": "Mexican Peso",
+  "region": "americas",
+  "accent": "#006847",
+  "type": "percentage",
+  "min": 10,
+  "max": 15,
+  "default": 15,
+  "status": "customary",
+  "sc": "sometimes",
+  "sc_pct": null,
+  "after": "no_additional_tip",
+  "conf": "medium",
+  "verified": "2026-10-02",
+  "note_he": "10%–15% הוא הטווח הרווח; ב-Mexico News Daily כתוב 15%–20%, ובאזורי תיירות 15% נפוץ. אם בחשבון כתוב 'propina' או 'sugerencia' – זה טיפ מוצע, ואז לא מוסיפים. עדיף פסו ולא דולרים.",
+  "note_en": "10%–15% is the common range; Mexico News Daily says 15%–20%, and in tourist areas 15% is common. If the bill says 'propina' or 'sugerencia', that's a suggested tip, so don't add more. Pesos are better than dollars.",
+  "sources": [
+   {
+    "name": "Mexperience – Tipping in Mexico",
+    "url": "https://mexperience.com/?p=33"
+   },
+   {
+    "name": "Mexico News Daily – Tips for tipping in Mexico",
+    "url": "https://mexiconewsdaily.com/expat-resources/tips-for-tipping-in-mexico/"
+   },
+   {
+    "name": "Goats on the Road – Tipping in Mexico",
+    "url": "https://www.goatsontheroad.com/tipping-in-mexico/"
+   },
+   {
+    "name": "Naatik – A guide to tipping in Mexico",
+    "url": "https://naatikmexico.org/blog/a-guide-to-tipping-in-mexico"
+   }
+  ]
+ },
+ {
+  "slug": "brazil",
+  "he": "ברזיל",
+  "en": "Brazil",
+  "flag": "🇧🇷",
+  "code": "BRL",
+  "sym": "R$",
+  "cur_he": "ריאל ברזילאי",
+  "cur_en": "Brazilian Real",
+  "region": "americas",
+  "accent": "#009C3B",
+  "type": "percentage",
+  "min": 10,
+  "max": 10,
+  "default": 10,
+  "status": "customary",
+  "sc": "common",
+  "sc_pct": 10,
+  "after": "optional_small_extra",
+  "conf": "high",
+  "verified": "2026-10-02",
+  "note_he": "ברוב המסעדות מתווסף 'serviço' של 10% – זה טיפ וולונטרי טכנית, אבל כמעט כולם משלמים אותו. אם נוסף, אין צורך להוסיף; אם לא – 10%.",
+  "note_en": "Most restaurants add a 10% 'serviço'. It's technically a voluntary tip, but almost everyone pays it. If it's added, you don't need to add more; if not, leave 10%.",
+  "sources": [
+   {
+    "name": "SmarterTravel – Brazil tipping guide (info from Brazil Tourism Board)",
+    "url": "https://www.smartertravel.com/?p=260778"
+   },
+   {
+    "name": "Arabian Business – Global Tipping Guide: Brazil",
+    "url": "https://arabianbusiness.com/lists/global-tipping-guide-how-gulf-states-compare-512703-htmlitemid512653"
+   },
+   {
+    "name": "Discover Corps – Brazil tipping guidelines",
+    "url": "https://travel.discovercorps.com/home/brazil-rio-carnival-festival/tipping-guidelines"
+   },
+   {
+    "name": "South American Vacations – Guide to tipping in South America",
+    "url": "https://www.savacations.com/guide-tipping-south-america/"
+   }
+  ]
+ },
+ {
+  "slug": "argentina",
+  "he": "ארגנטינה",
+  "en": "Argentina",
+  "flag": "🇦🇷",
+  "code": "ARS",
+  "sym": "AR$",
+  "cur_he": "פסו ארגנטינאי",
+  "cur_en": "Argentine Peso",
+  "region": "americas",
+  "accent": "#4B9CD3",
+  "type": "percentage",
+  "min": 10,
+  "max": 10,
+  "default": 10,
+  "status": "customary",
+  "sc": "uncommon",
+  "sc_pct": null,
+  "after": "no_additional_tip",
+  "conf": "high",
+  "verified": "2026-10-02",
+  "note_he": "10% הוא הטיפ המקובל (CIA). 'Cubierto' הוא דמי כיסוי למסעדה, לא טיפ ולא שירות. עודף במוניות מקובל.",
+  "note_en": "10% is the customary tip (CIA). 'Cubierto' is a cover charge that goes to the restaurant, not a tip or service charge. Leaving small change for taxis is normal.",
+  "sources": [
+   {
+    "name": "CIA World Factbook – Argentina Travel Facts",
+    "url": "https://Www.Cia.gov/the-world-factbook/countries/argentina/travel-facts"
+   },
+   {
+    "name": "Landing Pad BA – Tipping and gratuities in Argentina",
+    "url": "https://landingpadba.com/tipping-and-gratuities-in-argentina/"
+   },
+   {
+    "name": "South American Vacations – Guide to tipping in South America",
+    "url": "https://www.savacations.com/guide-tipping-south-america/"
+   }
+  ]
+ },
+ {
+  "slug": "peru",
+  "he": "פרו",
+  "en": "Peru",
+  "flag": "🇵🇪",
+  "code": "PEN",
+  "sym": "S/",
+  "cur_he": "סול פרואני",
+  "cur_en": "Peruvian Sol",
+  "region": "americas",
+  "accent": "#D91023",
+  "type": "percentage",
+  "min": 10,
+  "max": 10,
+  "default": 10,
+  "status": "customary",
+  "sc": "sometimes",
+  "sc_pct": 10,
+  "after": "no_additional_tip",
+  "conf": "medium",
+  "verified": "2026-10-02",
+  "note_he": "כ-10% במסעדות ישיבה; במקומות מקומיים קטנים לא תמיד נותנים. בחלק מהמקומות כבר נוסף 10% בחשבון (CIA, גרסת 2021) – בדקו.",
+  "note_en": "About 10% at sit-down restaurants; at small local places people don't always tip. Some places already add 10% to the bill (CIA, 2021 version), so check.",
+  "sources": [
+   {
+    "name": "CIA World Factbook – Peru Travel Facts (2021 archive)",
+    "url": "https://www.cia.gov:443/the-world-factbook/about/archives/2021/static/df9e625cf516053743c142693146c9c3/PE-travel-facts.pdf"
+   },
+   {
+    "name": "Peru for Less – Tipping in Peru",
+    "url": "https://www.peruforless.com/blog/tipping-in-peru"
+   },
+   {
+    "name": "South American Vacations – Guide to tipping in South America",
+    "url": "https://www.savacations.com/guide-tipping-south-america/"
+   }
+  ]
+ },
+ {
+  "slug": "colombia",
+  "he": "קולומביה",
+  "en": "Colombia",
+  "flag": "🇨🇴",
+  "code": "COP",
+  "sym": "COL$",
+  "cur_he": "פסו קולומביאני",
+  "cur_en": "Colombian Peso",
+  "region": "americas",
+  "accent": "#F2B705",
+  "type": "percentage",
+  "min": 10,
+  "max": 10,
+  "default": 10,
+  "status": "customary",
+  "sc": "common",
+  "sc_pct": 10,
+  "after": "no_additional_tip",
+  "conf": "high",
+  "verified": "2026-10-02",
+  "note_he": "במסעדות ישיבה מוצעת 'propina voluntaria' של 10% – המלצר שואל אם להוסיף, ואפשר לסרב או לשנות. אם אישרתם – זה הטיפ.",
+  "note_en": "At sit-down restaurants a 10% 'propina voluntaria' is offered: the waiter asks whether to add it, and you can decline or change it. If you accept, that's the tip.",
+  "sources": [
+   {
+    "name": "Moving to Colombia – Tipping in Colombia",
+    "url": "https://colombiamove.com/blog/tipping-in-colombia-guide/"
+   },
+   {
+    "name": "Tripmasters – How to tip in Colombia",
+    "url": "https://www.tripmasters.com/tipping%20in%20colombia/cms?cms=6076&"
+   },
+   {
+    "name": "Medellín.co – Money & currency (tipping)",
+    "url": "https://medellin.co/plan-your-trip/currency"
+   },
+   {
+    "name": "Flavors of Bogotá – Tipping in South America",
+    "url": "https://flavorsofbogota.com/tipping-in-south-america/"
+   }
+  ]
+ },
+ {
+  "slug": "dominican-republic",
+  "he": "הרפובליקה הדומיניקנית",
+  "en": "Dominican Republic",
+  "flag": "🇩🇴",
+  "code": "DOP",
+  "sym": "RD$",
+  "cur_he": "פסו דומיניקני",
+  "cur_en": "Dominican Peso",
+  "region": "americas",
+  "accent": "#002D62",
+  "type": "percentage",
+  "min": 10,
+  "max": 15,
+  "default": 10,
+  "status": "customary",
+  "sc": "common",
+  "sc_pct": 10,
+  "after": "varies",
+  "conf": "medium",
+  "verified": "2026-10-02",
+  "note_he": "ה-CIA: מצופה 10% אלא אם דמי שירות כבר נוספו. Frommer's: הרבה מסעדות מוסיפות 10% ועדיין נהוג להוסיף 10%–15% – לכן הוראה 'משתנה'. במלונות הכול כלול נהוג לתת קצת למלצר.",
+  "note_en": "The CIA says 10% is expected unless a service charge was already added. Frommer's says many restaurants add 10% and it's still common to add 10%–15%, so the advice is 'varies'. At all-inclusive resorts it's normal to give the bartender or waiter a little.",
+  "sources": [
+   {
+    "name": "CIA World Factbook – Dominican Republic Travel Facts",
+    "url": "https://www.cia.gov:443/the-world-factbook/countries/dominican-republic/travel-facts"
+   },
+   {
+    "name": "Frommer's – Tipping in the Dominican Republic",
+    "url": "https://www.frommers.com/tips/money-and-currency/tipping-in-the-dominican-republic/"
+   }
+  ]
+ },
+ {
+  "slug": "australia",
+  "he": "אוסטרליה",
+  "en": "Australia",
+  "flag": "🇦🇺",
+  "code": "AUD",
+  "sym": "A$",
+  "cur_he": "דולר אוסטרלי",
+  "cur_en": "Australian Dollar",
+  "region": "other",
+  "accent": "#00843D",
+  "type": "round_up",
+  "min": 0,
+  "max": 10,
+  "default": 0,
+  "status": "optional",
+  "sc": "uncommon",
+  "sc_pct": null,
+  "after": "no_additional_tip",
+  "conf": "medium",
+  "verified": "2026-10-02",
+  "note_he": "לא מצופה; מעגלים או משאירים עד 10% על שירות טוב. Lonely Planet: 10%–15% במסעדות שירות מלא בערים גדולות. בסופי שבוע ובחגים לעיתים מתווספת תוספת 10%.",
+  "note_en": "Not expected; people round up or leave up to 10% for good service. Lonely Planet: 10%–15% at full-service restaurants in big cities. A 10% surcharge is sometimes added on weekends and public holidays.",
+  "sources": [
+   {
+    "name": "Lonely Planet – Tipping customs in Oceania",
+    "url": "https://www.lonelyplanet.com/articles/tipping-customs-oceania"
+   },
+   {
+    "name": "Mozo – Tipping culture in Australia",
+    "url": "https://mozo.com.au/family-finances/what-is-the-tipping-culture-in-australia-a-guide-for-visitors"
+   },
+   {
+    "name": "Traveller.com.au – How much should you tip in Australia",
+    "url": "https://www.traveller.com.au/how-much-should-you-tip-in-australia-gkcoxz"
+   },
+   {
+    "name": "Finder – Tipping waitstaff in Australia (survey)",
+    "url": "https://finder.com.au/tipping-waitstaff-in-australia"
+   }
+  ]
+ },
+ {
+  "slug": "new-zealand",
+  "he": "ניו זילנד",
+  "en": "New Zealand",
+  "flag": "🇳🇿",
+  "code": "NZD",
+  "sym": "NZ$",
+  "cur_he": "דולר ניו זילנדי",
+  "cur_en": "New Zealand Dollar",
+  "region": "other",
+  "accent": "#1D3F8F",
+  "type": "round_up",
+  "min": 0,
+  "max": 10,
+  "default": 0,
+  "status": "not_customary",
+  "sc": "uncommon",
+  "sc_pct": null,
+  "after": "no_additional_tip",
+  "conf": "high",
+  "verified": "2026-10-02",
+  "note_he": "רשות התיירות: טיפ אינו נהוג או מצופה. 10% נחשב יותר ממספיק. בחגים ציבוריים מתווספת תוספת 10%–15% שמוסברת מראש.",
+  "note_en": "Per Tourism New Zealand, tipping isn't customary or expected. 10% is considered more than enough. A 10%–15% surcharge is added on public holidays, and it's explained in advance.",
+  "sources": [
+   {
+    "name": "Tourism New Zealand (newzealand.com) – Is tipping customary?",
+    "url": "https://www.newzealand.com.au/info/frequently-asked-questions/is-tipping-customary-in-new-zealand"
+   },
+   {
+    "name": "Restaurant Association of New Zealand – Tipping in NZ",
+    "url": "https://www.restaurantnz.co.nz/savour/tipping-in-new-zealand-a-friendly-nod-to-great-service"
+   },
+   {
+    "name": "Wise Move NZ – How much do you tip in New Zealand",
+    "url": "https://www.wisemove.co.nz/post/how-much-do-you-tip-in-new-zealand"
+   },
+   {
+    "name": "AskExplorer – Tipping in New Zealand",
+    "url": "https://www.askexplorer.com/new-zealand/residents/about/money/tipping"
+   }
+  ]
+ },
+ {
+  "slug": "indonesia",
+  "he": "אינדונזיה",
+  "en": "Indonesia",
+  "flag": "🇮🇩",
+  "code": "IDR",
+  "sym": "Rp",
+  "cur_he": "רופיה",
+  "cur_en": "Indonesian Rupiah",
+  "region": "asia",
+  "accent": "#E70011",
+  "type": "percentage",
+  "min": 5,
+  "max": 10,
+  "default": 5,
+  "status": "optional",
+  "sc": "common",
+  "sc_pct": 10,
+  "after": "no_additional_tip",
+  "conf": "medium",
+  "verified": "2026-10-02",
+  "note_he": "בבאלי ובמסעדות בינוניות ומעלה מתווספים 5%–10% דמי שירות (בנוסף למס PB1) – אז לא מוסיפים. בלי דמי שירות: 5%–10%.",
+  "note_en": "In Bali, and at mid-range and upscale restaurants, a 5%–10% service charge is added (on top of PB1 tax), so don't add more. With no service charge: 5%–10%.",
+  "sources": [
+   {
+    "name": "SmarterTravel – Indonesia tipping guide (info from Ministry of Tourism, Indonesia)",
+    "url": "https://www.smartertravel.com/tipping-in-indonesia-the-indonesia-tipping-guide/"
+   },
+   {
+    "name": "Bali Holiday Secrets – Tipping in Bali",
+    "url": "https://www.baliholidaysecrets.com/tipping-in-bali/"
+   },
+   {
+    "name": "International Travel News – Suggested tipping amounts worldwide",
+    "url": "https://www.intltravelnews.com/node/8316.html"
+   }
+  ]
+ },
+ {
+  "slug": "sri-lanka",
+  "he": "סרי לנקה",
+  "en": "Sri Lanka",
+  "flag": "🇱🇰",
+  "code": "LKR",
+  "sym": "Rs",
+  "cur_he": "רופי סרי לנקי",
+  "cur_en": "Sri Lankan Rupee",
+  "region": "asia",
+  "accent": "#8D153A",
+  "type": "percentage",
+  "min": 10,
+  "max": 15,
+  "default": 10,
+  "status": "customary",
+  "sc": "common",
+  "sc_pct": 10,
+  "after": "optional_small_extra",
+  "conf": "high",
+  "verified": "2026-10-02",
+  "note_he": "10% מקובל (CIA). דמי שירות של 10% כלולים לרוב; אז מוסיפים רק קצת. במקומות קטנים בלי עמלה: 10%–15%.",
+  "note_en": "10% is customary (CIA). A 10% service charge is usually included, so add only a little. At small places with no charge: 10%–15%.",
+  "sources": [
+   {
+    "name": "CIA World Factbook – Sri Lanka Travel Facts",
+    "url": "https://Www.Cia.gov/the-world-factbook/countries/sri-lanka/travel-facts"
+   },
+   {
+    "name": "Experience Travel Group – Guide to tipping in Sri Lanka",
+    "url": "https://www.experiencetravelgroup.com/blog/tipping-sri-lanka"
+   },
+   {
+    "name": "Wendy Wu Tours – Tipping in Sri Lanka",
+    "url": "https://help.wendywutours.com.au/knowledge/tipping-sri-lanka"
+   }
+  ]
+ },
+ {
+  "slug": "maldives",
+  "he": "המלדיביים",
+  "en": "Maldives",
+  "flag": "🇲🇻",
+  "code": "USD",
+  "sym": "$",
+  "cur_he": "דולר אמריקאי (נפוץ בריזורטים)",
+  "cur_en": "US Dollar",
+  "region": "asia",
+  "accent": "#0AA6A6",
+  "type": "percentage",
+  "min": 10,
+  "max": 15,
+  "default": 10,
+  "status": "optional",
+  "sc": "common",
+  "sc_pct": 10,
+  "after": "no_additional_tip",
+  "conf": "medium",
+  "verified": "2026-10-02",
+  "note_he": "בריזורטים ובמסעדות מתווספים 10% שירות (בחלק מהמקורות 10%–12.5%) – אין צורך להוסיף. מי שרוצה מוסיף דולרים במזומן לצוות. אם אין עמלה (נדיר): 10%–15%.",
+  "note_en": "Resorts and restaurants add a 10% service charge (10%–12.5% in some sources), so there's no need to add more. If you like, add cash dollars for the staff. With no charge (rare): 10%–15%.",
+  "sources": [
+   {
+    "name": "Experience Travel Group – How much to tip in the Maldives",
+    "url": "https://www.experiencetravelgroup.com/blog/how-much-to-tip-in-the-maldives"
+   },
+   {
+    "name": "A Maldives – Maldives tipping guide 2026",
+    "url": "https://amaldives.com/blog/maldives-tipping-guide"
+   },
+   {
+    "name": "TravelOnline – Maldives currency (tipping)",
+    "url": "https://www.travelonline.com/maldives/currency"
+   }
+  ]
+ },
+ {
+  "slug": "malaysia",
+  "he": "מלזיה",
+  "en": "Malaysia",
+  "flag": "🇲🇾",
+  "code": "MYR",
+  "sym": "RM",
+  "cur_he": "רינגיט",
+  "cur_en": "Malaysian Ringgit",
+  "region": "asia",
+  "accent": "#CC0001",
+  "type": "round_up",
+  "min": 0,
+  "max": 10,
+  "default": 0,
+  "status": "optional",
+  "sc": "common",
+  "sc_pct": 10,
+  "after": "no_additional_tip",
+  "conf": "medium",
+  "verified": "2026-10-02",
+  "note_he": "טיפ לא נהוג. במסעדות מערביות ובמלונות מתווספים 10% שירות במקום טיפ. בלי עמלה: משאירים עודף, ועד 10% אם רוצים.",
+  "note_en": "Tipping isn't customary. Western-style restaurants and hotels add a 10% service charge instead of a tip. With no charge: leave your change, and up to 10% if you like.",
+  "sources": [
+   {
+    "name": "Experience Travel Group – Tipping guidelines for Malaysia",
+    "url": "https://www.experiencetravelgroup.com/blog/tipping-guidelines-malaysia"
+   },
+   {
+    "name": "Malay Mail – 10% service charge stays (Customs Dept definition)",
+    "url": "https://www.malaymail.com/news/malaysia/2018/07/18/hoteliers-insist-10pc-service-charge-not-going-anywhere/1653411"
+   },
+   {
+    "name": "Arabian Business – Global Tipping Guide: Malaysia",
+    "url": "https://arabianbusiness.com/lists/global-tipping-guide-how-gulf-states-compare-512703-htmlitemid512678"
+   },
+   {
+    "name": "Lonely Planet – Tipping customs in Asia (URL retrieved on nonprod subdomain)",
+    "url": "https://www.nonprod.lonelyplanet.com/articles/tipping-customs-asia"
+   }
+  ]
+ },
+ {
+  "slug": "cambodia",
+  "he": "קמבודיה",
+  "en": "Cambodia",
+  "flag": "🇰🇭",
+  "code": "USD",
+  "sym": "$",
+  "cur_he": "דולר אמריקאי (נפוץ), ריאל",
+  "cur_en": "US Dollar",
+  "region": "asia",
+  "accent": "#032EA1",
+  "type": "percentage",
+  "min": 5,
+  "max": 10,
+  "default": 10,
+  "status": "appreciated",
+  "sc": "sometimes",
+  "sc_pct": null,
+  "after": "no_additional_tip",
+  "conf": "medium",
+  "verified": "2026-10-02",
+  "note_he": "5%–10% מוערך, ו-10% מלפני מס נחשב סטנדרטי במסעדות תיירותיות. במקומות יוקרה ובקבוצות מתווספים 7%–15% שירות. המחירים לרוב בדולרים.",
+  "note_en": "5%–10% is appreciated, and 10% of the pre-tax bill is standard at tourist restaurants. Upscale venues and groups get a 7%–15% service charge. Prices are usually in dollars.",
+  "sources": [
+   {
+    "name": "Indochina Tour – Tipping in Cambodia (2025)",
+    "url": "https://www.indochinatour.com/tipping-in-cambodia.html"
+   },
+   {
+    "name": "Intrepid Travel – Tipping in Cambodia",
+    "url": "https://intrepidtravel.com/us/cambodia/tipping-in-cambodia"
+   },
+   {
+    "name": "Experience Travel Group – Tipping in Cambodia",
+    "url": "https://www.experiencetravelgroup.com/blog/tipping-cambodia"
+   },
+   {
+    "name": "Hello – Cambodia currency & money guide",
+    "url": "https://www.travelwithhello.com/blog/cambodia-currency-money-guide"
+   }
+  ]
+ },
+ {
+  "slug": "nepal",
+  "he": "נפאל",
+  "en": "Nepal",
+  "flag": "🇳🇵",
+  "code": "NPR",
+  "sym": "Rs",
+  "cur_he": "רופי נפאלי",
+  "cur_en": "Nepalese Rupee",
+  "region": "asia",
+  "accent": "#DC143C",
+  "type": "percentage",
+  "min": 10,
+  "max": 10,
+  "default": 10,
+  "status": "customary",
+  "sc": "common",
+  "sc_pct": 10,
+  "after": "no_additional_tip",
+  "conf": "high",
+  "verified": "2026-10-02",
+  "note_he": "במסעדות תיירותיות מתווספים 10% שירות + 13% מע\"מ – השירות הוא הטיפ. במסעדות מקומיות בלי עמלה: 10%.",
+  "note_en": "Tourist restaurants add a 10% service charge plus 13% VAT; the service charge is the tip. At local restaurants with no charge: 10%.",
+  "sources": [
+   {
+    "name": "The Kathmandu Post – Service charge row (10% + 13% VAT)",
+    "url": "https://kathmandupost.com/money/2017/01/28/meeting-between-hotels-workers-ends-fruitless"
+   },
+   {
+    "name": "The Longest Way Home – Restaurants in Kathmandu",
+    "url": "https://thelongestwayhome.com/travel-guides/nepal/kathmandu/restaurants-in-kathmandu.html"
+   },
+   {
+    "name": "Full Time Explorer – Tipping in Nepal",
+    "url": "https://fulltimeexplorer.com/tipping-nepal-guide/"
+   },
+   {
+    "name": "Great Himalaya Trail – How to bargain and tip",
+    "url": "https://greathimalayatrail.com/?p=6009"
+   }
+  ]
+ },
+ {
+  "slug": "south-africa",
+  "he": "דרום אפריקה",
+  "en": "South Africa",
+  "flag": "🇿🇦",
+  "code": "ZAR",
+  "sym": "R",
+  "cur_he": "ראנד",
+  "cur_en": "South African Rand",
+  "region": "other",
+  "accent": "#007749",
+  "type": "percentage",
+  "min": 10,
+  "max": 15,
+  "default": 15,
+  "status": "expected",
+  "sc": "sometimes",
+  "sc_pct": null,
+  "after": "no_additional_tip",
+  "conf": "high",
+  "verified": "2026-10-02",
+  "note_he": "10% הוא המינימום ו-15% שכיח יותר. הרבה מלצרים מסתמכים על טיפים. בקבוצות גדולות ובמסעדות יוקרה לעיתים מתווספים 10%–12.5% – בדקו. עדיף מזומן.",
+  "note_en": "10% is the minimum and 15% is more common. Many waiters rely on tips. Large groups and upscale restaurants sometimes add 10%–12.5%, so check. Cash is better.",
+  "sources": [
+   {
+    "name": "Cape Town Magazine – Guide to tipping in South Africa",
+    "url": "https://www.capetownmagazine.com/tipping-south-africa"
+   },
+   {
+    "name": "Evaneos – Tipping in South Africa",
+    "url": "https://www.evaneos.com/south-africa/holidays/essential-information/4153-tipping-in-south-africa/"
+   },
+   {
+    "name": "Wise Move SA – Tipping in South Africa",
+    "url": "https://wisemove.co.za/post/tipping-in-south-africa-when-and-how-much"
+   },
+   {
+    "name": "Cape Tourism – How much should you tip in South Africa",
+    "url": "https://www.capetourism.com/how-much-should-you-tip-in-south-africa/"
+   }
+  ]
+ },
+ {
+  "slug": "norway",
+  "he": "נורווגיה",
+  "en": "Norway",
+  "flag": "🇳🇴",
+  "code": "NOK",
+  "sym": "kr",
+  "cur_he": "כתר נורווגי",
+  "cur_en": "Norwegian Krone",
+  "region": "europe_west",
+  "accent": "#BA0C2F",
+  "type": "round_up",
+  "min": 0,
+  "max": 10,
+  "default": 0,
+  "status": "optional",
+  "sc": "uncommon",
+  "sc_pct": null,
+  "after": "no_additional_tip",
+  "conf": "high",
+  "verified": "2026-10-02",
+  "note_he": "לא נהוג וקצת מביך להשאיר טיפ בסגנון אמריקאי. מעגלים או משאירים עד 5%–10% על שירות יוצא דופן. אם מתווספים דמי שירות – אין צורך להוסיף.",
+  "note_en": "Tipping isn't customary, and an American-style tip can feel awkward. Round up, or leave 5%–10% for exceptional service. If a service charge is added, you don't need to add more.",
+  "sources": [
+   {
+    "name": "The Local Norway – Restaurant bill etiquette (2024)",
+    "url": "https://www.thelocal.no/20240920/explained-restaurant-bill-etiquette-in-norway"
+   },
+   {
+    "name": "SmarterTravel – Norway tipping guide (confirmed by Innovation Norway)",
+    "url": "https://www.smartertravel.com/tipping-in-norway-the-norway-tipping-guide/"
+   },
+   {
+    "name": "Lonely Planet – Pocket Oslo (tipping)",
+    "url": "https://media.lonelyplanet.com/shop/pdfs/pocket-oslo-1-preview.pdf"
+   }
+  ]
+ },
+ {
+  "slug": "iceland",
+  "he": "איסלנד",
+  "en": "Iceland",
+  "flag": "🇮🇸",
+  "code": "ISK",
+  "sym": "kr",
+  "cur_he": "כתר איסלנדי",
+  "cur_en": "Icelandic Krona",
+  "region": "europe_west",
+  "accent": "#02529C",
+  "type": "round_up",
+  "min": 0,
+  "max": 10,
+  "default": 0,
+  "status": "not_customary",
+  "sc": "included_in_price",
+  "sc_pct": null,
+  "after": "no_additional_tip",
+  "conf": "medium",
+  "verified": "2026-10-02",
+  "note_he": "לא נהוג ולא מצופה; השירות כלול במחירי התפריט. אפשר לעגל, ועד 5%–10% נחשב נדיב.",
+  "note_en": "Not customary and not expected; service is included in menu prices. You can round up, and 5%–10% is considered generous.",
+  "sources": [
+   {
+    "name": "Radical Storage – Tipping in Iceland (2025)",
+    "url": "https://radicalstorage.com/travel/tipping-in-iceland-complete-guide-to-icelandic-tipping-culture-2025/"
+   },
+   {
+    "name": "All Things Iceland – Iceland tipping culture",
+    "url": "https://allthingsiceland.com/iceland-tipping-culture-what-to-know/"
+   },
+   {
+    "name": "Reykjavik Cars – Iceland tipping culture",
+    "url": "https://www.reykjavikcars.com/blog/icelandic-culture/iceland-tipping-culture"
+   },
+   {
+    "name": "Your Mileage May Vary (Aug 2026) quoting VisitCopenhagen",
+    "url": "https://yourmileagemayvary.com/2026/08/15/destinations-where-tipping-isnt-expected/"
+   }
+  ]
+ },
+ {
+  "slug": "malta",
+  "he": "מלטה",
+  "en": "Malta",
+  "flag": "🇲🇹",
+  "code": "EUR",
+  "sym": "€",
+  "cur_he": "אירו",
+  "cur_en": "Euro",
+  "region": "europe_west",
+  "accent": "#CF142B",
+  "type": "percentage",
+  "min": 5,
+  "max": 10,
+  "default": 10,
+  "status": "customary",
+  "sc": "sometimes",
+  "sc_pct": null,
+  "after": "no_additional_tip",
+  "conf": "high",
+  "verified": "2026-10-02",
+  "note_he": "נהוג 5%–10% על שירות טוב (CIA). ברוב המסעדות לא נוסף שירות, ואז כ-10% נפוץ. אם יש דמי שירות בחשבון – לא צריך להוסיף.",
+  "note_en": "5%–10% for good service is customary (CIA). Most restaurants don't add a service charge, and 10% is then common. If a service charge is on the bill, you don't need to add more.",
+  "sources": [
+   {
+    "name": "CIA World Factbook – Malta Travel Facts (PDF)",
+    "url": "https://cia.gov/the-world-factbook/static/d2d00953c4b1b1bfac6c0eac012759c5/MT-travel-facts.pdf"
+   },
+   {
+    "name": "Holiday Hypermarket – Malta currency & tipping",
+    "url": "https://www.holidayhypermarket.co.uk/hype/guide-to-currency-and-prices-in-malta"
+   },
+   {
+    "name": "InterContinental Malta – Concierge guide (tipping)",
+    "url": "https://malta.intercontinental.com/wp-content/uploads/2025/06/IC-Malta-Map.pdf"
+   }
+  ]
+ }
+]

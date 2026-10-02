@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="{{lang}}" dir="{{dir}}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>{{title}}</title>
+<meta name="description" content="{{description}}">
+<link rel="canonical" href="{{canonical}}">
+{{alternates}}
+<meta property="og:title" content="{{title}}">
+<meta property="og:description" content="{{description}}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="TipReveal">
+<meta property="og:url" content="{{canonical}}">
+<meta property="og:image" content="{{ogImage}}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="{{og_locale}}">
+<meta property="og:locale:alternate" content="{{og_alt}}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#2563EB">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧾</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Karantina:wght@400;700&family=IBM+Plex+Sans+Hebrew:wght@400;500;600;700&display=swap" rel="stylesheet">
+{{jsonld}}
+<link rel="stylesheet" href="/style.css?v={{ver}}">
+{{theme}}
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="logo" href="{{homeHref}}" aria-label="TipReveal" dir="ltr"><span>Tip</span>Reveal</a>
+    <div class="right">
+      <small>{{tagline}}</small>
+      <a class="langbtn" id="lang-toggle" href="{{langHref}}" hreflang="{{other_lang}}" lang="{{other_lang}}" aria-label="{{lang_aria}}">{{lang_label}}</a>
+    </div>
+  </header>
+  <main class="hero">
+    <div class="headline">
+      <h1>{{h1_a}} <span class="place" id="h-place">{{h1_place}}</span></h1>
+      <p>{{heroP}}</p>
+      <div class="quick" id="quick" aria-label="{{quickAria}}">{{quickHtml}}</div>
+    </div>
+
+    <form class="receipt" id="calc" onsubmit="return false" aria-label="TipReveal">
+      <div class="rhead"><b>{{receipt_head}}</b><span id="r-date"></span></div>
+
+      <div class="field">
+        <label class="f" id="lbl-country">{{label_country}}</label>
+        <div class="combo" id="combo">
+          <div class="combo-row">
+            <button type="button" class="combo-btn" id="combo-btn" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="lbl-country combo-btn">
+              <span class="fl" id="c-flag">{{c_flag}}</span><span id="c-name">{{c_name}}</span><span class="chev" aria-hidden="true">▾</span>
+            </button>
+            <button type="button" class="fav-btn" id="fav-btn" aria-pressed="false" aria-label="{{fav_generic_aria}}"><span id="fav-ico" aria-hidden="true">☆</span></button>
+          </div>
+          <div class="combo-pop">
+            <div class="hint">{{combo_hint}}</div>
+            <input id="combo-q" type="search" placeholder="{{search_ph}}" autocomplete="off" aria-controls="combo-list" aria-label="{{search_aria}}">
+            <ul id="combo-list" role="listbox" aria-labelledby="lbl-country"></ul>
+          </div>
+        </div>
+        <div class="fav-note" id="fav-note" role="status" aria-live="polite"></div>
+      </div>
+
+      <div class="field">
+        <label class="f" for="bill">{{label_bill}}</label>
+        <div class="money"><span class="sym" id="sym">{{c_sym}}</span><input id="bill" inputmode="decimal" placeholder="0" value="{{c_bill}}" aria-describedby="sym"></div>
+      </div>
+
+      <div class="norm" id="norm" aria-live="polite"></div>
+
+      <label class="f" id="lbl-pct">{{label_pct}}</label>
+      <div class="pcts" id="pcts" role="group" aria-labelledby="lbl-pct"></div>
+      <div class="slider"><div class="band" id="band"></div>
+        <input type="range" id="pct" min="0" max="30" step="1" value="12" aria-label="{{pct_aria}}">
+      </div>
+      <div class="scale" aria-hidden="true"><span>0%</span><span>10%</span><span>20%</span><span>30%</span></div>
+
+      <label class="toggle"><input type="checkbox" id="sc"> {{sc_toggle}}</label>
+      <div class="advice" id="advice" aria-live="polite"></div>
+
+      <div class="result">
+        <div class="lbl">{{lbl_leave}}</div>
+        <div class="big" id="tip" aria-live="polite"></div>
+        <dl class="rows">
+          <dt>{{lbl_total}}</dt><dd id="total"></dd>
+          <dt><span class="split">{{lbl_split}} <button type="button" id="minus" aria-label="{{minus_aria}}">−</button><output id="ppl">1</output><button type="button" id="plus" aria-label="{{plus_aria}}">+</button></span></dt><dd id="per"></dd>
+        </dl>
+        <p class="note" id="note"></p>
+        <details class="src"><summary>{{src_summary}} <span class="conf" id="conf"></span></summary><ul id="srcs"></ul><div id="verified"></div></details>
+      </div>
+    </form>
+  </main>
+</div>
+
+{{sections}}
+
+<footer><div class="wrap">
+  <span>{{foot}}</span>
+  <button type="button" id="report" hidden>{{report_btn}}</button>
+</div></footer>
+
+<script>window.PAGE={{pageJson}};</script>
+<script src="/data.js?v={{ver}}" defer></script>
+<script src="/i18n.js?v={{ver}}" defer></script>
+<script src="/shared.js?v={{ver}}" defer></script>
+<script src="/config.js?v={{ver}}" defer></script>
+<script src="/app.js?v={{ver}}" defer></script>
+</body>
+</html>
