@@ -20,7 +20,9 @@ a{color:inherit}
 .wrap{max-width:1040px;margin:0 auto;padding:0 20px}
 header.top{display:flex;align-items:center;justify-content:space-between;padding:18px 0;color:var(--on-accent)}
 .logo{font-family:var(--display);font-weight:700;font-size:38px;line-height:1;letter-spacing:.5px;text-decoration:none}
-.logo span{display:inline-block;transform:rotate(-8deg)}
+.logo{display:inline-flex;align-items:center;gap:9px}
+.logo .globe{width:42px;height:42px;flex:none}
+.logo .rot{display:inline-block;transform:rotate(-8deg);margin-inline-end:3px}
 .top small{font-size:14px;opacity:.9}
 .hero>*{min-width:0}
 .hero{display:grid;grid-template-columns:1fr minmax(320px,440px);gap:40px;align-items:start;padding:12px 0 56px}
@@ -154,7 +156,6 @@ tbody tr:hover td a{text-decoration:underline}
 [dir="ltr"] .money input{text-align:left;padding:10px 0 10px 14px}
 [dir="ltr"] .rows dd{text-align:right}
 [dir="ltr"] th,[dir="ltr"] td{text-align:left}
-[dir="ltr"] .logo span{transform:rotate(-8deg)}
 .article{background:var(--paper);color:var(--ink)}
 .article .wrap{max-width:860px;padding-top:44px;padding-bottom:56px}
 .crumbs{font-size:14px;color:var(--muted);margin-bottom:22px}
@@ -183,3 +184,16 @@ tbody tr:hover td a{text-decoration:underline}
 
 /* English headline is wider than Hebrew: scale it down a little */
 html[lang="en"] .headline h1{font-size:clamp(44px,7.6vw,100px);line-height:.92;overflow-wrap:anywhere}
+
+.qh{color:var(--on-accent);opacity:.82;font-size:14px;align-self:center}
+
+/* Header + favorites row on small screens */
+.logo{white-space:nowrap}
+@media (max-width:820px){
+  .logo{font-size:30px;gap:7px}
+  .logo .globe{width:34px;height:34px}
+  .top .right{gap:8px}
+  .langbtn{padding:5px 11px;font-size:13px}
+  .quick{flex-wrap:wrap;overflow-x:visible}
+}
+@media (max-width:820px){ html[lang="en"] .headline h1{font-size:clamp(34px,9.4vw,60px)} }

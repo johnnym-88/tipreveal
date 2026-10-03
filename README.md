@@ -1,4 +1,4 @@
-# TipReveal
+# Kama Tip?
 
 Restaurant tipping calculator for travelers: 71 destinations, Hebrew + English, one page per country.
 
@@ -20,3 +20,6 @@ The build fails with a clear message if a field is missing or invalid.
 - `src/page.html` – page template · `src/style.css` · `src/app.js` · `src/shared.js`
 - `public/` – static files copied as-is (`og.png`, `og-en.png`, `config.js`)
 - `public/config.js` – optional: paste the n8n feedback webhook URL to show the "Found a mistake?" button
+
+## Domain
+The site URL (canonical, sitemap, hreflang, share images) comes from the `SITE_URL` environment variable at build time (fallback in `build.mjs`). In Vercel: Settings → Environment Variables → `SITE_URL` = `https://your-domain`, then Redeploy.

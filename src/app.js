@@ -1,6 +1,6 @@
 (function () {
   "use strict";
-  var P = window.PAGE, L = window.I18N[P.lang], DATA = window.TIPS, CFG = window.TIPREVEAL_CONFIG || {}, S = window.Shared;
+  var P = window.PAGE, L = window.I18N[P.lang], DATA = window.TIPS, CFG = window.KAMATIP_CONFIG || {}, S = window.Shared;
   var lang = P.lang, isHe = lang === "he";
   var $ = function (s) { return document.querySelector(s); };
   var store = {
@@ -13,9 +13,8 @@
   var place = function (c) { return S.placeOf(c, lang, L, true); };
   var money = function (v, c) { return S.money(v, c, L.num_locale); };
   var urlOf = function (c) { return (isHe ? "" : "/en") + "/tip/" + c.slug; };
-  var QUICK = ["Greece", "Cyprus", "Thailand", "Czech Republic", "Hungary", "United States", "Israel", "United Kingdom", "Japan"];
 
-  var h1Dynamic = false, cur = null, pct = 12, people = 1, userPct = false, billTouched = false, favs = [], noteTimer = null, active = 0, filtered = [];
+  var cur = null, pct = 12, people = 1, userPct = false, billTouched = false, favs = [], noteTimer = null, active = 0, filtered = [];
 
   function billVal() {
     var v = parseFloat(($("#bill").value || "").replace(/[^\d.]/g, ""));
@@ -29,16 +28,14 @@
   function sampleMid(c) { return (S.SAMPLE[c.code] || [50, 100, 200])[1]; }
 
   /* ---------- country ---------- */
-  function setCountry(c, fromUser) {
+  function setCountry(c) {
     cur = c;
-    if (fromUser) store.set("tipreveal-country", c.en);
-    if (favs.indexOf(c.en) >= 0) store.set("tipreveal-lastfav", c.en);
+    if (favs.indexOf(c.en) >= 0) store.set("kamatip-lastfav", c.en);
     var a = c.accent || "#7C3AED", st = document.documentElement.style;
     st.setProperty("--accent", a); st.setProperty("--on-accent", S.onAccent(a)); st.setProperty("--accent-text", S.accentText(a));
     var tc = document.querySelector('meta[name="theme-color"]'); if (tc) tc.content = a;
     $("#c-flag").textContent = c.flag; $("#c-name").textContent = nm(c); $("#sym").textContent = c.sym;
     syncFavBtn();
-    if (P.type === "home" && (fromUser || h1Dynamic)) { h1Dynamic = true; $("#h-place").textContent = S.placeOf(c, lang, L, false) + "?"; }
     document.querySelectorAll("#quick button").forEach(function (b) { b.setAttribute("aria-pressed", b.dataset.en === c.en); });
 
     var rg = c.type === "percentage" ? '<bdi dir="ltr">' + S.pctRange(c) + "</bdi>" : S.rangePhrase(c, L);
@@ -94,7 +91,7 @@
   /* ---------- favorites ---------- */
   function loadFavs() {
     try {
-      var a = JSON.parse(store.get("tipreveal-favs") || "[]");
+      var a = JSON.parse(store.get("kamatip-favs") || "[]");
       return Array.isArray(a) ? a.filter(function (x) { return DATA.some(function (d) { return d.en === x; }); }) : [];
     } catch (e) { return []; }
   }
@@ -112,9 +109,9 @@
     var c = DATA.find(function (d) { return d.en === en; }); if (!c) return;
     var i = favs.indexOf(en), adding = i < 0;
     if (adding) favs.push(en); else favs.splice(i, 1);
-    var json = JSON.stringify(favs); store.set("tipreveal-favs", json);
-    var saved = store.get("tipreveal-favs") === json;
-    if (adding && (!store.get("tipreveal-lastfav") || (cur && cur.en === en))) store.set("tipreveal-lastfav", en);
+    var json = JSON.stringify(favs); store.set("kamatip-favs", json);
+    var saved = store.get("kamatip-favs") === json;
+    if (adding && (!store.get("kamatip-lastfav") || (cur && cur.en === en))) store.set("kamatip-lastfav", en);
     syncFavBtn(); if (P.type === "home") renderQuick();
     if ($("#combo").classList.contains("open")) renderList($("#combo-q").value, true);
     if (!saved) say(L.fav_blocked);
@@ -122,20 +119,23 @@
     else say(fmt(L.fav_removed, { name: nm(c) }));
   }
   function renderQuick() {
-    var list = favs.length ? favs : QUICK;
-    $("#quick").setAttribute("aria-label", favs.length ? L.quick_aria_favs : L.quick_aria_pop);
-    $("#quick").innerHTML = '<span class="ql">' + (favs.length ? L.quick_favs_label : L.quick_examples_label) + "</span>" +
-      list.map(function (en) {
-        var c = DATA.find(function (d) { return d.en === en; });
-        return c ? '<button type="button" data-en="' + en + '" aria-pressed="' + (!!cur && cur.en === en) + '">' + c.flag + " " + nm(c) + "</button>" : "";
-      }).join("");
-    $("#quick").querySelectorAll("button").forEach(function (b) {
-      b.onclick = function () { setCountry(DATA.find(function (d) { return d.en === b.dataset.en; }), true); };
+    var q = $("#quick");
+    q.setAttribute("aria-label", L.quick_aria_favs);
+    if (!favs.length) {
+      q.innerHTML = '<span class="ql">' + L.quick_favs_label + '</span><span class="qh">' + L.quick_hint + "</span>";
+      return;
+    }
+    q.innerHTML = '<span class="ql">' + L.quick_favs_label + "</span>" + favs.map(function (en) {
+      var c = DATA.find(function (d) { return d.en === en; });
+      return c ? '<button type="button" data-en="' + en + '" aria-pressed="' + (!!cur && cur.en === en) + '">' + c.flag + " " + nm(c) + "</button>" : "";
+    }).join("");
+    q.querySelectorAll("button").forEach(function (b) {
+      b.onclick = function () { setCountry(DATA.find(function (d) { return d.en === b.dataset.en; })); };
     });
   }
 
   /* ---------- combobox ---------- */
-  function choose(c) { if (P.type === "country") { location.href = urlOf(c); } else { setCountry(c, true); } }
+  function choose(c) { if (P.type === "country") { location.href = urlOf(c); } else { setCountry(c); } }
   function openCombo(o) {
     $("#combo").classList.toggle("open", o); $("#combo-btn").setAttribute("aria-expanded", o);
     if (o) { $("#combo-q").value = ""; renderList(""); setTimeout(function () { $("#combo-q").focus(); }, 0); }
@@ -196,12 +196,12 @@
     document.querySelectorAll("tr[data-href]").forEach(function (tr) {
       tr.onclick = function (e) { if (!e.target.closest("a")) location.href = tr.dataset.href; };
     });
-    var lt = $("#lang-toggle"); if (lt) lt.addEventListener("click", function () { store.set("tipreveal-lang", L.other_lang); });
+    var lt = $("#lang-toggle"); if (lt) lt.addEventListener("click", function () { store.set("kamatip-lang", L.other_lang); });
   }
 
   function init() {
     if (P.type === "home") {
-      var pref = store.get("tipreveal-lang");
+      var pref = store.get("kamatip-lang");
       if ((pref === "he" || pref === "en") && pref !== lang) { location.replace(pref === "en" ? "/en" : "/"); return; }
     }
     favs = loadFavs();
@@ -212,11 +212,9 @@
       start = DATA.find(function (d) { return d.en === P.country; });
     } else {
       renderQuick();
-      var lastFav = store.get("tipreveal-lastfav"), saved = store.get("tipreveal-country"), pick;
+      var lastFav = store.get("kamatip-lastfav"), pick;
       if (favs.length) pick = favs.indexOf(lastFav) >= 0 ? lastFav : favs[0];
-      h1Dynamic = !!(pick || saved);  // returning visitors see their country in the headline; new visitors see the generic one
-      start = DATA.find(function (d) { return d.en === pick; }) || DATA.find(function (d) { return d.en === saved; }) ||
-        DATA.find(function (d) { return d.en === "Israel"; }) || DATA[0];
+      start = DATA.find(function (d) { return d.en === pick; }) || DATA.find(function (d) { return d.en === "Israel"; }) || DATA[0];
     }
     setCountry(start || DATA[0]);
     if (CFG.feedbackUrl) {

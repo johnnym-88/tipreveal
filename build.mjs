@@ -1,4 +1,4 @@
-// TipReveal static site generator. Run: node build.mjs  (Vercel runs it automatically; see vercel.json)
+// Kama Tip static site generator. Run: node build.mjs  (Vercel runs it automatically; see vercel.json)
 import fs from "node:fs";
 import path from "node:path";
 import crypto from "node:crypto";
@@ -8,7 +8,9 @@ import { createRequire } from "node:module";
 const require = createRequire(import.meta.url);
 const ROOT = path.dirname(fileURLToPath(import.meta.url));
 const S = require("./src/shared.js");
-const SITE = "https://tipreveal.com";
+const BRAND = "Kama Tip";
+// Domain: set the SITE_URL environment variable in Vercel (or edit the fallback below).
+const SITE = (process.env.SITE_URL || "https://kamatip.com").replace(/\/$/, "");
 const OUT = path.join(ROOT, "dist");
 const read = (p) => fs.readFileSync(path.join(ROOT, p), "utf8");
 
@@ -219,12 +221,12 @@ function buildPage(l, kind, c) {
   const rel = isCountry ? relatedList(c) : [];
   const quickHtml = isCountry
     ? rel.slice(0, 6).map((d) => `<a href="${urlPath(d, l)}">${d.flag} ${esc(nm(d, l))}</a>`).join("")
-    : "";
+    : `<span class="ql">${L.quick_favs_label}</span><span class="qh">${L.quick_hint}</span>`;
   const jsonld = isCountry
     ? { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
-        { "@type": "ListItem", position: 1, name: "TipReveal", item: SITE + homePath(l) },
+        { "@type": "ListItem", position: 1, name: BRAND, item: SITE + homePath(l) },
         { "@type": "ListItem", position: 2, name: nm(c, l), item: canonical }] }
-    : { "@context": "https://schema.org", "@type": "WebApplication", name: "TipReveal", url: canonical, inLanguage: l,
+    : { "@context": "https://schema.org", "@type": "WebApplication", name: BRAND, url: canonical, inLanguage: l,
         applicationCategory: "TravelApplication", description, offers: { "@type": "Offer", price: "0", priceCurrency: "USD" } };
   const theme = isCountry
     ? `<style>:root{--accent:${c.accent};--on-accent:${S.onAccent(c.accent)};--accent-text:${S.accentText(c.accent)}}</style>`
@@ -235,9 +237,9 @@ function buildPage(l, kind, c) {
     alternates: alternates(hePath, enPath), ogImage: SITE + (l === "he" ? "/og.png" : "/og-en.png"),
     jsonld: `<script type="application/ld+json">${JSON.stringify(jsonld)}</script>`, ver: VER, theme,
     homeHref: homePath(l), langHref: isCountry ? urlPath(c, other) : homePath(other),
-    h1_place: S.placeOf(dflt, l, L, false) + "?",
+    h1_place: isCountry ? S.placeOf(c, l, L, false) + "?" : L.h1_abroad,
     heroP: isCountry ? answerSentence(c, l, true) : L.hero_p,
-    quickAria: isCountry ? L.related_aria : L.quick_aria_pop, quickHtml,
+    quickAria: isCountry ? L.related_aria : L.quick_aria_favs, brand: BRAND, quickHtml,
     c_flag: dflt.flag, c_name: esc(nm(dflt, l)), c_sym: esc(dflt.sym), c_bill: (S.SAMPLE[dflt.code] || [50, 100, 200])[1],
     sections: isCountry ? articleSection(c, l, rel) : infoSection(l) + "\n" + tableSection(l),
     pageJson: JSON.stringify(isCountry ? { lang: l, type: "country", country: c.en } : { lang: l, type: "home" }),
@@ -281,4 +283,4 @@ write("sitemap.xml", sitemap);
 write("robots.txt", `User-agent: *\nAllow: /\nSitemap: ${SITE}/sitemap.xml\n`);
 
 const pages = 2 + data.length * 2;
-console.log(`TipReveal build OK: ${data.length} countries, ${pages} pages, version ${VER}`);
+console.log(`Kama Tip build OK: ${data.length} countries, ${pages} pages, version ${VER}`);

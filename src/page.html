@@ -10,7 +10,7 @@
 <meta property="og:title" content="{{title}}">
 <meta property="og:description" content="{{description}}">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="TipReveal">
+<meta property="og:site_name" content="{{brand}}">
 <meta property="og:url" content="{{canonical}}">
 <meta property="og:image" content="{{ogImage}}">
 <meta property="og:image:width" content="1200">
@@ -19,7 +19,7 @@
 <meta property="og:locale:alternate" content="{{og_alt}}">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#2563EB">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧾</text></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%232563EB'/><g fill='none' stroke='white' stroke-width='3.5'><circle cx='32' cy='32' r='20'/><ellipse cx='32' cy='32' rx='9' ry='20'/><path d='M12 25h40M12 39h40' opacity='.5'/></g><circle cx='32' cy='32' r='11' fill='white'/><text x='32' y='39.5' font-size='20' font-weight='800' text-anchor='middle' fill='%232563EB' font-family='Arial,sans-serif'>$</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Karantina:wght@400;700&family=IBM+Plex+Sans+Hebrew:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -30,7 +30,7 @@
 <body>
 <div class="wrap">
   <header class="top">
-    <a class="logo" href="{{homeHref}}" aria-label="TipReveal" dir="ltr"><span>Tip</span>Reveal</a>
+    <a class="logo" href="{{homeHref}}" aria-label="{{brand}}" dir="ltr"><svg class="globe" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><circle cx="24" cy="24" r="20"/><ellipse cx="24" cy="24" rx="9" ry="20"/><path d="M5 17.5h38M5 30.5h38" opacity=".55"/></g><circle cx="24" cy="24" r="11" fill="currentColor"/><text x="24" y="31" text-anchor="middle" font-size="19" font-weight="800" font-family="Arial,Helvetica,sans-serif" style="fill:var(--accent)">$</text></svg><span class="wm"><span class="rot">Kama</span> Tip?</span></a>
     <div class="right">
       <small>{{tagline}}</small>
       <a class="langbtn" id="lang-toggle" href="{{langHref}}" hreflang="{{other_lang}}" lang="{{other_lang}}" aria-label="{{lang_aria}}">{{lang_label}}</a>
@@ -43,7 +43,7 @@
       <div class="quick" id="quick" aria-label="{{quickAria}}">{{quickHtml}}</div>
     </div>
 
-    <form class="receipt" id="calc" onsubmit="return false" aria-label="TipReveal">
+    <form class="receipt" id="calc" onsubmit="return false" aria-label="{{brand}}">
       <div class="rhead"><b>{{receipt_head}}</b><span id="r-date"></span></div>
 
       <div class="field">
