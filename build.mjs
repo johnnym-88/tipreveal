@@ -10,7 +10,7 @@ const ROOT = path.dirname(fileURLToPath(import.meta.url));
 const S = require("./src/shared.js");
 const BRAND = "Kama Tip";
 // Domain: set the SITE_URL environment variable in Vercel (or edit the fallback below).
-const SITE = (process.env.SITE_URL || "https://kamatip.com").replace(/\/$/, "");
+const SITE = (process.env.SITE_URL || "https://www.kamatip.com").replace(/\/$/, "");
 const OUT = path.join(ROOT, "dist");
 const read = (p) => fs.readFileSync(path.join(ROOT, p), "utf8");
 
