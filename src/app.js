@@ -118,7 +118,7 @@
     var json = JSON.stringify(favs); store.set("kamatip-favs", json);
     var saved = store.get("kamatip-favs") === json;
     if (adding && (!store.get("kamatip-lastfav") || (cur && cur.en === en))) store.set("kamatip-lastfav", en);
-    syncFavBtn(); if (P.type === "home") renderQuick();
+    syncFavBtn(); renderQuick();
     if ($("#combo").classList.contains("open")) renderList($("#combo-q").value, true);
     if (!saved) say(L.fav_blocked);
     else if (adding) say(fmt(favs.length === 1 ? L.fav_saved_first : L.fav_saved_more, { name: nm(c) }));
@@ -136,7 +136,7 @@
       return c ? '<button type="button" data-en="' + en + '" aria-pressed="' + (!!cur && cur.en === en) + '">' + c.flag + " " + nm(c) + "</button>" : "";
     }).join("");
     q.querySelectorAll("button").forEach(function (b) {
-      b.onclick = function () { choose(DATA.find(function (d) { return d.en === b.dataset.en; })); };
+      b.onclick = function () { if (cur && cur.en === b.dataset.en) return; choose(DATA.find(function (d) { return d.en === b.dataset.en; })); };
     });
   }
 
@@ -214,10 +214,10 @@
     $("#r-date").textContent = new Intl.DateTimeFormat(L.date_locale, { day: "numeric", month: "numeric", year: "numeric" }).format(new Date());
     wire();
     var start;
+    renderQuick();
     if (P.type === "country") {
       start = DATA.find(function (d) { return d.en === P.country; });
     } else {
-      renderQuick();
       var lastFav = store.get("kamatip-lastfav"), pick;
       if (favs.length) pick = favs.indexOf(lastFav) >= 0 ? lastFav : favs[0];
       start = DATA.find(function (d) { return d.en === pick; }) || DATA.find(function (d) { return d.en === "Israel"; }) || DATA[0];

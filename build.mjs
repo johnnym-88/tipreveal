@@ -156,7 +156,7 @@ function articleSection(c, l, rel) {
   if (c.type === "percentage") a2 += " " + fmt(L.ans_example, { bill: bdi(midBill.bill), tip: bdi(midBill.tip) });
   const a3 = scSentence(c, l) + " " + L.after_long[c.after];
   const srcs = c.sources.map((s) => `<li><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc((l === "en" && s.name_en) || s.name)}</a></li>`).join("");
-  const more = rel.slice(6, 18).map((d) => `<a href="${urlPath(d, l)}">${d.flag} ${esc(nm(d, l))}</a>`).join("");
+  const more = rel.slice(0, 12).map((d) => `<a href="${urlPath(d, l)}">${d.flag} ${esc(nm(d, l))}</a>`).join("");
   return `<section class="article"><div class="wrap">
     <nav class="crumbs" aria-label="Breadcrumb"><a href="${homePath(l)}">${L.crumb_home}</a> › <span>${c.flag} ${esc(nm(c, l))}</span></nav>
     <h2 class="first">${L.h_quick}</h2>
@@ -219,9 +219,8 @@ function buildPage(l, kind, c) {
     if (description.length > 160) description = `${a} ${L.desc_tail}`;
   } else description = fmt(L.home_desc, { n: N });
   const rel = isCountry ? relatedList(c) : [];
-  const quickHtml = isCountry
-    ? rel.slice(0, 6).map((d) => `<a href="${urlPath(d, l)}">${d.flag} ${esc(nm(d, l))}</a>`).join("")
-    : `<span class="ql">${L.quick_favs_label}</span><span class="qh">${L.quick_hint}</span>`;
+  // Same favorites row on every page (the app fills it with the visitor's starred countries).
+  const quickHtml = `<span class="ql">${L.quick_favs_label}</span><span class="qh">${L.quick_hint}</span>`;
   const jsonld = isCountry
     ? { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
         { "@type": "ListItem", position: 1, name: BRAND, item: SITE + homePath(l) },
@@ -239,7 +238,7 @@ function buildPage(l, kind, c) {
     homeHref: homePath(l), langHref: isCountry ? urlPath(c, other) : homePath(other),
     h1_place: isCountry ? S.placeOf(c, l, L, false) + "?" : L.h1_abroad,
     heroP: isCountry ? answerSentence(c, l, true) : L.hero_p,
-    quickAria: isCountry ? L.related_aria : L.quick_aria_favs, brand: BRAND, quickHtml,
+    quickAria: L.quick_aria_favs, brand: BRAND, quickHtml,
     c_flag: dflt.flag, c_name: esc(nm(dflt, l)), c_sym: esc(dflt.sym), c_bill: (S.SAMPLE[dflt.code] || [50, 100, 200])[1],
     sections: isCountry ? articleSection(c, l, rel) : infoSection(l) + "\n" + tableSection(l),
     pageJson: JSON.stringify(isCountry ? { lang: l, type: "country", country: c.en } : { lang: l, type: "home" }),
