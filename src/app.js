@@ -25,6 +25,12 @@
     var step = v < 20 ? 1 : v < 100 ? 5 : v < 1000 ? 10 : v < 10000 ? 50 : 1000;
     return Math.ceil((v + 0.0001) / step) * step;
   }
+  function readCarry() {
+    try { return JSON.parse(sessionStorage.getItem("kamatip-bill") || "null"); } catch (e) { return null; }
+  }
+  function saveCarry() {
+    try { sessionStorage.setItem("kamatip-bill", JSON.stringify({ code: cur.code, value: $("#bill").value })); } catch (e) {}
+  }
   function sampleMid(c) { return (S.SAMPLE[c.code] || [50, 100, 200])[1]; }
 
   /* ---------- country ---------- */
@@ -55,7 +61,7 @@
     }).join("");
     var d = new Date(c.verified + "T00:00:00");
     $("#verified").textContent = L.verified_label + " " + new Intl.DateTimeFormat(L.date_locale, { month: "long", year: "numeric" }).format(d);
-    if (!billTouched) $("#bill").value = sampleMid(c);
+    if (!billTouched) { var carry = readCarry(); $("#bill").value = carry && carry.code === c.code ? carry.value : sampleMid(c); }
     update(true);
   }
   function buildChips(c) {
@@ -130,12 +136,12 @@
       return c ? '<button type="button" data-en="' + en + '" aria-pressed="' + (!!cur && cur.en === en) + '">' + c.flag + " " + nm(c) + "</button>" : "";
     }).join("");
     q.querySelectorAll("button").forEach(function (b) {
-      b.onclick = function () { setCountry(DATA.find(function (d) { return d.en === b.dataset.en; })); };
+      b.onclick = function () { choose(DATA.find(function (d) { return d.en === b.dataset.en; })); };
     });
   }
 
   /* ---------- combobox ---------- */
-  function choose(c) { if (P.type === "country") { location.href = urlOf(c); } else { setCountry(c); } }
+  function choose(c) { location.href = urlOf(c); }
   function openCombo(o) {
     $("#combo").classList.toggle("open", o); $("#combo-btn").setAttribute("aria-expanded", o);
     if (o) { $("#combo-q").value = ""; renderList(""); setTimeout(function () { $("#combo-q").focus(); }, 0); }
@@ -188,7 +194,7 @@
       else if (e.key === "Escape") { openCombo(false); $("#combo-btn").focus(); }
     };
     document.addEventListener("click", function (e) { if (!$("#combo").contains(e.target)) openCombo(false); });
-    $("#bill").oninput = function () { billTouched = true; update(false); };
+    $("#bill").oninput = function () { billTouched = true; saveCarry(); update(false); };
     $("#pct").oninput = function (e) { pct = +e.target.value; userPct = true; update(false); };
     $("#sc").onchange = function () { userPct = false; update(true); };
     $("#minus").onclick = function () { people = Math.max(1, people - 1); update(false); };
