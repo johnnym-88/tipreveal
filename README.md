@@ -1,11 +1,11 @@
 # Kama Tip?
 
-Restaurant tipping calculator for travelers: 71 destinations, Hebrew + English, one page per country.
+Restaurant tipping calculator for travelers: 91 destinations, Hebrew + English, one page per country.
 
 ## How it works
 `node build.mjs` generates the whole site into `dist/`:
 - `/` and `/en` – calculator home pages (Hebrew / English)
-- `/tip/<country>` and `/en/tip/<country>` – one SEO page per country (142 pages)
+- `/tip/<country>` and `/en/tip/<country>` – one SEO page per country (182 pages)
 - `sitemap.xml` (with hreflang) and `robots.txt`
 
 Vercel runs the build automatically on every push (see `vercel.json`). No dashboard settings needed.
