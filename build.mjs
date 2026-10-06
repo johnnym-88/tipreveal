@@ -17,6 +17,9 @@ const read = (p) => fs.readFileSync(path.join(ROOT, p), "utf8");
 const data = JSON.parse(read("data/tips.json"));
 const I18N = JSON.parse(read("src/i18n.json"));
 const TEMPLATE = read("src/page.html");
+const DOC_TEMPLATE = read("src/doc.html");
+const SITE_CFG = JSON.parse(read("data/site.json"));
+if (!SITE_CFG.contactEmail) console.warn("WARNING: data/site.json has no contactEmail, so the privacy page will have no contact section.");
 const N = data.length;
 const LANGS = ["he", "en"];
 
@@ -235,7 +238,7 @@ function buildPage(l, kind, c) {
     lang: l, dir: L.dir, title: esc(title), description: esc(description), canonical,
     alternates: alternates(hePath, enPath), ogImage: SITE + (l === "he" ? "/og.png" : "/og-en.png"),
     jsonld: `<script type="application/ld+json">${JSON.stringify(jsonld)}</script>`, ver: VER, theme,
-    homeHref: homePath(l), langHref: isCountry ? urlPath(c, other) : homePath(other),
+    privacyHref: l === "he" ? "/privacy" : "/en/privacy", contactBtn: contactBtn(l), homeHref: homePath(l), langHref: isCountry ? urlPath(c, other) : homePath(other),
     h1_place: isCountry ? S.placeOf(c, l, L, false) + "?" : L.h1_abroad,
     heroP: isCountry ? answerSentence(c, l, true) : L.hero_p,
     quickAria: L.quick_aria_favs, brand: BRAND, quickHtml,
@@ -246,10 +249,51 @@ function buildPage(l, kind, c) {
   return render(TEMPLATE, vars);
 }
 
+/* ---------- contact button (mailto) ---------- */
+function contactBtn(l) {
+  const email = (SITE_CFG.contactEmail || "").trim();
+  if (!email) return "";
+  const L = I18N[l];
+  const href = `mailto:${email}?subject=${encodeURIComponent(L.contact_subject)}`;
+  return `<a class="contact-btn" href="${esc(href)}">✉ ${L.contact_btn}</a>`;
+}
+
+/* ---------- privacy policy page ---------- */
+function buildDoc(l) {
+  const L = I18N[l];
+  const other = l === "he" ? "en" : "he";
+  const hePath = "/privacy", enPath = "/en/privacy";
+  const canonical = SITE + (l === "he" ? hePath : enPath);
+  const name = (SITE_CFG.operatorName || "").trim();
+  const email = (SITE_CFG.contactEmail || "").trim();
+  const operator = l === "he"
+    ? (name ? `האתר <bdi dir="ltr">Kama Tip?</bdi> (<bdi dir="ltr">kamatip.com</bdi>) מופעל על ידי ${esc(name)} (להלן: "אנחנו").` : `אנחנו מפעילים את האתר <bdi dir="ltr">Kama Tip?</bdi> (<bdi dir="ltr">kamatip.com</bdi>).`)
+    : (name ? `Kama Tip? (kamatip.com) is operated by ${esc(name)} ("we").` : `We operate Kama Tip? (kamatip.com).`);
+  const contact = email
+    ? (l === "he"
+        ? `<h2>יצירת קשר</h2><p>לשאלות או לבקשות בנושא פרטיות: <a href="mailto:${esc(email)}">${esc(email)}</a></p>`
+        : `<h2>Contact</h2><p>For privacy questions or requests: <a href="mailto:${esc(email)}">${esc(email)}</a></p>`)
+    : "";
+  const content = render(read(`src/privacy.${l}.html`), { operator, contact_section: contact });
+  const date = new Intl.DateTimeFormat(L.date_locale, { day: "numeric", month: "long", year: "numeric" })
+    .format(new Date(SITE_CFG.privacyUpdated + "T00:00:00"));
+  const vars = {
+    ...Object.fromEntries(Object.entries(L).filter(([, v]) => typeof v === "string")),
+    lang: l, dir: L.dir, title: esc(L.privacy_title), description: esc(L.privacy_desc), canonical,
+    alternates: alternates(hePath, enPath), ogImage: SITE + (l === "he" ? "/og.png" : "/og-en.png"),
+    ver: VER, brand: BRAND, homeHref: homePath(l), langHref: l === "he" ? enPath : hePath,
+    privacyHref: l === "he" ? hePath : enPath, contactBtn: contactBtn(l), updated_line: `${L.updated_label} ${esc(date)}`, content,
+  };
+  void other;
+  return render(DOC_TEMPLATE, vars);
+}
+
 /* ---------- output ---------- */
 fs.rmSync(OUT, { recursive: true, force: true });
 fs.mkdirSync(OUT, { recursive: true });
 write("index.html", buildPage("he", "home"));
+write("privacy/index.html", buildDoc("he"));
+write("en/privacy/index.html", buildDoc("en"));
 write("en/index.html", buildPage("en", "home"));
 for (const c of data) {
   write(`tip/${c.slug}/index.html`, buildPage("he", "country", c));
@@ -275,11 +319,12 @@ const urlEntry = (hePath, enPath, lm) => LANGS.map((l) => {
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 ${urlEntry("/", "/en", lastmod)}
+${urlEntry("/privacy", "/en/privacy", SITE_CFG.privacyUpdated)}
 ${data.map((c) => urlEntry(urlPath(c, "he"), urlPath(c, "en"), c.verified)).join("\n")}
 </urlset>
 `;
 write("sitemap.xml", sitemap);
 write("robots.txt", `User-agent: *\nAllow: /\nSitemap: ${SITE}/sitemap.xml\n`);
 
-const pages = 2 + data.length * 2;
+const pages = 4 + data.length * 2;
 console.log(`Kama Tip build OK: ${data.length} countries, ${pages} pages, version ${VER}`);

@@ -158,7 +158,16 @@
   "num_locale": "he-IL",
   "dir": "rtl",
   "h1_abroad": "בחו״ל?",
-  "quick_hint": "סמנו מדינה בכוכב ☆ והיא תופיע כאן"
+  "quick_hint": "סמנו מדינה בכוכב ☆ והיא תופיע כאן",
+  "privacy_link": "מדיניות פרטיות",
+  "privacy_title": "מדיניות פרטיות | Kama Tip",
+  "privacy_desc": "איזה מידע האתר Kama Tip אוסף ולמה: אנליטיקה, אחסון מקומי בדפדפן ושירותי צד שלישי. מה שמקלידים במחשבון לא נשלח אלינו.",
+  "privacy_h1": "מדיניות פרטיות",
+  "privacy_lead": "בקצרה: <bdi dir=\"ltr\">Kama Tip?</bdi> הוא מחשבון. אין צורך בחשבון משתמש, אנחנו לא מבקשים שם או אימייל, ומה שמקלידים במחשבון נשאר בדפדפן שלכם. אנחנו כן משתמשים ב-<bdi dir=\"ltr\">Google Analytics</bdi> כדי להבין איך משתמשים באתר.",
+  "back_home": "חזרה למחשבון",
+  "updated_label": "עודכן לאחרונה:",
+  "contact_btn": "צרו קשר",
+  "contact_subject": "פנייה מאתר Kama Tip"
  },
  "en": {
   "tagline": "Restaurant tip calculator for travelers",
@@ -322,6 +331,15 @@
   "num_locale": "en-US",
   "dir": "ltr",
   "h1_abroad": "abroad?",
-  "quick_hint": "Star a country ☆ and it will appear here"
+  "quick_hint": "Star a country ☆ and it will appear here",
+  "privacy_link": "Privacy policy",
+  "privacy_title": "Privacy Policy | Kama Tip",
+  "privacy_desc": "What Kama Tip collects and why: analytics, local browser storage and third-party services. What you type into the calculator isn't sent to us.",
+  "privacy_h1": "Privacy Policy",
+  "privacy_lead": "The short version: Kama Tip? is a calculator. You don't need an account, we don't ask for your name or email, and what you type into the calculator stays in your browser. We do use Google Analytics to understand how the site is used.",
+  "back_home": "Back to the calculator",
+  "updated_label": "Last updated:",
+  "contact_btn": "Contact us",
+  "contact_subject": "Message from Kama Tip"
  }
 }

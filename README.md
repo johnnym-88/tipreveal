@@ -23,3 +23,6 @@ The build fails with a clear message if a field is missing or invalid.
 
 ## Domain
 The site URL (canonical, sitemap, hreflang, share images) comes from the `SITE_URL` environment variable at build time (fallback in `build.mjs`). In Vercel: Settings → Environment Variables → `SITE_URL` = `https://your-domain`, then Redeploy.
+
+## Site settings
+`data/site.json` holds the contact email (used by the "Contact us" button and the privacy page), an optional operator name, and the privacy policy date.

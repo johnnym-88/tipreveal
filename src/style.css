@@ -197,3 +197,18 @@ html[lang="en"] .headline h1{font-size:clamp(44px,7.6vw,100px);line-height:.92;o
   .quick{flex-wrap:wrap;overflow-x:visible}
 }
 @media (max-width:820px){ html[lang="en"] .headline h1{font-size:clamp(34px,9.4vw,60px)} }
+
+/* ===== privacy / document pages ===== */
+.doc-hero{color:var(--on-accent);padding:18px 0 44px}
+.doc-hero h1{font-family:var(--display);font-weight:700;font-size:clamp(52px,9vw,100px);line-height:.95;margin:0 0 14px}
+.doc-hero p{font-size:18px;line-height:1.65;margin:0;max-width:62ch;opacity:.95}
+.article ul{padding-inline-start:22px;line-height:1.75;font-size:17px;max-width:68ch}
+.article a{color:var(--accent-text)}
+.article code{font-size:.9em;background:var(--paper-2);border-radius:5px;padding:1px 6px}
+.article td code{white-space:nowrap}
+footer a{color:var(--muted)}
+
+/* contact button in the footer */
+footer .wrap{gap:12px 16px}
+footer a.contact-btn{font:600 13px var(--body);border:1.5px solid var(--line);color:var(--ink);border-radius:8px;padding:7px 14px;text-decoration:none;white-space:nowrap}
+footer a.contact-btn:hover{background:var(--paper-2)}
