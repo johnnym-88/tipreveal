@@ -139,7 +139,7 @@ function tableSection(l) {
   }).join("\n");
   return `<section class="all"><div class="wrap">
     <h2 id="all-h">${fmt(L.all_h, { n: N })}</h2>
-    <div class="tablewrap"><table>
+    <div class="tablewrap" data-nosnippet><table>
       <thead><tr><th>${L.th_country}</th><th>${L.th_range}</th><th>${L.th_sc}</th><th>${L.th_after}</th></tr></thead>
       <tbody id="tbl">${rows}</tbody>
     </table></div>
@@ -162,6 +162,8 @@ function articleSection(c, l, rel) {
   const more = rel.slice(0, 12).map((d) => `<a href="${urlPath(d, l)}">${d.flag} ${esc(nm(d, l))}</a>`).join("");
   return `<section class="article"><div class="wrap">
     <nav class="crumbs" aria-label="Breadcrumb"><a href="${homePath(l)}">${L.crumb_home}</a> › <span>${c.flag} ${esc(nm(c, l))}</span></nav>
+    <p class="teaser">${fmt(L.teaser, { place: pl })}</p>
+    <div data-nosnippet>
     <h2 class="first">${L.h_quick}</h2>
     <p>${answerSentence(c, l, true)} ${scSentence(c, l)}</p>
     <div class="facts">
@@ -193,6 +195,7 @@ function articleSection(c, l, rel) {
     <ul class="srcs-list">${srcs}</ul>
     <p class="meta-line">${L.conf_label}: ${L.conf[c.conf]} · ${L.verified_label} ${esc(date)}</p>
 
+    </div>
     <h2>${L.h_more}</h2>
     <div class="related">${more}</div>
     <p style="margin-top:18px"><a href="${homePath(l)}">${fmt(L.back_all, { n: N })}</a></p>
@@ -213,23 +216,23 @@ function buildPage(l, kind, c) {
   const enPath = isCountry ? urlPath(c, "en") : homePath("en");
   const canonical = SITE + (l === "he" ? hePath : enPath);
   const title = isCountry
-    ? fmt(L[c.type === "percentage" ? "title_pct" : c.type === "round_up" ? "title_round" : "title_none"], { place: S.placeOf(c, l, L, false), range: ltr(l, S.pctRange(c)) })
+    ? fmt(L.title_teaser, { place: S.placeOf(c, l, L, false) })
     : L.home_title;
   let description;
   if (isCountry) {
-    const a = answerSentence(c, l, false), s = scSentence(c, l);
-    description = `${a} ${s} ${L.desc_tail}`;
-    if (description.length > 160) description = `${a} ${L.desc_tail}`;
+    description = fmt(L.desc_teaser, { place: S.placeOf(c, l, L, false) });
   } else description = fmt(L.home_desc, { n: N });
   const rel = isCountry ? relatedList(c) : [];
   // Same favorites row on every page (the app fills it with the visitor's starred countries).
   const quickHtml = `<span class="ql">${L.quick_favs_label}</span><span class="qh">${L.quick_hint}</span>`;
-  const jsonld = isCountry
+  const siteSchema = { "@context": "https://schema.org", "@type": "WebSite", name: BRAND, alternateName: ["Kama Tip?", "כמה טיפ"], url: SITE + "/" };
+  const jsonld0 = isCountry
     ? { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
         { "@type": "ListItem", position: 1, name: BRAND, item: SITE + homePath(l) },
         { "@type": "ListItem", position: 2, name: nm(c, l), item: canonical }] }
     : { "@context": "https://schema.org", "@type": "WebApplication", name: BRAND, url: canonical, inLanguage: l,
         applicationCategory: "TravelApplication", description, offers: { "@type": "Offer", price: "0", priceCurrency: "USD" } };
+  const jsonld = !isCountry && l === "he" ? [jsonld0, siteSchema] : jsonld0;
   const theme = isCountry
     ? `<style>:root{--accent:${c.accent};--on-accent:${S.onAccent(c.accent)};--accent-text:${S.accentText(c.accent)}}</style>`
     : "";
@@ -240,7 +243,7 @@ function buildPage(l, kind, c) {
     jsonld: `<script type="application/ld+json">${JSON.stringify(jsonld)}</script>`, ver: VER, theme,
     privacyHref: l === "he" ? "/privacy" : "/en/privacy", contactBtn: contactBtn(l), homeHref: homePath(l), langHref: isCountry ? urlPath(c, other) : homePath(other),
     h1_place: isCountry ? S.placeOf(c, l, L, false) + "?" : L.h1_abroad,
-    heroP: isCountry ? answerSentence(c, l, true) : L.hero_p,
+    heroP: isCountry ? `<span data-nosnippet>${answerSentence(c, l, true)}</span>` : L.hero_p,
     quickAria: L.quick_aria_favs, brand: BRAND, quickHtml,
     c_flag: dflt.flag, c_name: esc(nm(dflt, l)), c_sym: esc(dflt.sym), c_bill: (S.SAMPLE[dflt.code] || [50, 100, 200])[1],
     sections: isCountry ? articleSection(c, l, rel) : infoSection(l) + "\n" + tableSection(l),

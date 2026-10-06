@@ -94,7 +94,7 @@
   "tbl_round": "עיגול / רשות",
   "foot": "Kama Tip מציג מנהגים מקובלים, לא חובה חוקית. תמיד בדקו את החשבון.",
   "home_title": "Kama Tip – כמה טיפ משאירים במסעדה בחו\"ל?",
-  "home_desc": "מחשבון טיפים לישראלים בחו״ל: בחרו מדינה, הזינו את החשבון וקבלו כמה טיפ נהוג להשאיר במסעדה – ב-{n} יעדים, עם מקורות מאומתים.",
+  "home_desc": "מחשבון טיפים בחו״ל – בוחרים מדינה, מזינים את החשבון, ויודעים בדיוק מה מקובל. בלי להיראות קמצנים, ובלי לשלם פעמיים.",
   "og_locale": "he_IL",
   "og_alt": "en_US",
   "crumb_home": "Kama Tip",
@@ -167,7 +167,10 @@
   "back_home": "חזרה למחשבון",
   "updated_label": "עודכן לאחרונה:",
   "contact_btn": "צרו קשר",
-  "contact_subject": "פנייה מאתר Kama Tip"
+  "contact_subject": "פנייה מאתר Kama Tip",
+  "title_teaser": "כמה טיפ משאירים {place}? | Kama Tip",
+  "desc_teaser": "כמה טיפ משאירים {place}? מזינים את החשבון ויודעים בדיוק מה מקובל, כולל עמלת שירות. בלי להיראות קמצנים, ובלי לשלם פעמיים.",
+  "teaser": "כאן תמצאו את המנהג המקומי {place}, אם עמלת השירות כבר כלולה בחשבון, ודוגמאות לחישוב – הכול עם מקורות."
  },
  "en": {
   "tagline": "Restaurant tip calculator for travelers",
@@ -264,7 +267,7 @@
   "tbl_round": "Round up / optional",
   "foot": "Kama Tip shows customary practice, not a legal requirement. Always check your bill.",
   "home_title": "Kama Tip – How much to tip at restaurants abroad?",
-  "home_desc": "Tip calculator for travelers: pick a country, enter your bill and see how much to tip at restaurants in {n} destinations, with sourced data.",
+  "home_desc": "Tip calculator for travelers – pick a country, enter your bill and know exactly what's customary. Don't look stingy, and don't pay twice.",
   "og_locale": "en_US",
   "og_alt": "he_IL",
   "crumb_home": "Kama Tip",
@@ -340,6 +343,9 @@
   "back_home": "Back to the calculator",
   "updated_label": "Last updated:",
   "contact_btn": "Contact us",
-  "contact_subject": "Message from Kama Tip"
+  "contact_subject": "Message from Kama Tip",
+  "title_teaser": "How much to tip {place}? | Kama Tip",
+  "desc_teaser": "How much to tip {place}? Enter your bill and know exactly what's customary, service charge included. Don't look stingy, and don't pay twice.",
+  "teaser": "Here's the local custom {place}, whether a service charge is already on the bill, and worked examples, all with sources."
  }
 }
