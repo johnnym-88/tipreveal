@@ -170,7 +170,23 @@
   "contact_subject": "פנייה מאתר Kama Tip",
   "title_teaser": "כמה טיפ משאירים {place}? | Kama Tip",
   "desc_teaser": "כמה טיפ משאירים {place}? מזינים את החשבון ויודעים בדיוק מה מקובל, כולל עמלת שירות. בלי להיראות קמצנים, ובלי לשלם פעמיים.",
-  "teaser": "כאן תמצאו את המנהג המקומי {place}, אם עמלת השירות כבר כלולה בחשבון, ודוגמאות לחישוב – הכול עם מקורות."
+  "teaser": "כאן תמצאו את המנהג המקומי {place}, אם עמלת השירות כבר כלולה בחשבון, ודוגמאות לחישוב – הכול עם מקורות.",
+  "share_btn": "שתפו את החישוב",
+  "share_busy": "מכינים כרטיס…",
+  "share_text": "{flag} {place}: טיפ של {tip} על חשבון של {bill}.",
+  "share_text_range": "{flag} {place}: {range}.",
+  "share_ask": "בדקו כמה טיפ משאירים בכל יעד:",
+  "share_wa": "וואטסאפ",
+  "share_dl": "הורדת תמונה",
+  "share_copy": "העתקת קישור",
+  "share_copied": "הקישור הועתק",
+  "share_fail": "לא הצלחנו להכין את הכרטיס. נסו שוב.",
+  "share_alt_title": "הכרטיס מוכן. איך לשלוח?",
+  "share_img_alt": "כרטיס טיפ לשיתוף",
+  "card_bill": "מתוך חשבון של {bill}",
+  "card_per": "לכל אחד מ-{n}",
+  "card_range_label": "הטווח המקובל",
+  "card_cta": "בדקו כמה טיפ משאירים בכל יעד"
  },
  "en": {
   "tagline": "Restaurant tip calculator for travelers",
@@ -346,6 +362,22 @@
   "contact_subject": "Message from Kama Tip",
   "title_teaser": "How much to tip {place}? | Kama Tip",
   "desc_teaser": "How much to tip {place}? Enter your bill and know exactly what's customary, service charge included. Don't look stingy, and don't pay twice.",
-  "teaser": "Here's the local custom {place}, whether a service charge is already on the bill, and worked examples, all with sources."
+  "teaser": "Here's the local custom {place}, whether a service charge is already on the bill, and worked examples, all with sources.",
+  "share_btn": "Share this tip",
+  "share_busy": "Preparing the card…",
+  "share_text": "{flag} {place}: tip {tip} on a bill of {bill}.",
+  "share_text_range": "{flag} {place}: {range}.",
+  "share_ask": "Check how much to tip anywhere:",
+  "share_wa": "WhatsApp",
+  "share_dl": "Download image",
+  "share_copy": "Copy link",
+  "share_copied": "Link copied",
+  "share_fail": "We couldn't prepare the card. Please try again.",
+  "share_alt_title": "Your card is ready. How do you want to send it?",
+  "share_img_alt": "Tip card to share",
+  "card_bill": "on a bill of {bill}",
+  "card_per": "Each of {n}",
+  "card_range_label": "What's customary",
+  "card_cta": "Check how much to tip anywhere"
  }
 }

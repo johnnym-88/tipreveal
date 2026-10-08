@@ -101,6 +101,9 @@
           <dt><span class="split">{{lbl_split}} <button type="button" id="minus" aria-label="{{minus_aria}}">−</button><output id="ppl">1</output><button type="button" id="plus" aria-label="{{plus_aria}}">+</button></span></dt><dd id="per"></dd>
         </dl>
         <p class="note" id="note"></p>
+        <button type="button" class="share-btn" id="share-btn"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M12 3v12M7 8l5-5 5 5M5 13v6a2 2 0 002 2h10a2 2 0 002-2v-6"/></svg><span>{{share_btn}}</span></button>
+        <div class="share-alt" id="share-alt" hidden></div>
+        <div class="share-msg" id="share-msg" role="status" aria-live="polite"></div>
         <details class="src"><summary>{{src_summary}} <span class="conf" id="conf"></span></summary><ul id="srcs"></ul><div id="verified"></div></details>
       </div>
     </form>
@@ -120,6 +123,7 @@
 <script src="/data.js?v={{ver}}" defer></script>
 <script src="/i18n.js?v={{ver}}" defer></script>
 <script src="/shared.js?v={{ver}}" defer></script>
+<script src="/card.js?v={{ver}}" defer></script>
 <script src="/config.js?v={{ver}}" defer></script>
 <script src="/app.js?v={{ver}}" defer></script>
 </body>

@@ -115,10 +115,10 @@ function write(rel, content) {
 }
 
 /* ---------- version hash for cache busting ---------- */
-const appJs = read("src/app.js"), sharedJs = read("src/shared.js"), css = read("src/style.css");
+const appJs = read("src/app.js"), sharedJs = read("src/shared.js"), cardJs = read("src/card.js"), css = read("src/style.css");
 const dataJs = "window.TIPS=" + JSON.stringify(data) + ";";
 const i18nJs = "window.I18N=" + JSON.stringify(I18N) + ";";
-const VER = crypto.createHash("md5").update(appJs + sharedJs + css + dataJs + i18nJs).digest("hex").slice(0, 8);
+const VER = crypto.createHash("md5").update(appJs + sharedJs + cardJs + css + dataJs + i18nJs).digest("hex").slice(0, 8);
 
 /* ---------- page sections ---------- */
 function infoSection(l) {
@@ -239,7 +239,7 @@ function buildPage(l, kind, c) {
   const vars = {
     ...Object.fromEntries(Object.entries(L).filter(([, v]) => typeof v === "string")),
     lang: l, dir: L.dir, title: esc(title), description: esc(description), canonical,
-    alternates: alternates(hePath, enPath), ogImage: SITE + (l === "he" ? "/og.png" : "/og-en.png"),
+    alternates: alternates(hePath, enPath), ogImage: SITE + (isCountry ? `/og/${c.slug}${l === "he" ? "" : "-en"}.png` : l === "he" ? "/og.png" : "/og-en.png"),
     jsonld: `<script type="application/ld+json">${JSON.stringify(jsonld)}</script>`, ver: VER, theme,
     privacyHref: l === "he" ? "/privacy" : "/en/privacy", contactBtn: contactBtn(l), homeHref: homePath(l), langHref: isCountry ? urlPath(c, other) : homePath(other),
     h1_place: isCountry ? S.placeOf(c, l, L, false) + "?" : L.h1_abroad,
@@ -305,10 +305,11 @@ for (const c of data) {
 write("style.css", css);
 write("app.js", appJs);
 write("shared.js", sharedJs);
+write("card.js", cardJs);
 write("data.js", dataJs);
 write("i18n.js", i18nJs);
 const pub = path.join(ROOT, "public");
-if (fs.existsSync(pub)) for (const f of fs.readdirSync(pub)) fs.copyFileSync(path.join(pub, f), path.join(OUT, f));
+if (fs.existsSync(pub)) fs.cpSync(pub, OUT, { recursive: true });
 
 const lastmod = data.map((c) => c.verified).sort().slice(-1)[0];
 const urlEntry = (hePath, enPath, lm) => LANGS.map((l) => {

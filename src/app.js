@@ -14,7 +14,7 @@
   var money = function (v, c) { return S.money(v, c, L.num_locale); };
   var urlOf = function (c) { return (isHe ? "" : "/en") + "/tip/" + c.slug; };
 
-  var cur = null, pct = 12, people = 1, userPct = false, billTouched = false, favs = [], noteTimer = null, active = 0, filtered = [];
+  var last = null, cur = null, pct = 12, people = 1, userPct = false, billTouched = false, favs = [], noteTimer = null, active = 0, filtered = [];
 
   function billVal() {
     var v = parseFloat(($("#bill").value || "").replace(/[^\d.]/g, ""));
@@ -87,6 +87,7 @@
     var roundMode = pct === 0 && c.type === "round_up" && !sc;
     if (roundMode) { var t = roundUpTarget(b); tip = t - b; label = fmt(L.round_to, { amount: money(t, c) }); }
     var total = b + tip;
+    last = { b: b, pct: pct, tip: tip, total: total, roundMode: roundMode, target: roundMode ? t : 0 };
     $(".result .lbl").textContent = b > 0 ? label + (roundMode ? "" : " (" + pct + "%)") : L.enter_bill;
     var el = $("#tip"); el.textContent = money(tip, c);
     if (animate) { el.classList.remove("pop"); void el.offsetWidth; el.classList.add("pop"); }
@@ -182,8 +183,78 @@
     var o = $("#opt" + active); if (o) o.scrollIntoView({ block: "nearest" });
   }
 
+  /* ---------- share card ---------- */
+  function pageUrl() { return location.origin + urlOf(cur); }
+  function mixInk(hex) {
+    var n = parseInt(hex.slice(1), 16), k = 0.55, ink = [26, 25, 54];
+    var ch = [n >> 16 & 255, n >> 8 & 255, n & 255].map(function (v, i) { return Math.round(v * (1 - k) + ink[i] * k); });
+    return "rgb(" + ch.join(",") + ")";
+  }
+  function cardOpts() {
+    var c = cur, a = c.accent || "#7C3AED", u = last || { b: 0 }, has = u.b > 0, light = S.onAccent(a) !== "#FFFFFF";
+    var o = { rtl: isHe, accent: a, onAccent: S.onAccent(a), accentText: light ? mixInk(a) : a, flag: c.flag, name: nm(c),
+      cta: L.card_cta, site: "kamatip.com", sub: "", rows: [] };
+    var st = c.type === "none" ? "" : L.status[c.status];
+    if (c.type === "none") {
+      o.mode = "text"; o.tipLabel = L.card_range_label; o.big = L.range_none.charAt(0).toUpperCase() + L.range_none.slice(1);
+    } else if (!has) {
+      o.tipLabel = L.card_range_label; o.sub = st;
+      if (c.type === "percentage") { o.mode = "range"; o.big = S.pctRange(c); }
+      else { o.mode = "text"; o.big = L.round_chip; o.sub = (st ? st + "  ·  " : "") + S.rangePhrase(c, L); }
+    } else {
+      o.mode = "amount"; o.big = money(u.tip, c);
+      o.tipLabel = u.roundMode ? fmt(L.round_to, { amount: money(u.target, c) }) : L.lbl_leave + " (" + u.pct + "%)";
+      o.sub = (st ? st + "  ·  " : "") + (c.type === "percentage" ? "\u2066" + S.pctRange(c) + "\u2069" : S.rangePhrase(c, L));
+      o.billLine = fmt(L.card_bill, { bill: money(u.b, c) });
+      o.rows.push([L.lbl_total, money(u.total, c)]);
+      if (people > 1) o.rows.push([fmt(L.card_per, { n: people }), money(u.total / people, c)]);
+    }
+    return o;
+  }
+  function shareText() {
+    var u = last || { b: 0 }, c = cur, o = { flag: c.flag, place: place(c) };
+    var t = (c.type === "percentage" && u.b > 0 && !u.roundMode)
+      ? fmt(L.share_text, { flag: o.flag, place: o.place, tip: money(u.tip, c) + " (" + u.pct + "%)", bill: money(u.b, c) })
+      : fmt(L.share_text_range, { flag: o.flag, place: o.place, range: S.rangePhrase(c, L) });
+    return t + "\n" + L.share_ask + "\n" + pageUrl();
+  }
+  function shareMsg(m) { var e = $("#share-msg"); if (e) e.textContent = m || ""; }
+  function track(method) { try { if (window.gtag) window.gtag("event", "share", { method: method, content_type: "tip_card", item_id: cur.en }); } catch (e) {} }
+  function showAlt(blob, text) {
+    var box = $("#share-alt"), href = URL.createObjectURL(blob);
+    box.innerHTML = "<b>" + L.share_alt_title + '</b><img alt="' + L.share_img_alt + '" src="' + href + '"><div class="acts">' +
+      '<a class="wa" target="_blank" rel="noopener" href="https://wa.me/?text=' + encodeURIComponent(text) + '">' + L.share_wa + "</a>" +
+      '<a download="kamatip-' + cur.slug + '.png" href="' + href + '">' + L.share_dl + "</a>" +
+      '<button type="button" id="share-copy">' + L.share_copy + "</button></div>";
+    box.hidden = false;
+    box.querySelector(".wa").onclick = function () { track("whatsapp_link"); };
+    box.querySelector("[download]").onclick = function () { track("download"); };
+    $("#share-copy").onclick = function () {
+      var done = function () { shareMsg(L.share_copied); setTimeout(function () { shareMsg(""); }, 3000); track("copy"); };
+      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(pageUrl()).then(done, done); else done();
+    };
+  }
+  function onShare() {
+    var btn = $("#share-btn"); if (btn.disabled) return;
+    btn.disabled = true; shareMsg(L.share_busy); $("#share-alt").hidden = true;
+    var text = shareText();
+    window.KamaCard.ready().then(function () {
+      var cv = window.KamaCard.draw(cardOpts());
+      cv.toBlob(function (blob) {
+        btn.disabled = false; shareMsg("");
+        if (!blob) { shareMsg(L.share_fail); return; }
+        var file = null; try { file = new File([blob], "kamatip-" + cur.slug + ".png", { type: "image/png" }); } catch (e) {}
+        if (file && navigator.share && navigator.canShare && navigator.canShare({ files: [file] })) {
+          navigator.share({ files: [file], text: text }).then(function () { track("native"); })
+            .catch(function (e) { if (!e || e.name !== "AbortError") showAlt(blob, text); });
+        } else showAlt(blob, text);
+      }, "image/png");
+    }).catch(function () { btn.disabled = false; shareMsg(L.share_fail); });
+  }
+
   /* ---------- wiring ---------- */
   function wire() {
+    $("#share-btn").onclick = onShare;
     $("#combo-btn").onclick = function () { openCombo(!$("#combo").classList.contains("open")); };
     $("#fav-btn").onclick = function () { if (cur) toggleFav(cur.en); };
     $("#combo-q").oninput = function (e) { renderList(e.target.value); };
