@@ -115,10 +115,10 @@ function write(rel, content) {
 }
 
 /* ---------- version hash for cache busting ---------- */
-const appJs = read("src/app.js"), sharedJs = read("src/shared.js"), cardJs = read("src/card.js"), css = read("src/style.css");
+const appJs = read("src/app.js"), sharedJs = read("src/shared.js"), cardJs = read("src/card.js"), a11yJs = read("src/a11y.js"), css = read("src/style.css");
 const dataJs = "window.TIPS=" + JSON.stringify(data) + ";";
 const i18nJs = "window.I18N=" + JSON.stringify(I18N) + ";";
-const VER = crypto.createHash("md5").update(appJs + sharedJs + cardJs + css + dataJs + i18nJs).digest("hex").slice(0, 8);
+const VER = crypto.createHash("md5").update(appJs + sharedJs + cardJs + a11yJs + css + dataJs + i18nJs).digest("hex").slice(0, 8);
 
 /* ---------- page sections ---------- */
 function infoSection(l) {
@@ -241,7 +241,7 @@ function buildPage(l, kind, c) {
     lang: l, dir: L.dir, title: esc(title), description: esc(description), canonical,
     alternates: alternates(hePath, enPath), ogImage: SITE + (isCountry ? `/og/${c.slug}${l === "he" ? "" : "-en"}.png` : l === "he" ? "/og.png" : "/og-en.png"),
     jsonld: `<script type="application/ld+json">${JSON.stringify(jsonld)}</script>`, ver: VER, theme,
-    privacyHref: l === "he" ? "/privacy" : "/en/privacy", contactBtn: contactBtn(l), homeHref: homePath(l), langHref: isCountry ? urlPath(c, other) : homePath(other),
+    a11yLink: `<a href="${l === "he" ? "/accessibility" : "/en/accessibility"}">${L.a11y_link}</a>`, privacyHref: l === "he" ? "/privacy" : "/en/privacy", contactBtn: contactBtn(l), homeHref: homePath(l), langHref: isCountry ? urlPath(c, other) : homePath(other),
     h1_place: isCountry ? S.placeOf(c, l, L, false) + "?" : L.h1_abroad,
     heroP: isCountry ? `<span data-nosnippet>${answerSentence(c, l, true)}</span>` : L.hero_p,
     quickAria: L.quick_aria_favs, brand: BRAND, quickHtml,
@@ -262,10 +262,11 @@ function contactBtn(l) {
 }
 
 /* ---------- privacy policy page ---------- */
-function buildDoc(l) {
+function buildDoc(l, kind = "privacy") {
   const L = I18N[l];
   const other = l === "he" ? "en" : "he";
-  const hePath = "/privacy", enPath = "/en/privacy";
+  const isA = kind === "a11y";
+  const hePath = isA ? "/accessibility" : "/privacy", enPath = isA ? "/en/accessibility" : "/en/privacy";
   const canonical = SITE + (l === "he" ? hePath : enPath);
   const name = (SITE_CFG.operatorName || "").trim();
   const email = (SITE_CFG.contactEmail || "").trim();
@@ -274,18 +275,19 @@ function buildDoc(l) {
     : (name ? `Kama Tip? (kamatip.com) is operated by ${esc(name)} ("we").` : `We operate Kama Tip? (kamatip.com).`);
   const contact = email
     ? (l === "he"
-        ? `<h2>יצירת קשר</h2><p>לשאלות או לבקשות בנושא פרטיות: <a href="mailto:${esc(email)}">${esc(email)}</a></p>`
-        : `<h2>Contact</h2><p>For privacy questions or requests: <a href="mailto:${esc(email)}">${esc(email)}</a></p>`)
+        ? (isA ? `<p>רכז/ת נגישות: ${name ? esc(name) + ", " : ""}דוא״ל <a href="mailto:${esc(email)}">${esc(email)}</a></p>` : `<h2>יצירת קשר</h2><p>לשאלות או לבקשות בנושא פרטיות: <a href="mailto:${esc(email)}">${esc(email)}</a></p>`)
+        : (isA ? `<p>Accessibility contact: ${name ? esc(name) + ", " : ""}email <a href="mailto:${esc(email)}">${esc(email)}</a></p>` : `<h2>Contact</h2><p>For privacy questions or requests: <a href="mailto:${esc(email)}">${esc(email)}</a></p>`))
     : "";
-  const content = render(read(`src/privacy.${l}.html`), { operator, contact_section: contact });
+  const content = render(read(`src/${isA ? "a11y" : "privacy"}.${l}.html`), { operator, contact_section: contact });
   const date = new Intl.DateTimeFormat(L.date_locale, { day: "numeric", month: "long", year: "numeric" })
-    .format(new Date(SITE_CFG.privacyUpdated + "T00:00:00"));
+    .format(new Date((isA ? SITE_CFG.a11yUpdated || SITE_CFG.privacyUpdated : SITE_CFG.privacyUpdated) + "T00:00:00"));
   const vars = {
     ...Object.fromEntries(Object.entries(L).filter(([, v]) => typeof v === "string")),
-    lang: l, dir: L.dir, title: esc(L.privacy_title), description: esc(L.privacy_desc), canonical,
+    lang: l, dir: L.dir, title: esc(isA ? L.a11y_title : L.privacy_title), description: esc(isA ? L.a11y_desc : L.privacy_desc), canonical,
+    privacy_h1: isA ? L.a11y_h1 : L.privacy_h1, privacy_lead: isA ? L.a11y_lead : L.privacy_lead, a11yLink: `<a href="${l === "he" ? "/accessibility" : "/en/accessibility"}">${L.a11y_link}</a>`,
     alternates: alternates(hePath, enPath), ogImage: SITE + (l === "he" ? "/og.png" : "/og-en.png"),
     ver: VER, brand: BRAND, homeHref: homePath(l), langHref: l === "he" ? enPath : hePath,
-    privacyHref: l === "he" ? hePath : enPath, contactBtn: contactBtn(l), updated_line: `${L.updated_label} ${esc(date)}`, content,
+    privacyHref: l === "he" ? "/privacy" : "/en/privacy", contactBtn: contactBtn(l), updated_line: `${L.updated_label} ${esc(date)}`, content,
   };
   void other;
   return render(DOC_TEMPLATE, vars);
@@ -297,6 +299,8 @@ fs.mkdirSync(OUT, { recursive: true });
 write("index.html", buildPage("he", "home"));
 write("privacy/index.html", buildDoc("he"));
 write("en/privacy/index.html", buildDoc("en"));
+write("accessibility/index.html", buildDoc("he", "a11y"));
+write("en/accessibility/index.html", buildDoc("en", "a11y"));
 write("en/index.html", buildPage("en", "home"));
 for (const c of data) {
   write(`tip/${c.slug}/index.html`, buildPage("he", "country", c));
@@ -306,6 +310,7 @@ write("style.css", css);
 write("app.js", appJs);
 write("shared.js", sharedJs);
 write("card.js", cardJs);
+write("a11y.js", a11yJs);
 write("data.js", dataJs);
 write("i18n.js", i18nJs);
 const pub = path.join(ROOT, "public");
@@ -324,11 +329,12 @@ const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 ${urlEntry("/", "/en", lastmod)}
 ${urlEntry("/privacy", "/en/privacy", SITE_CFG.privacyUpdated)}
+${urlEntry("/accessibility", "/en/accessibility", SITE_CFG.a11yUpdated || SITE_CFG.privacyUpdated)}
 ${data.map((c) => urlEntry(urlPath(c, "he"), urlPath(c, "en"), c.verified)).join("\n")}
 </urlset>
 `;
 write("sitemap.xml", sitemap);
 write("robots.txt", `User-agent: *\nAllow: /\nSitemap: ${SITE}/sitemap.xml\n`);
 
-const pages = 4 + data.length * 2;
+const pages = 6 + data.length * 2;
 console.log(`Kama Tip build OK: ${data.length} countries, ${pages} pages, version ${VER}`);

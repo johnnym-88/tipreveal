@@ -186,7 +186,12 @@
   "card_bill": "מתוך חשבון של {bill}",
   "card_per": "לכל אחד מ-{n}",
   "card_range_label": "הטווח המקובל",
-  "card_cta": "בדקו כמה טיפ משאירים בכל יעד"
+  "card_cta": "בדקו כמה טיפ משאירים בכל יעד",
+  "a11y_link": "הצהרת נגישות",
+  "a11y_title": "הצהרת נגישות | Kama Tip",
+  "a11y_desc": "הצהרת הנגישות של האתר Kama Tip: מה עשינו כדי שיהיה נגיש, מגבלות ידועות ואיך לפנות אלינו.",
+  "a11y_h1": "הצהרת נגישות",
+  "a11y_lead": "אנחנו רוצים שכל אחד יוכל להשתמש ב-<bdi dir=\"ltr\">Kama Tip?</bdi>. כאן מפורט מה עשינו, מה עדיין חסר ואיך אפשר לפנות אלינו."
  },
  "en": {
   "tagline": "Restaurant tip calculator for travelers",
@@ -378,6 +383,11 @@
   "card_bill": "on a bill of {bill}",
   "card_per": "Each of {n}",
   "card_range_label": "What's customary",
-  "card_cta": "Check how much to tip anywhere"
+  "card_cta": "Check how much to tip anywhere",
+  "a11y_link": "Accessibility statement",
+  "a11y_title": "Accessibility Statement | Kama Tip",
+  "a11y_desc": "Kama Tip's accessibility statement: what we did to make the site accessible, known limitations and how to contact us.",
+  "a11y_h1": "Accessibility Statement",
+  "a11y_lead": "We want everyone to be able to use Kama Tip?. This page explains what we did, what is still missing and how to reach us."
  }
 }
