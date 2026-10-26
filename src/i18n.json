@@ -204,7 +204,8 @@
   "e_pick": "בחרו מדינה",
   "e_empty": "בוחרים מדינה מהרשימה או מחפשים בהקלדה, ורואים איזה שקע משתמשים בה ואם צריך מתאם.",
   "e_back": "→ בחזרה ל-Kama Tip",
-  "elec_cta": "🔌 איזה שקע חשמל יש {place}?"
+  "elec_cta": "🔌 איזה שקע חשמל יש {place}?",
+  "tip_cta": "💵 כמה טיפ משאירים {place}?"
  },
  "en": {
   "tagline": "Restaurant tip calculator for travelers",
@@ -414,6 +415,7 @@
   "e_pick": "Choose a country",
   "e_empty": "Pick a country from the list or search by typing, to see its plug type and whether you need an adapter.",
   "e_back": "← Back to Kama Tip",
-  "elec_cta": "🔌 Which power plug {place}?"
+  "elec_cta": "🔌 Which power plug {place}?",
+  "tip_cta": "💵 How much to tip {place}?"
  }
 }

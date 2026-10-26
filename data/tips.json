@@ -4706,5 +4706,1229 @@
     "url": "https://blog.windstarcruises.com/how-to-tip-around-the-world/"
    }
   ]
+ },
+ {
+  "slug": "andorra",
+  "he": "אנדורה",
+  "en": "Andorra",
+  "flag": "🇦🇩",
+  "code": "EUR",
+  "sym": "€",
+  "cur_he": "אירו",
+  "cur_en": "Euro",
+  "region": "europe_west",
+  "accent": "#10069F",
+  "type": "percentage",
+  "min": 5,
+  "max": 10,
+  "default": 10,
+  "status": "customary",
+  "sc": "common",
+  "sc_pct": null,
+  "after": "optional_small_extra",
+  "conf": "medium",
+  "verified": "2026-10-26",
+  "note_he": "השירות בדרך כלל כלול בחשבון (לפי World Travel Guide), ולפי אותו מדריך מלצרים מצפים לעוד כ-10%. כדאי לבדוק קודם את החשבון, ולהוסיף 5%–10% על שירות טוב.",
+  "note_en": "Service is usually included in the bill (per World Travel Guide), which also says waiters expect a further 10%. Check the bill first, then add 5%–10% for good service.",
+  "sources": [
+   {
+    "name": "World Travel Guide – Andorra: Food & Drink (tipping)",
+    "url": "https://www.worldtravelguide.net/guides/europe/andorra/food-and-drink"
+   }
+  ]
+ },
+ {
+  "slug": "liechtenstein",
+  "he": "ליכטנשטיין",
+  "en": "Liechtenstein",
+  "flag": "🇱🇮",
+  "code": "CHF",
+  "sym": "CHF",
+  "cur_he": "פרנק שווייצרי",
+  "cur_en": "Swiss Franc",
+  "region": "europe_west",
+  "accent": "#002B7F",
+  "type": "round_up",
+  "min": 0,
+  "max": 10,
+  "default": 0,
+  "status": "optional",
+  "sc": "included_in_price",
+  "sc_pct": null,
+  "after": "optional_small_extra",
+  "conf": "low",
+  "verified": "2026-10-26",
+  "note_he": "ליכטנשטיין משתמשת בפרנק השווייצרי ובמנהג השווייצרי: השירות כלול במחירים, ומעגלים למעלה. לא מצאנו מקור ייעודי לליכטנשטיין, ולכן הנתון מבוסס על שווייץ.",
+  "note_en": "Liechtenstein uses the Swiss franc and Swiss practice: service is included in prices and people round up. We found no Liechtenstein-specific source, so this is based on Switzerland.",
+  "sources": [
+   {
+    "name": "UBS – Tipping in Switzerland: between tradition and law (Switzerland; Liechtenstein not mentioned)",
+    "url": "https://www.ubs.com/ch/en/services/guide/accounts-and-cards/articles/tipping-culture-switzerland.html"
+   }
+  ]
+ },
+ {
+  "slug": "san-marino",
+  "he": "סן מרינו",
+  "en": "San Marino",
+  "flag": "🇸🇲",
+  "code": "EUR",
+  "sym": "€",
+  "cur_he": "אירו",
+  "cur_en": "Euro",
+  "region": "europe_west",
+  "accent": "#5EB6E4",
+  "type": "percentage",
+  "min": 10,
+  "max": 10,
+  "default": 10,
+  "status": "customary",
+  "sc": "sometimes",
+  "sc_pct": null,
+  "after": "no_additional_tip",
+  "conf": "medium",
+  "verified": "2026-10-26",
+  "note_he": "לפי World Travel Guide, טיפ של 10% הוא הנהוג. אם כבר נוספה עמלת שירות לחשבון, אין צורך להוסיף.",
+  "note_en": "According to World Travel Guide, a 10% tip is usual. If a service charge was already added to the bill, you don't need to add more.",
+  "sources": [
+   {
+    "name": "World Travel Guide – San Marino: Food & Drink (tipping)",
+    "url": "https://www.worldtravelguide.net/guides/europe/san-marino/food-and-drink"
+   }
+  ]
+ },
+ {
+  "slug": "gibraltar",
+  "he": "גיברלטר",
+  "en": "Gibraltar",
+  "flag": "🇬🇮",
+  "code": "GIP",
+  "sym": "£",
+  "cur_he": "לירה גיברלטרית",
+  "cur_en": "Gibraltar Pound",
+  "region": "europe_west",
+  "accent": "#DA000C",
+  "type": "percentage",
+  "min": 10,
+  "max": 15,
+  "default": 10,
+  "status": "customary",
+  "sc": "sometimes",
+  "sc_pct": null,
+  "after": "no_additional_tip",
+  "conf": "medium",
+  "verified": "2026-10-26",
+  "note_he": "לפי World Travel Guide, הטיפ הרגיל הוא 10%–15%. אם נוספה עמלת שירות לחשבון, אין צורך להוסיף.",
+  "note_en": "World Travel Guide says tipping is normally 10% to 15%. If a service charge was added to the bill, no extra is needed.",
+  "sources": [
+   {
+    "name": "World Travel Guide – Gibraltar: Food & Drink (tipping)",
+    "url": "https://www.worldtravelguide.net/guides/europe/gibraltar/food-and-drink"
+   }
+  ]
+ },
+ {
+  "slug": "senegal",
+  "he": "סנגל",
+  "en": "Senegal",
+  "flag": "🇸🇳",
+  "code": "XOF",
+  "sym": "XOF",
+  "cur_he": "פרנק CFA מערב אפריקאי",
+  "cur_en": "West African CFA Franc",
+  "region": "africa",
+  "accent": "#00853F",
+  "type": "percentage",
+  "min": 5,
+  "max": 10,
+  "default": 10,
+  "status": "appreciated",
+  "sc": "sometimes",
+  "sc_pct": null,
+  "after": "no_additional_tip",
+  "conf": "medium",
+  "verified": "2026-10-26",
+  "note_he": "טיפ במסעדות אינו חובה אך מוערך, במיוחד באזורי תיירות. כ-10% נחשב נדיב, ורק אם לא נוספה עמלת שירות.",
+  "note_en": "Tipping in restaurants isn't required but is appreciated, especially in tourist areas. About 10% is considered generous, and only if no service charge was added.",
+  "sources": [
+   {
+    "name": "World Travel Guide – Senegal: Food & Drink (tipping)",
+    "url": "https://www.worldtravelguide.net/guides/africa/senegal/food-and-drink"
+   },
+   {
+    "name": "Tripmasters – Tipping in Senegal",
+    "url": "https://www.tripmasters.com/tipping_in_senegal/cms"
+   }
+  ]
+ },
+ {
+  "slug": "nigeria",
+  "he": "ניגריה",
+  "en": "Nigeria",
+  "flag": "🇳🇬",
+  "code": "NGN",
+  "sym": "₦",
+  "cur_he": "נאירה ניגרית",
+  "cur_en": "Nigerian Naira",
+  "region": "africa",
+  "accent": "#008751",
+  "type": "percentage",
+  "min": 5,
+  "max": 10,
+  "default": 5,
+  "status": "customary",
+  "sc": "common",
+  "sc_pct": null,
+  "after": "optional_small_extra",
+  "conf": "medium",
+  "verified": "2026-10-26",
+  "note_he": "במסעדות רבות (בעיקר בלאגוס) מתווספת עמלת שירות של 2.5%–10% ועוד מע״מ, והיא בדרך כלל נחלקת בין כל הצוות. טיפ ישיר למלצר מוערך אם אפשר.",
+  "note_en": "Many restaurants (especially in Lagos) add a 2.5%–10% service charge plus VAT, usually pooled among all staff. A direct tip to your waiter is appreciated if you can.",
+  "sources": [
+   {
+    "name": "Eat Drink Lagos – Decoding service charges and taxes in Lagos restaurants",
+    "url": "https://www.eatdrinklagos.com/roll-call/2024/4/6/decoding-service-charges-and-taxes-in-lagos-restaurants"
+   },
+   {
+    "name": "Wikipedia – List of tipping customs by country (Nigeria)",
+    "url": "https://en.wikipedia.org/wiki/List_of_tipping_customs_by_country"
+   }
+  ]
+ },
+ {
+  "slug": "mozambique",
+  "he": "מוזמביק",
+  "en": "Mozambique",
+  "flag": "🇲🇿",
+  "code": "MZN",
+  "sym": "MZN",
+  "cur_he": "מטיקל מוזמביקי",
+  "cur_en": "Mozambican Metical",
+  "region": "africa",
+  "accent": "#007168",
+  "type": "percentage",
+  "min": 10,
+  "max": 10,
+  "default": 10,
+  "status": "customary",
+  "sc": "sometimes",
+  "sc_pct": null,
+  "after": "no_additional_tip",
+  "conf": "medium",
+  "verified": "2026-10-26",
+  "note_he": "במסעדות נהוג כ-10% על שירות טוב, אם לא נוספה עמלת שירות לחשבון.",
+  "note_en": "In restaurants about 10% is customary for good service, if no service charge was already added to the bill.",
+  "sources": [
+   {
+    "name": "World Travel Guide – Mozambique: Food & Drink (tipping)",
+    "url": "https://www.worldtravelguide.net/guides/africa/mozambique/food-and-drink/"
+   }
+  ]
+ },
+ {
+  "slug": "malawi",
+  "he": "מלאווי",
+  "en": "Malawi",
+  "flag": "🇲🇼",
+  "code": "MWK",
+  "sym": "MWK",
+  "cur_he": "קוואצ'ה מלאווית",
+  "cur_en": "Malawian Kwacha",
+  "region": "africa",
+  "accent": "#CE1126",
+  "type": "percentage",
+  "min": 10,
+  "max": 15,
+  "default": 10,
+  "status": "appreciated",
+  "sc": "uncommon",
+  "sc_pct": null,
+  "after": "optional_small_extra",
+  "conf": "medium",
+  "verified": "2026-10-26",
+  "note_he": "במסעדות במלאווי בדרך כלל לא מתווספת עמלת שירות. 10%–15% על שירות טוב מקובלים.",
+  "note_en": "Service charges are not usually added to restaurant bills in Malawi. 10%–15% for good service is acceptable.",
+  "sources": [
+   {
+    "name": "Tripmasters – How to tip in Malawi",
+    "url": "https://www.tripmasters.com/tipping_in_malawi/cms?cms=12466&wF=0&wH=0"
+   }
+  ]
+ },
+ {
+  "slug": "angola",
+  "he": "אנגולה",
+  "en": "Angola",
+  "flag": "🇦🇴",
+  "code": "AOA",
+  "sym": "AOA",
+  "cur_he": "קוואנזה אנגולית",
+  "cur_en": "Angolan Kwanza",
+  "region": "africa",
+  "accent": "#CC092F",
+  "type": "percentage",
+  "min": 10,
+  "max": 10,
+  "default": 10,
+  "status": "optional",
+  "sc": "sometimes",
+  "sc_pct": null,
+  "after": "no_additional_tip",
+  "conf": "medium",
+  "verified": "2026-10-26",
+  "note_he": "טיפ אינו מעודד רשמית. אם לא נוספה עמלת שירות לחשבון, כ-10% מקובלים.",
+  "note_en": "Tipping isn't officially encouraged. If no service charge was added to the bill, about 10% is acceptable.",
+  "sources": [
+   {
+    "name": "World Travel Guide – Angola: Food & Drink (tipping)",
+    "url": "https://www.worldtravelguide.net/guides/africa/angola/food-and-drink"
+   }
+  ]
+ },
+ {
+  "slug": "ivory-coast",
+  "he": "חוף השנהב",
+  "en": "Côte d'Ivoire",
+  "flag": "🇨🇮",
+  "code": "XOF",
+  "sym": "XOF",
+  "cur_he": "פרנק CFA מערב אפריקאי",
+  "cur_en": "West African CFA Franc",
+  "region": "africa",
+  "accent": "#F77F00",
+  "type": "percentage",
+  "min": 15,
+  "max": 15,
+  "default": 15,
+  "status": "appreciated",
+  "sc": "common",
+  "sc_pct": null,
+  "after": "no_additional_tip",
+  "conf": "medium",
+  "verified": "2026-10-26",
+  "note_he": "רוב המלונות והמסעדות כוללים עמלת שירות בחשבון. אם לא, 15% מקובלים.",
+  "note_en": "Most hotels and restaurants include a service charge in the bill. If not, 15% is acceptable.",
+  "sources": [
+   {
+    "name": "World Travel Guide – Ivory Coast: Food & Drink (tipping)",
+    "url": "https://www.worldtravelguide.net/guides/africa/ivory-coast/food-and-drink/"
+   }
+  ]
+ },
+ {
+  "slug": "eswatini",
+  "he": "אסוואטיני",
+  "en": "Eswatini",
+  "flag": "🇸🇿",
+  "code": "SZL",
+  "sym": "SZL",
+  "cur_he": "ליחנגני סווזי",
+  "cur_en": "Swazi Lilangeni",
+  "region": "africa",
+  "accent": "#3E5EB9",
+  "type": "percentage",
+  "min": 10,
+  "max": 10,
+  "default": 10,
+  "status": "customary",
+  "sc": "sometimes",
+  "sc_pct": null,
+  "after": "no_additional_tip",
+  "conf": "medium",
+  "verified": "2026-10-26",
+  "note_he": "כ-10% מהחשבון נהוגים אם השירות לא כלול, בעיקר במקומות רשמיים או תיירותיים.",
+  "note_en": "About 10% of the bill is customary if service isn't already included, particularly in formal or tourist-oriented places.",
+  "sources": [
+   {
+    "name": "World Travel Guide – Eswatini: Food & Drink (tipping)",
+    "url": "https://worldtravelguide.net/guides/africa/eswatini/food-and-drink"
+   }
+  ]
+ },
+ {
+  "slug": "togo",
+  "he": "טוגו",
+  "en": "Togo",
+  "flag": "🇹🇬",
+  "code": "XOF",
+  "sym": "XOF",
+  "cur_he": "פרנק CFA מערב אפריקאי",
+  "cur_en": "West African CFA Franc",
+  "region": "africa",
+  "accent": "#006A4E",
+  "type": "percentage",
+  "min": 10,
+  "max": 10,
+  "default": 10,
+  "status": "customary",
+  "sc": "sometimes",
+  "sc_pct": null,
+  "after": "no_additional_tip",
+  "conf": "medium",
+  "verified": "2026-10-26",
+  "note_he": "כשהשירות לא כלול, כ-10% נהוגים.",
+  "note_en": "When service isn't included, about 10% is customary.",
+  "sources": [
+   {
+    "name": "World Travel Guide – Togo: Food & Drink (tipping)",
+    "url": "https://www.worldtravelguide.net/guides/africa/togo/food-and-drink"
+   }
+  ]
+ },
+ {
+  "slug": "gabon",
+  "he": "גבון",
+  "en": "Gabon",
+  "flag": "🇬🇦",
+  "code": "XAF",
+  "sym": "XAF",
+  "cur_he": "פרנק CFA מרכז אפריקאי",
+  "cur_en": "Central African CFA Franc",
+  "region": "africa",
+  "accent": "#009E60",
+  "type": "percentage",
+  "min": 10,
+  "max": 15,
+  "default": 10,
+  "status": "customary",
+  "sc": "sometimes",
+  "sc_pct": null,
+  "after": "no_additional_tip",
+  "conf": "low",
+  "verified": "2026-10-26",
+  "note_he": "המדריך מציין 10%–15% אלא אם השירות כלול בחשבון. זו הנחיה כללית ולא ספציפית למסעדות.",
+  "note_en": "The guide says 10% to 15% unless service is included in the bill. This is general guidance, not specific to restaurants.",
+  "sources": [
+   {
+    "name": "World Travel Guide – Gabon: Food & Drink (tipping)",
+    "url": "https://www.worldtravelguide.net/guides/africa/gabon/food-and-drink"
+   }
+  ]
+ },
+ {
+  "slug": "myanmar",
+  "he": "מיאנמר",
+  "en": "Myanmar",
+  "flag": "🇲🇲",
+  "code": "MMK",
+  "sym": "MMK",
+  "cur_he": "קיאט מיאנמרי",
+  "cur_en": "Myanmar Kyat",
+  "region": "asia",
+  "accent": "#FECB00",
+  "type": "none",
+  "min": 0,
+  "max": 0,
+  "default": 0,
+  "status": "not_customary",
+  "sc": "uncommon",
+  "sc_pct": null,
+  "after": "no_additional_tip",
+  "conf": "medium",
+  "verified": "2026-10-26",
+  "note_he": "לפי World Travel Guide, לא מקובל לתת טיפ במסעדות או במקומות אחרים.",
+  "note_en": "According to World Travel Guide, it is not traditional to tip in restaurants or elsewhere.",
+  "sources": [
+   {
+    "name": "World Travel Guide – Myanmar: Food & Drink (tipping)",
+    "url": "https://www.worldtravelguide.net/guides/asia/myanmar/food-and-drink/"
+   }
+  ]
+ },
+ {
+  "slug": "tajikistan",
+  "he": "טג'יקיסטן",
+  "en": "Tajikistan",
+  "flag": "🇹🇯",
+  "code": "TJS",
+  "sym": "TJS",
+  "cur_he": "סומוני טג'יקי",
+  "cur_en": "Tajikistani Somoni",
+  "region": "asia",
+  "accent": "#006600",
+  "type": "round_up",
+  "min": 0,
+  "max": 10,
+  "default": 0,
+  "status": "optional",
+  "sc": "sometimes",
+  "sc_pct": null,
+  "after": "optional_small_extra",
+  "conf": "medium",
+  "verified": "2026-10-26",
+  "note_he": "במסעדות יוקרה ובמלונות עשויה להיות כלולה עמלת שירות. במקומות אחרים מעגלים למעלה או משאירים סכום קטן.",
+  "note_en": "Higher-end restaurants and hotel venues may already include a service charge. Elsewhere, rounding up or leaving a small tip is appreciated.",
+  "sources": [
+   {
+    "name": "World Travel Guide – Tajikistan: Food & Drink (tipping)",
+    "url": "https://www.worldtravelguide.net/guides/asia/tajikistan/food-and-drink"
+   }
+  ]
+ },
+ {
+  "slug": "turkmenistan",
+  "he": "טורקמניסטן",
+  "en": "Turkmenistan",
+  "flag": "🇹🇲",
+  "code": "TMT",
+  "sym": "TMT",
+  "cur_he": "מנאט טורקמני",
+  "cur_en": "Turkmenistani Manat",
+  "region": "asia",
+  "accent": "#00843D",
+  "type": "round_up",
+  "min": 0,
+  "max": 10,
+  "default": 0,
+  "status": "optional",
+  "sc": "sometimes",
+  "sc_pct": null,
+  "after": "optional_small_extra",
+  "conf": "medium",
+  "verified": "2026-10-26",
+  "note_he": "במסעדות של מלונות עשויה להיות כלולה עמלת שירות. במקומות אחרים מעגלים למעלה או משאירים סכום קטן, לא חובה.",
+  "note_en": "Service charges may already be included in hotel restaurants. Elsewhere, rounding up or leaving a small amount is appreciated but not required.",
+  "sources": [
+   {
+    "name": "World Travel Guide – Turkmenistan: Food & Drink (tipping)",
+    "url": "https://worldtravelguide.net/guides/asia/turkmenistan/food-and-drink"
+   }
+  ]
+ },
+ {
+  "slug": "brunei",
+  "he": "ברוניי",
+  "en": "Brunei",
+  "flag": "🇧🇳",
+  "code": "BND",
+  "sym": "B$",
+  "cur_he": "דולר ברוניי",
+  "cur_en": "Brunei Dollar",
+  "region": "asia",
+  "accent": "#F7E017",
+  "type": "none",
+  "min": 0,
+  "max": 0,
+  "default": 0,
+  "status": "not_customary",
+  "sc": "sometimes",
+  "sc_pct": 10,
+  "after": "no_additional_tip",
+  "conf": "medium",
+  "verified": "2026-10-26",
+  "note_he": "טיפ אינו נהוג, אבל מלונות ומסעדות שמכוונים לתיירים מוסיפים לא פעם 10% לחשבון.",
+  "note_en": "Tipping is not common practice, but tourist-oriented hotels and restaurants often add 10% to the bill.",
+  "sources": [
+   {
+    "name": "World Travel Guide – Brunei: Food & Drink (tipping)",
+    "url": "https://www.worldtravelguide.net/guides/asia/brunei/food-and-drink"
+   }
+  ]
+ },
+ {
+  "slug": "papua-new-guinea",
+  "he": "פפואה גינאה החדשה",
+  "en": "Papua New Guinea",
+  "flag": "🇵🇬",
+  "code": "PGK",
+  "sym": "PGK",
+  "cur_he": "קינה פפואית",
+  "cur_en": "Papua New Guinean Kina",
+  "region": "oceania",
+  "accent": "#CE1126",
+  "type": "none",
+  "min": 0,
+  "max": 0,
+  "default": 0,
+  "status": "not_customary",
+  "sc": "uncommon",
+  "sc_pct": null,
+  "after": "no_additional_tip",
+  "conf": "medium",
+  "verified": "2026-10-26",
+  "note_he": "לא נהוג ומונע, לפי World Travel Guide. לחשבון מתווסף מס מכירה של 10%, שאינו עמלת שירות.",
+  "note_en": "Not customary and discouraged, per World Travel Guide. Bills include a 10% sales tax, which is not a service charge.",
+  "sources": [
+   {
+    "name": "World Travel Guide – Papua New Guinea: Food & Drink (tipping)",
+    "url": "https://www.worldtravelguide.net/guides/oceania/papua-new-guinea/food-and-drink"
+   }
+  ]
+ },
+ {
+  "slug": "samoa",
+  "he": "סמואה",
+  "en": "Samoa",
+  "flag": "🇼🇸",
+  "code": "WST",
+  "sym": "WST",
+  "cur_he": "טאלה סמואית",
+  "cur_en": "Samoan Tala",
+  "region": "oceania",
+  "accent": "#CE1126",
+  "type": "none",
+  "min": 0,
+  "max": 0,
+  "default": 0,
+  "status": "not_customary",
+  "sc": "uncommon",
+  "sc_pct": null,
+  "after": "no_additional_tip",
+  "conf": "medium",
+  "verified": "2026-10-26",
+  "note_he": "לא נהוג לתת טיפ, לפי World Travel Guide.",
+  "note_en": "Tipping is not customary, according to World Travel Guide.",
+  "sources": [
+   {
+    "name": "World Travel Guide – Samoa: Food & Drink (tipping)",
+    "url": "https://www.worldtravelguide.net/guides/oceania/samoa/food-and-drink/"
+   }
+  ]
+ },
+ {
+  "slug": "tonga",
+  "he": "טונגה",
+  "en": "Tonga",
+  "flag": "🇹🇴",
+  "code": "TOP",
+  "sym": "TOP",
+  "cur_he": "פאנגה טונגית",
+  "cur_en": "Tongan Paʻanga",
+  "region": "oceania",
+  "accent": "#C10000",
+  "type": "none",
+  "min": 0,
+  "max": 0,
+  "default": 0,
+  "status": "not_customary",
+  "sc": "uncommon",
+  "sc_pct": null,
+  "after": "no_additional_tip",
+  "conf": "medium",
+  "verified": "2026-10-26",
+  "note_he": "לא מעודד, אך אף אחד לא נעלב אם מתגמלים שירות כך, לפי World Travel Guide.",
+  "note_en": "Not encouraged, but no offence is caused if services are rewarded this way, per World Travel Guide.",
+  "sources": [
+   {
+    "name": "World Travel Guide – Tonga: Food & Drink (tipping)",
+    "url": "https://www.worldtravelguide.net/guides/oceania/tonga/food-and-drink"
+   }
+  ]
+ },
+ {
+  "slug": "vanuatu",
+  "he": "ונואטו",
+  "en": "Vanuatu",
+  "flag": "🇻🇺",
+  "code": "VUV",
+  "sym": "VUV",
+  "cur_he": "ואטו ונואטי",
+  "cur_en": "Vanuatu Vatu",
+  "region": "oceania",
+  "accent": "#009543",
+  "type": "none",
+  "min": 0,
+  "max": 0,
+  "default": 0,
+  "status": "not_customary",
+  "sc": "uncommon",
+  "sc_pct": null,
+  "after": "no_additional_tip",
+  "conf": "medium",
+  "verified": "2026-10-26",
+  "note_he": "לא צפוי ולא מעודד, מפני שזה נוגד את המסורת המקומית, לפי World Travel Guide.",
+  "note_en": "Not expected or encouraged, as it goes against local tradition, per World Travel Guide.",
+  "sources": [
+   {
+    "name": "World Travel Guide – Vanuatu: Food & Drink (tipping)",
+    "url": "https://www.worldtravelguide.net/guides/oceania/vanuatu/food-and-drink/"
+   }
+  ]
+ },
+ {
+  "slug": "timor-leste",
+  "he": "מזרח טימור",
+  "en": "Timor-Leste",
+  "flag": "🇹🇱",
+  "code": "USD",
+  "sym": "$",
+  "cur_he": "דולר אמריקאי",
+  "cur_en": "US Dollar",
+  "region": "asia",
+  "accent": "#DC241F",
+  "type": "percentage",
+  "min": 10,
+  "max": 10,
+  "default": 10,
+  "status": "optional",
+  "sc": "uncommon",
+  "sc_pct": null,
+  "after": "optional_small_extra",
+  "conf": "medium",
+  "verified": "2026-10-26",
+  "note_he": "לא מתווספת עמלת שירות לחשבון. אם השירות מצדיק, 10% מספיקים.",
+  "note_en": "No service charge is added to bills. If the service calls for it, a 10% tip is sufficient.",
+  "sources": [
+   {
+    "name": "World Travel Guide – East Timor: Food & Drink (tipping)",
+    "url": "https://www.worldtravelguide.net/guides/asia/east-timor/food-and-drink"
+   }
+  ]
+ },
+ {
+  "slug": "venezuela",
+  "he": "ונצואלה",
+  "en": "Venezuela",
+  "flag": "🇻🇪",
+  "code": "VES",
+  "sym": "Bs.",
+  "cur_he": "בוליבר ונצואלי",
+  "cur_en": "Venezuelan Bolívar",
+  "region": "americas",
+  "accent": "#CF142B",
+  "type": "percentage",
+  "min": 10,
+  "max": 10,
+  "default": 10,
+  "status": "customary",
+  "sc": "common",
+  "sc_pct": 10,
+  "after": "optional_small_extra",
+  "conf": "medium",
+  "verified": "2026-10-26",
+  "note_he": "ברוב הברים והמסעדות מתווספים 10% לחשבון. במקומות מפוארים נהוג להשאיר עוד 10% על השולחן.",
+  "note_en": "In most bars and restaurants 10% is added to the bill. At fancier places it's customary to leave an additional 10% on the table.",
+  "sources": [
+   {
+    "name": "World Travel Guide – Venezuela: Food & Drink (tipping)",
+    "url": "https://www.worldtravelguide.net/guides/south-america/venezuela/food-and-drink"
+   }
+  ]
+ },
+ {
+  "slug": "trinidad-and-tobago",
+  "he": "טרינידד וטובגו",
+  "en": "Trinidad and Tobago",
+  "flag": "🇹🇹",
+  "code": "TTD",
+  "sym": "TT$",
+  "cur_he": "דולר של טרינידד וטובגו",
+  "cur_en": "Trinidad and Tobago Dollar",
+  "region": "americas",
+  "accent": "#CE1126",
+  "type": "percentage",
+  "min": 10,
+  "max": 15,
+  "default": 10,
+  "status": "customary",
+  "sc": "sometimes",
+  "sc_pct": null,
+  "after": "no_additional_tip",
+  "conf": "medium",
+  "verified": "2026-10-26",
+  "note_he": "10%–15% הם הטיפ הרגיל במלונות ובמסעדות. אם נוספה עמלת שירות, אין צורך להוסיף.",
+  "note_en": "A 10% to 15% tip is usual in hotels and restaurants. If a service charge was added, no extra is needed.",
+  "sources": [
+   {
+    "name": "World Travel Guide – Trinidad and Tobago: Food & Drink (tipping)",
+    "url": "https://www.worldtravelguide.net/guides/caribbean/trinidad-and-tobago/food-and-drink"
+   }
+  ]
+ },
+ {
+  "slug": "guyana",
+  "he": "גיאנה",
+  "en": "Guyana",
+  "flag": "🇬🇾",
+  "code": "GYD",
+  "sym": "G$",
+  "cur_he": "דולר גיאני",
+  "cur_en": "Guyanese Dollar",
+  "region": "americas",
+  "accent": "#009E49",
+  "type": "percentage",
+  "min": 10,
+  "max": 20,
+  "default": 10,
+  "status": "expected",
+  "sc": "uncommon",
+  "sc_pct": null,
+  "after": "no_additional_tip",
+  "conf": "medium",
+  "verified": "2026-10-26",
+  "note_he": "10% במלונות ובמסעדות הם ציפייה. על שירות יוצא דופן עד 20% לכל היותר, לפי World Travel Guide.",
+  "note_en": "10% at hotels and restaurants is expected. For truly exceptional service, 20% should be the maximum, per World Travel Guide.",
+  "sources": [
+   {
+    "name": "World Travel Guide – Guyana: Food & Drink (tipping)",
+    "url": "https://worldtravelguide.net/guides/south-america/guyana/food-and-drink"
+   }
+  ]
+ },
+ {
+  "slug": "haiti",
+  "he": "האיטי",
+  "en": "Haiti",
+  "flag": "🇭🇹",
+  "code": "HTG",
+  "sym": "HTG",
+  "cur_he": "גורד האיטי",
+  "cur_en": "Haitian Gourde",
+  "region": "americas",
+  "accent": "#00209F",
+  "type": "percentage",
+  "min": 10,
+  "max": 15,
+  "default": 10,
+  "status": "expected",
+  "sc": "sometimes",
+  "sc_pct": null,
+  "after": "no_additional_tip",
+  "conf": "medium",
+  "verified": "2026-10-26",
+  "note_he": "מצפים ל-10%–15%, אבל כדאי לבדוק בחשבון אם כבר נכלל שירות.",
+  "note_en": "A 10% to 15% tip is expected, but check your bill to see whether it has already been included.",
+  "sources": [
+   {
+    "name": "World Travel Guide – Haiti: Food & Drink (tipping)",
+    "url": "https://www.worldtravelguide.net/guides/caribbean/haiti/food-and-drink/"
+   }
+  ]
+ },
+ {
+  "slug": "saint-lucia",
+  "he": "סנט לוסיה",
+  "en": "Saint Lucia",
+  "flag": "🇱🇨",
+  "code": "XCD",
+  "sym": "EC$",
+  "cur_he": "דולר מזרח קריבי",
+  "cur_en": "East Caribbean Dollar",
+  "region": "americas",
+  "accent": "#66CCFF",
+  "type": "percentage",
+  "min": 8,
+  "max": 15,
+  "default": 10,
+  "status": "customary",
+  "sc": "common",
+  "sc_pct": 10,
+  "after": "optional_small_extra",
+  "conf": "medium",
+  "verified": "2026-10-26",
+  "note_he": "רוב המסעדות מוסיפות 10% שירות ועוד מע״מ. אם השירות היה מצוין אפשר להוסיף מעט. הטווח הכללי: 8%–15%.",
+  "note_en": "Most restaurants add a 10% service charge plus VAT. For exceptional service you can add a little more. The general range is 8%–15%.",
+  "sources": [
+   {
+    "name": "Tripmasters – Tipping in St Lucia",
+    "url": "https://www.tripmasters.com/tipping_in_st_lucia/cms?cms=10603&wF=0&wH=0"
+   },
+   {
+    "name": "World Travel Guide – St Lucia: Food & Drink",
+    "url": "https://www.worldtravelguide.net/guides/caribbean/st-lucia/food-and-drink/"
+   }
+  ]
+ },
+ {
+  "slug": "antigua-and-barbuda",
+  "he": "אנטיגואה וברבודה",
+  "en": "Antigua and Barbuda",
+  "flag": "🇦🇬",
+  "code": "XCD",
+  "sym": "EC$",
+  "cur_he": "דולר מזרח קריבי",
+  "cur_en": "East Caribbean Dollar",
+  "region": "americas",
+  "accent": "#CE1126",
+  "type": "percentage",
+  "min": 10,
+  "max": 15,
+  "default": 10,
+  "status": "customary",
+  "sc": "sometimes",
+  "sc_pct": null,
+  "after": "optional_small_extra",
+  "conf": "medium",
+  "verified": "2026-10-26",
+  "note_he": "בדרך כלל 10%–15% לפי השירות. חלק מהמסעדות מוסיפות עמלת שירות, ובכל זאת כמה דולרים נוספים מוערכים.",
+  "note_en": "Tipping is generally 10%–15% depending on service. Some restaurants add a service charge; even then, a few extra dollars is appreciated.",
+  "sources": [
+   {
+    "name": "StudyCountry – Tipping in Antigua",
+    "url": "https://www.studycountry.com/wiki/what-currency-do-you-tip-in-antigua"
+   }
+  ]
+ },
+ {
+  "slug": "grenada",
+  "he": "גרנדה",
+  "en": "Grenada",
+  "flag": "🇬🇩",
+  "code": "XCD",
+  "sym": "EC$",
+  "cur_he": "דולר מזרח קריבי",
+  "cur_en": "East Caribbean Dollar",
+  "region": "americas",
+  "accent": "#CE1126",
+  "type": "percentage",
+  "min": 10,
+  "max": 10,
+  "default": 10,
+  "status": "customary",
+  "sc": "common",
+  "sc_pct": 10,
+  "after": "no_additional_tip",
+  "conf": "medium",
+  "verified": "2026-10-26",
+  "note_he": "רוב המלונות והמסעדות מוסיפים 10% שירות. אם לא נוסף, נהוג להשאיר 10%.",
+  "note_en": "A 10% service charge is added by most hotels and restaurants. If none is added, it's customary to leave a 10% tip.",
+  "sources": [
+   {
+    "name": "World Travel Guide – Grenada: Food & Drink (tipping)",
+    "url": "https://www.worldtravelguide.net/guides/caribbean/grenada/food-and-drink"
+   }
+  ]
+ },
+ {
+  "slug": "curacao",
+  "he": "קוראסאו",
+  "en": "Curaçao",
+  "flag": "🇨🇼",
+  "code": "ANG",
+  "sym": "ƒ",
+  "cur_he": "גילדן אנטילי",
+  "cur_en": "Netherlands Antillean Guilder",
+  "region": "americas",
+  "accent": "#002B7F",
+  "type": "percentage",
+  "min": 10,
+  "max": 10,
+  "default": 10,
+  "status": "customary",
+  "sc": "sometimes",
+  "sc_pct": null,
+  "after": "no_additional_tip",
+  "conf": "medium",
+  "verified": "2026-10-26",
+  "note_he": "צוות הבר והמלצרים מצפים ל-10%. בדקו אם נוספה עמלת שירות.",
+  "note_en": "Bar staff and waiters expect a 10% tip. Check whether a service charge was added.",
+  "sources": [
+   {
+    "name": "World Travel Guide – Curaçao: Food & Drink (tipping)",
+    "url": "https://worldtravelguide.net/guides/caribbean/curacao/food-and-drink"
+   }
+  ]
+ },
+ {
+  "slug": "aruba",
+  "he": "ארובה",
+  "en": "Aruba",
+  "flag": "🇦🇼",
+  "code": "AWG",
+  "sym": "ƒ",
+  "cur_he": "פלורין ארובאי",
+  "cur_en": "Aruban Florin",
+  "region": "americas",
+  "accent": "#418FDE",
+  "type": "percentage",
+  "min": 15,
+  "max": 20,
+  "default": 15,
+  "status": "appreciated",
+  "sc": "sometimes",
+  "sc_pct": null,
+  "after": "optional_small_extra",
+  "conf": "high",
+  "verified": "2026-10-26",
+  "note_he": "בחלק מהמסעדות מתווספת עמלת שירות של 10%–15% (במיוחד לקבוצות), והיא נחלקת בין כל הצוות. טיפ אינו חובה אך מוערך מאוד, ואפשר להוסיף עד כ-20% על שירות מצוין.",
+  "note_en": "Some restaurants add a 10–15% service charge (especially for groups), shared among all staff. Tipping isn't mandatory but very much appreciated; up to about 20% for great service.",
+  "sources": [
+   {
+    "name": "Visit Aruba – Tipping in Aruba (official tourism site)",
+    "url": "https://www.aruba.com/us/plan-your-visit/tips-for-visitors/tipping"
+   },
+   {
+    "name": "Visit Aruba – Tipping in Aruba (UK site)",
+    "url": "https://www.aruba.com/uk/plan-your-visit-today/tips-for-visitors/tipping-in-aruba"
+   }
+  ]
+ },
+ {
+  "slug": "puerto-rico",
+  "he": "פורטו ריקו",
+  "en": "Puerto Rico",
+  "flag": "🇵🇷",
+  "code": "USD",
+  "sym": "$",
+  "cur_he": "דולר אמריקאי",
+  "cur_en": "US Dollar",
+  "region": "americas",
+  "accent": "#ED0000",
+  "type": "percentage",
+  "min": 15,
+  "max": 20,
+  "default": 15,
+  "status": "expected",
+  "sc": "uncommon",
+  "sc_pct": null,
+  "after": "no_additional_tip",
+  "conf": "medium",
+  "verified": "2026-10-26",
+  "note_he": "נהוג להשאיר 15%–20% אם השירות לא כלול בחשבון.",
+  "note_en": "It is customary to leave a 15%–20% tip if gratuity isn't included on the bill.",
+  "sources": [
+   {
+    "name": "World Travel Guide – Puerto Rico: Food & Drink (tipping)",
+    "url": "https://www.worldtravelguide.net/guides/caribbean/puerto-rico/food-and-drink"
+   }
+  ]
+ },
+ {
+  "slug": "dominica",
+  "he": "דומיניקה",
+  "en": "Dominica",
+  "flag": "🇩🇲",
+  "code": "XCD",
+  "sym": "EC$",
+  "cur_he": "דולר מזרח קריבי",
+  "cur_en": "East Caribbean Dollar",
+  "region": "americas",
+  "accent": "#006B3F",
+  "type": "percentage",
+  "min": 10,
+  "max": 15,
+  "default": 10,
+  "status": "customary",
+  "sc": "sometimes",
+  "sc_pct": 10,
+  "after": "no_additional_tip",
+  "conf": "medium",
+  "verified": "2026-10-26",
+  "note_he": "רוב המלונות וחלק מהמסעדות מוסיפים 10% שירות. במקומות פחות תיירותיים אין עמלה, והטיפ נתון לשיקולך: 10%–15%. (זו דומיניקה האי, לא הרפובליקה הדומיניקנית.)",
+  "note_en": "Most hotels and some restaurants add a 10% service charge. In less touristy places there's none and tipping is discretionary: 10%–15%. (This is the island of Dominica, not the Dominican Republic.)",
+  "sources": [
+   {
+    "name": "World Travel Guide – Dominica: Food & Drink (tipping)",
+    "url": "https://www.worldtravelguide.net/guides/caribbean/dominica/food-and-drink"
+   }
+  ]
+ },
+ {
+  "slug": "saint-kitts-and-nevis",
+  "he": "סנט קיטס ונוויס",
+  "en": "Saint Kitts and Nevis",
+  "flag": "🇰🇳",
+  "code": "XCD",
+  "sym": "EC$",
+  "cur_he": "דולר מזרח קריבי",
+  "cur_en": "East Caribbean Dollar",
+  "region": "americas",
+  "accent": "#009E49",
+  "type": "percentage",
+  "min": 10,
+  "max": 15,
+  "default": 10,
+  "status": "customary",
+  "sc": "common",
+  "sc_pct": null,
+  "after": "no_additional_tip",
+  "conf": "medium",
+  "verified": "2026-10-26",
+  "note_he": "ברוב המקרים מתווספת עמלת שירות של 10%–15% שמתחלקת בין הצוות. אם אין, מוסיפים 10%–15% בעצמכם.",
+  "note_en": "In most cases a 10%–15% service charge is added to the bill and shared among staff. If it isn't, add 10%–15% yourself.",
+  "sources": [
+   {
+    "name": "Tripmasters – Tipping in St Kitts and Nevis",
+    "url": "https://www.tripmasters.com/tipping_in_st_kitts_and_nevis/cms"
+   },
+   {
+    "name": "World Travel Guide – St Kitts and Nevis: Food & Drink",
+    "url": "https://www.worldtravelguide.net/guides/caribbean/st-kitts-and-nevis/food-and-drink"
+   }
+  ]
+ },
+ {
+  "slug": "tunisia",
+  "he": "תוניסיה",
+  "en": "Tunisia",
+  "flag": "🇹🇳",
+  "code": "TND",
+  "sym": "TND",
+  "cur_he": "דינר תוניסאי",
+  "cur_en": "Tunisian Dinar",
+  "region": "mena",
+  "accent": "#E70013",
+  "type": "percentage",
+  "min": 10,
+  "max": 10,
+  "default": 10,
+  "status": "customary",
+  "sc": "sometimes",
+  "sc_pct": null,
+  "after": "no_additional_tip",
+  "conf": "medium",
+  "verified": "2026-10-26",
+  "note_he": "לעיתים נכללת עמלת שירות בחשבון. אם לא, כ-10% על שירות טוב.",
+  "note_en": "A service charge is sometimes included in restaurant bills. If it isn't, leave around 10% for good service.",
+  "sources": [
+   {
+    "name": "World Travel Guide – Tunisia: Food & Drink (tipping)",
+    "url": "https://www.worldtravelguide.net/guides/africa/tunisia/food-and-drink"
+   }
+  ]
+ },
+ {
+  "slug": "pakistan",
+  "he": "פקיסטן",
+  "en": "Pakistan",
+  "flag": "🇵🇰",
+  "code": "PKR",
+  "sym": "PKR",
+  "cur_he": "רופי פקיסטני",
+  "cur_en": "Pakistani Rupee",
+  "region": "asia",
+  "accent": "#01411C",
+  "type": "percentage",
+  "min": 5,
+  "max": 10,
+  "default": 5,
+  "status": "optional",
+  "sc": "common",
+  "sc_pct": 10,
+  "after": "no_additional_tip",
+  "conf": "medium",
+  "verified": "2026-10-26",
+  "note_he": "מסעדות בינוניות ויוקרתיות מוסיפות בדרך כלל עמלת שירות (כ-10%). אם לא, 5%–10%. במקומות פשוטים מעגלים למעלה.",
+  "note_en": "Mid-range and upscale restaurants usually add a service charge (around 10%). If none, tip 5%–10%. In casual eateries, rounding up is enough.",
+  "sources": [
+   {
+    "name": "World Travel Guide – Pakistan: Food & Drink (tipping)",
+    "url": "https://worldtravelguide.net/guides/asia/pakistan/food-and-drink"
+   },
+   {
+    "name": "Wikipedia – List of tipping customs by country (Pakistan)",
+    "url": "https://en.wikipedia.org/wiki/List_of_tipping_customs_by_country"
+   }
+  ]
+ },
+ {
+  "slug": "bangladesh",
+  "he": "בנגלדש",
+  "en": "Bangladesh",
+  "flag": "🇧🇩",
+  "code": "BDT",
+  "sym": "৳",
+  "cur_he": "טאקה בנגלדשית",
+  "cur_en": "Bangladeshi Taka",
+  "region": "asia",
+  "accent": "#006A4E",
+  "type": "percentage",
+  "min": 10,
+  "max": 10,
+  "default": 10,
+  "status": "optional",
+  "sc": "uncommon",
+  "sc_pct": null,
+  "after": "optional_small_extra",
+  "conf": "medium",
+  "verified": "2026-10-26",
+  "note_he": "המקומיים נוטים לא לתת טיפ, אבל מתיירים לעיתים מצפים לכך. 10% מתאימים לצוות מסעדות ומלונות.",
+  "note_en": "Locals tend not to tip, but foreigners are often expected to. 10% is appropriate for hotel and restaurant staff.",
+  "sources": [
+   {
+    "name": "World Travel Guide – Bangladesh: Food & Drink (tipping)",
+    "url": "https://www.worldtravelguide.net/guides/asia/bangladesh/food-and-drink"
+   }
+  ]
+ },
+ {
+  "slug": "bermuda",
+  "he": "ברמודה",
+  "en": "Bermuda",
+  "flag": "🇧🇲",
+  "code": "BMD",
+  "sym": "$",
+  "cur_he": "דולר ברמודי",
+  "cur_en": "Bermudian Dollar",
+  "region": "americas",
+  "accent": "#C8102E",
+  "type": "percentage",
+  "min": 15,
+  "max": 15,
+  "default": 15,
+  "status": "customary",
+  "sc": "uncommon",
+  "sc_pct": null,
+  "after": "no_additional_tip",
+  "conf": "medium",
+  "verified": "2026-10-26",
+  "note_he": "כשהשירות לא כלול בחשבון, 15% מקובלים, לפי World Travel Guide. זו הנחיה כללית ולא ספציפית למסעדות.",
+  "note_en": "When not included in the bill, 15% is generally acceptable for most services, per World Travel Guide. This is general guidance, not specific to restaurants.",
+  "sources": [
+   {
+    "name": "World Travel Guide – Bermuda: Food & Drink (tipping)",
+    "url": "https://www.worldtravelguide.net/guides/caribbean/bermuda/food-and-drink"
+   }
+  ]
+ },
+ {
+  "slug": "cayman-islands",
+  "he": "איי קיימן",
+  "en": "Cayman Islands",
+  "flag": "🇰🇾",
+  "code": "KYD",
+  "sym": "CI$",
+  "cur_he": "דולר איי קיימן",
+  "cur_en": "Cayman Islands Dollar",
+  "region": "americas",
+  "accent": "#012169",
+  "type": "percentage",
+  "min": 10,
+  "max": 15,
+  "default": 10,
+  "status": "customary",
+  "sc": "common",
+  "sc_pct": null,
+  "after": "optional_small_extra",
+  "conf": "medium",
+  "verified": "2026-10-26",
+  "note_he": "חשבונות מסעדות כוללים בדרך כלל 10%–15% עמלה במקום טיפ. תוספת מוערכת, כי השכר השעתי של הצוות נמוך.",
+  "note_en": "Restaurant bills usually include a 10–15% charge in lieu of tipping. Extras are welcomed, as staff often earn a low hourly rate.",
+  "sources": [
+   {
+    "name": "World Travel Guide – Cayman Islands: Food & Drink (tipping)",
+    "url": "https://worldtravelguide.net/guides/caribbean/cayman-islands/food-and-drink"
+   }
+  ]
+ },
+ {
+  "slug": "saint-vincent-and-the-grenadines",
+  "he": "סנט וינסנט והגרנדינים",
+  "en": "Saint Vincent and the Grenadines",
+  "flag": "🇻🇨",
+  "code": "XCD",
+  "sym": "EC$",
+  "cur_he": "דולר מזרח קריבי",
+  "cur_en": "East Caribbean Dollar",
+  "region": "americas",
+  "accent": "#009E60",
+  "type": "percentage",
+  "min": 10,
+  "max": 15,
+  "default": 10,
+  "status": "customary",
+  "sc": "common",
+  "sc_pct": null,
+  "after": "no_additional_tip",
+  "conf": "medium",
+  "verified": "2026-10-26",
+  "note_he": "בדרך כלל נוספים לחשבון 10%–15% שירות, ולכן אין צורך להוסיף.",
+  "note_en": "A 10%–15% service charge is usually added to the bill, so no extra is needed.",
+  "sources": [
+   {
+    "name": "World Travel Guide – St Vincent and the Grenadines: Food & Drink (tipping)",
+    "url": "https://www.worldtravelguide.net/guides/caribbean/st-vincent-and-the-grenadines/food-and-drink"
+   }
+  ]
  }
 ]

@@ -299,9 +299,10 @@ function buildDoc(l, kind = "privacy") {
 
 
 /* ---------- power plug page ---------- */
-function buildElectricity(l) {
+function buildElectricity(l, c) {
   const L = I18N[l], other = l === "he" ? "en" : "he";
-  const hePath = "/electricity", enPath = "/en/electricity";
+  const sfx = c ? "/" + c.slug : "";
+  const hePath = "/electricity" + sfx, enPath = "/en/electricity" + sfx;
   const canonical = SITE + (l === "he" ? hePath : enPath);
   const email = (SITE_CFG.contactEmail || "").trim();
   const content = render(read(`src/electricity.${l}.html`), {});
@@ -328,6 +329,10 @@ write("accessibility/index.html", buildDoc("he", "a11y"));
 write("en/accessibility/index.html", buildDoc("en", "a11y"));
 write("electricity/index.html", buildElectricity("he"));
 write("en/electricity/index.html", buildElectricity("en"));
+for (const c of data) {
+  write(`electricity/${c.slug}/index.html`, buildElectricity("he", c));
+  write(`en/electricity/${c.slug}/index.html`, buildElectricity("en", c));
+}
 write("elec.js", "window.ELEC=" + JSON.stringify(ELEC) + ";window.ELEC_CFG=" + JSON.stringify({ links: Object.fromEntries(Object.entries(SITE_CFG.elecLinks || {}).filter(([k, v]) => k !== "note" && v)), disclosure: !!SITE_CFG.affiliateDisclosure }) + ";");
 write("electricity.js", electricityJs);
 write("en/index.html", buildPage("en", "home"));
@@ -365,5 +370,5 @@ ${data.map((c) => urlEntry(urlPath(c, "he"), urlPath(c, "en"), c.verified)).join
 write("sitemap.xml", sitemap);
 write("robots.txt", `User-agent: *\nAllow: /\nSitemap: ${SITE}/sitemap.xml\n`);
 
-const pages = 8 + data.length * 2;
+const pages = 8 + data.length * 4;
 console.log(`Kama Tip build OK: ${data.length} countries, ${pages} pages, version ${VER}`);

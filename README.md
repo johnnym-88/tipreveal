@@ -1,6 +1,6 @@
 # Kama Tip?
 
-Restaurant tipping calculator for travelers: 120 destinations, Hebrew + English, one page per country.
+Restaurant tipping calculator for travelers: 160 destinations, Hebrew + English, one page per country.
 
 ## How it works
 `node build.mjs` generates the whole site into `dist/`:

@@ -41,7 +41,7 @@
     st.setProperty("--accent", a); st.setProperty("--on-accent", S.onAccent(a)); st.setProperty("--accent-text", S.accentText(a));
     var tc = document.querySelector('meta[name="theme-color"]'); if (tc) tc.content = a;
     $("#c-flag").textContent = c.flag; $("#c-name").textContent = nm(c); $("#sym").textContent = c.sym;
-    var ec = $("#elec-cta"); if (ec) { ec.href = (isHe ? "" : "/en") + "/electricity#" + c.slug; ec.textContent = fmt(L.elec_cta, { place: S.placeOf(c, lang, L, false) }); }
+    var ec = $("#elec-cta"); if (ec) { ec.href = (isHe ? "" : "/en") + "/electricity/" + c.slug; ec.textContent = fmt(L.elec_cta, { place: S.placeOf(c, lang, L, false) }); }
     syncFavBtn();
     document.querySelectorAll("#quick button").forEach(function (b) { b.setAttribute("aria-pressed", b.dataset.en === c.en); });
 

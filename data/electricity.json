@@ -999,5 +999,341 @@
   ],
   "v": "110/220",
   "hz": "60"
+ },
+ "andorra": {
+  "types": [
+   "C",
+   "F"
+  ],
+  "v": "230",
+  "hz": "50"
+ },
+ "liechtenstein": {
+  "types": [
+   "C",
+   "J"
+  ],
+  "v": "230",
+  "hz": "50"
+ },
+ "san-marino": {
+  "types": [
+   "C",
+   "F",
+   "L"
+  ],
+  "v": "230",
+  "hz": "50"
+ },
+ "gibraltar": {
+  "types": [
+   "C",
+   "G"
+  ],
+  "v": "240",
+  "hz": "50"
+ },
+ "senegal": {
+  "types": [
+   "C",
+   "D",
+   "E",
+   "K"
+  ],
+  "v": "230",
+  "hz": "50"
+ },
+ "nigeria": {
+  "types": [
+   "D",
+   "G"
+  ],
+  "v": "230",
+  "hz": "50"
+ },
+ "mozambique": {
+  "types": [
+   "C",
+   "F",
+   "M"
+  ],
+  "v": "220",
+  "hz": "50"
+ },
+ "malawi": {
+  "types": [
+   "G"
+  ],
+  "v": "230",
+  "hz": "50"
+ },
+ "angola": {
+  "types": [
+   "C",
+   "F"
+  ],
+  "v": "220",
+  "hz": "50"
+ },
+ "ivory-coast": {
+  "types": [
+   "C",
+   "E"
+  ],
+  "v": "230",
+  "hz": "50"
+ },
+ "eswatini": {
+  "types": [
+   "M"
+  ],
+  "v": "230",
+  "hz": "50"
+ },
+ "togo": {
+  "types": [
+   "C",
+   "E"
+  ],
+  "v": "220",
+  "hz": "50"
+ },
+ "gabon": {
+  "types": [
+   "C",
+   "E"
+  ],
+  "v": "220",
+  "hz": "50"
+ },
+ "myanmar": {
+  "types": [
+   "A",
+   "C",
+   "D",
+   "F",
+   "G",
+   "I"
+  ],
+  "v": "230",
+  "hz": "50"
+ },
+ "tajikistan": {
+  "types": [
+   "C",
+   "F",
+   "I"
+  ],
+  "v": "220",
+  "hz": "50"
+ },
+ "turkmenistan": {
+  "types": [
+   "B",
+   "C",
+   "F"
+  ],
+  "v": "220",
+  "hz": "50"
+ },
+ "brunei": {
+  "types": [
+   "G"
+  ],
+  "v": "240",
+  "hz": "50"
+ },
+ "papua-new-guinea": {
+  "types": [
+   "I"
+  ],
+  "v": "240",
+  "hz": "50"
+ },
+ "samoa": {
+  "types": [
+   "I"
+  ],
+  "v": "230",
+  "hz": "50"
+ },
+ "tonga": {
+  "types": [
+   "I"
+  ],
+  "v": "230",
+  "hz": "50"
+ },
+ "vanuatu": {
+  "types": [
+   "I"
+  ],
+  "v": "230",
+  "hz": "50"
+ },
+ "timor-leste": {
+  "types": [
+   "C",
+   "E",
+   "F",
+   "I"
+  ],
+  "v": "220",
+  "hz": "50"
+ },
+ "venezuela": {
+  "types": [
+   "A",
+   "B"
+  ],
+  "v": "120",
+  "hz": "60"
+ },
+ "trinidad-and-tobago": {
+  "types": [
+   "A",
+   "B"
+  ],
+  "v": "115/230",
+  "hz": "60"
+ },
+ "guyana": {
+  "types": [
+   "A",
+   "B",
+   "D",
+   "G"
+  ],
+  "v": "240",
+  "hz": "60"
+ },
+ "haiti": {
+  "types": [
+   "A",
+   "B"
+  ],
+  "v": "110",
+  "hz": "60"
+ },
+ "saint-lucia": {
+  "types": [
+   "A",
+   "B",
+   "G"
+  ],
+  "v": "240",
+  "hz": "50"
+ },
+ "antigua-and-barbuda": {
+  "types": [
+   "A",
+   "B"
+  ],
+  "v": "230",
+  "hz": "60"
+ },
+ "grenada": {
+  "types": [
+   "G"
+  ],
+  "v": "230",
+  "hz": "50"
+ },
+ "curacao": {
+  "types": [
+   "A",
+   "B",
+   "F"
+  ],
+  "v": "127/220",
+  "hz": "50"
+ },
+ "aruba": {
+  "types": [
+   "A",
+   "B",
+   "F"
+  ],
+  "v": "127",
+  "hz": "60"
+ },
+ "puerto-rico": {
+  "types": [
+   "A",
+   "B"
+  ],
+  "v": "120",
+  "hz": "60"
+ },
+ "dominica": {
+  "types": [
+   "D",
+   "G"
+  ],
+  "v": "230",
+  "hz": "50"
+ },
+ "saint-kitts-and-nevis": {
+  "types": [
+   "A",
+   "B",
+   "D",
+   "G"
+  ],
+  "v": "230",
+  "hz": "60"
+ },
+ "tunisia": {
+  "types": [
+   "C",
+   "E"
+  ],
+  "v": "230",
+  "hz": "50"
+ },
+ "pakistan": {
+  "types": [
+   "C",
+   "D",
+   "G",
+   "M"
+  ],
+  "v": "230",
+  "hz": "50"
+ },
+ "bangladesh": {
+  "types": [
+   "A",
+   "C",
+   "D",
+   "G"
+  ],
+  "v": "220",
+  "hz": "50"
+ },
+ "bermuda": {
+  "types": [
+   "A",
+   "B"
+  ],
+  "v": "120",
+  "hz": "60"
+ },
+ "cayman-islands": {
+  "types": [
+   "A",
+   "B"
+  ],
+  "v": "120",
+  "hz": "60"
+ },
+ "saint-vincent-and-the-grenadines": {
+  "types": [
+   "A",
+   "B",
+   "G"
+  ],
+  "v": "230",
+  "hz": "50"
  }
 }

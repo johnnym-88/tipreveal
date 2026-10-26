@@ -63,7 +63,9 @@
   function show(slug) {
     var c = TIPS.find(function (x) { return x.slug === slug; }), e = ELEC[slug], box = $("#elec-result");
     if (!c || !e) { box.innerHTML = ""; return; }
-    history.replaceState(null, "", "#" + slug);
+    var base = (L.dir === "rtl" ? "" : "/en") + "/electricity/";
+    history.replaceState(null, "", base + slug);
+    var lb = document.querySelector(".langbtn"); if (lb) lb.href = (L.dir === "rtl" ? "/en" : "") + "/electricity/" + slug;
     var place = T.place(c), fits = e.types.some(function (t) { return FITS.indexOf(t) >= 0; });
     var main = e.types[0], vs = num(e.v), v0 = vs[0], vmax = vs[vs.length - 1], msg;
     if (vs.length > 1) msg = T.varies;
@@ -86,7 +88,8 @@
       '<dl class="e-rows"><dt>' + T.volt + "</dt><dd dir=\"ltr\">" + e.v + " V</dd><dt>" + T.hz + "</dt><dd dir=\"ltr\">" + e.hz + " Hz</dd></dl>" +
       '<p class="vnote' + (warn ? " warn" : "") + '">' + msg + "</p>" +
       (buy ? '<div class="buy"><h3>' + T.buy + "</h3>" + buy + (CFG.disclosure ? '<p class="disc">' + T.disc + "</p>" : "") + "</div>" : "") +
-      '<p class="vnote">' + T.mhz + ": " + T.note + "</p></div>";
+      '<p class="vnote">' + T.mhz + ": " + T.note + "</p>" +
+      '<a class="tip-cta" href="' + (he ? "" : "/en") + "/tip/" + c.slug + '">' + window.Shared.fmt(window.I18N[he ? "he" : "en"].tip_cta, { place: window.Shared.placeOf(c, he ? "he" : "en", window.I18N[he ? "he" : "en"], false) }) + "</a></div>";
   }
 
   /* ---------- country combobox (type to search, or open the list) ---------- */
@@ -136,7 +139,7 @@
   };
   document.addEventListener("click", function (e) { if (!$("#combo").contains(e.target)) openCombo(false); });
   var rd = $("#r-date"); if (rd) rd.textContent = new Intl.DateTimeFormat(L.date_locale, { day: "numeric", month: "numeric", year: "numeric" }).format(new Date());
-  var h = location.hash.replace("#", "");
+  var h = location.hash.replace("#", "") || (location.pathname.match(/\/electricity\/([^\/]+)/) || [])[1] || "";
   var first = h && TIPS.find(function (c) { return c.slug === h && ELEC[c.slug]; });
   if (first) choose(first);
 })();
