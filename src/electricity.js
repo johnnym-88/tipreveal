@@ -58,7 +58,7 @@
   function url(tpl, q) { return tpl.replace("{q}", encodeURIComponent(q)); }
   function link(kind, q) {
     var tpl = CFG.links && CFG.links[kind]; if (!tpl) return "";
-    return '<a class="btn-buy" rel="sponsored noopener" target="_blank" href="' + url(tpl, q) + '">' + (kind === "ksp" ? T.ksp : T.ali) + "</a>";
+    return '<a class="btn-buy" rel="nofollow noopener noreferrer" target="_blank" href="' + url(tpl, q) + '">' + (kind === "ksp" ? T.ksp : T.ali) + "</a>";
   }
   function num(v) { var m = String(v).match(/\d+/g); return m ? m.map(Number) : []; }
 
