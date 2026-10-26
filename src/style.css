@@ -271,3 +271,54 @@ html.a11y-contrast header.top a,html.a11y-contrast .headline a,html.a11y-contras
 html.a11y-contrast .headline p,html.a11y-contrast .headline .qh,html.a11y-contrast .headline .ql,html.a11y-contrast .doc-hero p,html.a11y-contrast header.top small{color:#fff!important;opacity:1!important}
 html.a11y-contrast .langbtn{border-color:#fff!important}
 html.a11y-contrast .a11y-panel a{color:#0B3FBF!important}
+
+/* ===== power plug page ===== */
+.elec{margin-bottom:34px}
+.elec-label{display:block;font-weight:700;font-size:16px;margin-bottom:8px}
+.elec-select{width:100%;max-width:520px;font:600 18px var(--body);padding:13px 14px;border:2px solid var(--line);border-radius:12px;background:var(--paper-2);color:var(--ink)}
+.elec-select:focus-visible{outline:3px solid color-mix(in srgb,var(--accent) 45%,transparent);border-color:var(--accent)}
+.elec-chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 20px}
+.elec-chips button{font:500 15px var(--body);border:1.5px solid var(--line);background:var(--paper);color:var(--ink);border-radius:999px;padding:7px 14px;cursor:pointer}
+.elec-chips button:hover{background:var(--paper-2)}
+.e-card{background:var(--paper-2);border-radius:16px;padding:22px;max-width:620px}
+.e-title{font-family:var(--body)!important;font-size:26px!important;margin:0 0 14px!important}
+.plugs{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:16px}
+.plug{margin:0;text-align:center;font-size:14px;color:var(--muted)}
+.plug svg{display:block;margin:0 auto 4px;max-width:96px;height:auto}
+.plug b{color:var(--ink);font-size:16px}
+.verdict{border-radius:12px;padding:13px 15px;margin-bottom:14px;line-height:1.55}
+.verdict p{margin:4px 0 0;font-size:15px}
+.verdict.ok{background:color-mix(in srgb,#067647 14%,var(--paper));color:var(--ink)}
+.verdict.need{background:color-mix(in srgb,#F59E0B 22%,var(--paper));color:var(--ink)}
+.e-rows{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;margin:0 0 8px;font-size:16px}
+.e-rows dt{color:var(--muted)} .e-rows dd{margin:0;font-weight:700;text-align:start}
+.vnote{font-size:14px;line-height:1.6;color:var(--muted);margin:8px 0}
+.vnote.warn{color:var(--warn);font-weight:600}
+.buy{border-top:2px dashed var(--line);margin-top:14px;padding-top:12px}
+.buy h3{font-size:16px;margin:0 0 8px}
+.buy-row{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-bottom:8px;font-size:15px}
+.buy-row span{margin-inline-end:4px}
+.btn-buy{font:700 14px var(--body);text-decoration:none;color:var(--on-accent);background:var(--accent);border-radius:9px;padding:8px 14px}
+.disc{font-size:12px;color:var(--muted);margin:6px 0 0}
+footer .elec-link{font-size:13px}
+
+.article .btn-buy,.article .btn-buy:visited{color:var(--on-accent);text-decoration:none}
+html.a11y-contrast .article .btn-buy{color:#fff!important;background:#0030B0!important}
+
+/* keep the accessibility button from covering footer content */
+footer .wrap{padding-bottom:72px}
+
+/* power plug page, inside the receipt card */
+.receipt .e-card{background:none;padding:0;max-width:none}
+.receipt .e-empty{color:var(--muted);font-size:15px;line-height:1.6;margin:4px 0 0}
+.receipt .plugs{margin-top:4px}
+.receipt .verdict{margin-top:6px}
+.receipt .e-title{display:none}
+.receipt .e-rows{margin-top:6px}
+
+.back-btn{font:600 14px var(--body);color:var(--on-accent);text-decoration:none;border:1.5px solid color-mix(in srgb,var(--on-accent) 70%,transparent);border-radius:999px;padding:7px 14px;white-space:nowrap}
+.back-btn:hover{background:color-mix(in srgb,var(--on-accent) 16%,transparent)}
+.back-btn:focus-visible{outline:3px solid #F59E0B;outline-offset:2px}
+html.a11y-contrast .back-btn{border-color:#fff!important}
+@media (max-width:480px){ .logo{font-size:30px} .logo .globe{width:34px;height:34px} .back-btn{padding:6px 10px;font-size:13px} header.top .right{gap:8px} }
+@media (max-width:520px){ header.top.has-back{flex-wrap:wrap;gap:12px 8px} header.top.has-back .right{width:100%;justify-content:space-between} }

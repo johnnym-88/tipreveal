@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="{{lang}}" dir="{{dir}}">
+<head>
+<meta charset="utf-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TRVLFZE86D"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-TRVLFZE86D');
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>{{title}}</title>
+<meta name="description" content="{{description}}">
+{{robots}}
+<link rel="canonical" href="{{canonical}}">
+{{alternates}}
+<meta property="og:title" content="{{title}}">
+<meta property="og:description" content="{{description}}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="{{brand}}">
+<meta property="og:url" content="{{canonical}}">
+<meta property="og:image" content="{{ogImage}}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="{{og_locale}}">
+<meta property="og:locale:alternate" content="{{og_alt}}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#2563EB">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicon-192x192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Karantina:wght@400;700&family=IBM+Plex+Sans+Hebrew:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css?v={{ver}}">
+</head>
+<body>
+<div class="wrap">
+  <header class="top has-back">
+    <a class="logo" href="{{selfHref}}" aria-label="{{brand}}" dir="ltr"><svg class="globe" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><circle cx="24" cy="24" r="20"/><ellipse cx="24" cy="24" rx="9" ry="20"/><path d="M5 17.5h38M5 30.5h38" opacity=".55"/></g><circle cx="24" cy="24" r="11" fill="currentColor"/><path d="M26.5 13.5L17.5 26h5.2l-1.6 8.5L30.5 21h-5.3z" style="fill:var(--accent)"/></svg><span class="wm"><span class="rot">Eize</span> Sheka?</span></a>
+    <div class="right">
+      <a class="back-btn" href="{{homeHref}}">{{e_back}}</a>
+      <a class="langbtn" href="{{langHref}}" hreflang="{{other_lang}}" lang="{{other_lang}}" aria-label="{{lang_aria}}">{{lang_label}}</a>
+    </div>
+  </header>
+  <main class="hero">
+    <div class="headline">
+      <h1>{{e_h1_a}} <span class="place" id="h-place">{{e_h1_place}}</span></h1>
+      <p>{{elec_lead}}</p>
+    </div>
+
+    <div data-nosnippet style="display:contents">
+    <form class="receipt" id="elec" onsubmit="return false" aria-label="{{elec_h1}}">
+      <div class="rhead"><b>{{e_receipt_head}}</b><span id="r-date"></span></div>
+      <div class="field">
+        <label class="f" id="e-lbl">{{e_label}}</label>
+        <div class="combo" id="combo">
+          <div class="combo-row">
+            <button type="button" class="combo-btn" id="combo-btn" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="e-lbl combo-btn">
+              <span class="fl" id="c-flag">🔌</span><span id="c-name">{{e_pick}}</span><span class="chev" aria-hidden="true">▾</span>
+            </button>
+          </div>
+          <div class="combo-pop">
+            <input id="combo-q" type="search" placeholder="{{search_ph}}" autocomplete="off" aria-controls="combo-list" aria-label="{{search_aria}}">
+            <ul id="combo-list" role="listbox" aria-labelledby="e-lbl"></ul>
+          </div>
+        </div>
+      </div>
+      <div id="elec-result" aria-live="polite"><p class="e-empty">{{e_empty}}</p></div>
+    </form>
+    </div>
+  </main>
+</div>
+
+<section class="article"><div class="wrap">
+  {{content}}
+  <p style="margin-top:28px"><a href="{{homeHref}}">{{back_home}}</a></p>
+</div></section>
+
+<footer><div class="wrap">
+  <span>{{foot}} · <a href="{{privacyHref}}">{{privacy_link}}</a> · {{a11yLink}}</span>
+  {{contactBtn}}
+</div></footer>
+
+<script src="/data.js?v={{ver}}" defer></script>
+<script src="/i18n.js?v={{ver}}" defer></script>
+<script src="/shared.js?v={{ver}}" defer></script>
+<script src="/elec.js?v={{ver}}" defer></script>
+<script src="/electricity.js?v={{ver}}" defer></script>
+<script src="/a11y.js?v={{ver}}" defer></script>
+</body>
+</html>

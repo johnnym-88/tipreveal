@@ -2,5 +2,12 @@
   "operatorName": "",
   "contactEmail": "johnny@kamatip.com",
   "privacyUpdated": "2026-10-06",
-  "a11yUpdated": "2026-10-09"
+  "a11yUpdated": "2026-10-09",
+  "electricityIndexable": false,
+  "elecLinks": {
+    "aliexpress": "https://www.aliexpress.com/wholesale?SearchText={q}",
+    "ksp": "",
+    "note": "put your affiliate/search URL templates here; {q} is the search words; leave ksp empty to hide that button"
+  },
+  "affiliateDisclosure": false
 }

@@ -18,8 +18,11 @@ const data = JSON.parse(read("data/tips.json"));
 const I18N = JSON.parse(read("src/i18n.json"));
 const TEMPLATE = read("src/page.html");
 const DOC_TEMPLATE = read("src/doc.html");
+const ELEC_TEMPLATE = read("src/electricity.html");
 const SITE_CFG = JSON.parse(read("data/site.json"));
 if (!SITE_CFG.contactEmail) console.warn("WARNING: data/site.json has no contactEmail, so the privacy page will have no contact section.");
+const ELEC = JSON.parse(read("data/electricity.json"));
+for (const c of data) if (!ELEC[c.slug]) throw new Error("No electricity data for " + c.slug);
 const N = data.length;
 const LANGS = ["he", "en"];
 
@@ -115,10 +118,10 @@ function write(rel, content) {
 }
 
 /* ---------- version hash for cache busting ---------- */
-const appJs = read("src/app.js"), sharedJs = read("src/shared.js"), cardJs = read("src/card.js"), a11yJs = read("src/a11y.js"), css = read("src/style.css");
+const appJs = read("src/app.js"), sharedJs = read("src/shared.js"), cardJs = read("src/card.js"), a11yJs = read("src/a11y.js"), electricityJs = read("src/electricity.js"), electricityHtml = read("src/electricity.html"), css = read("src/style.css");
 const dataJs = "window.TIPS=" + JSON.stringify(data) + ";";
 const i18nJs = "window.I18N=" + JSON.stringify(I18N) + ";";
-const VER = crypto.createHash("md5").update(appJs + sharedJs + cardJs + a11yJs + css + dataJs + i18nJs).digest("hex").slice(0, 8);
+const VER = crypto.createHash("md5").update(appJs + sharedJs + cardJs + a11yJs + electricityJs + JSON.stringify(ELEC) + electricityHtml + css + dataJs + i18nJs).digest("hex").slice(0, 8);
 
 /* ---------- page sections ---------- */
 function infoSection(l) {
@@ -239,9 +242,9 @@ function buildPage(l, kind, c) {
   const vars = {
     ...Object.fromEntries(Object.entries(L).filter(([, v]) => typeof v === "string")),
     lang: l, dir: L.dir, title: esc(title), description: esc(description), canonical,
-    alternates: alternates(hePath, enPath), ogImage: SITE + (isCountry ? `/og/${c.slug}${l === "he" ? "" : "-en"}.png` : l === "he" ? "/og.png" : "/og-en.png"),
+    alternates: alternates(hePath, enPath), ogImage: SITE + (l === "he" ? "/og.png" : "/og-en.png"),
     jsonld: `<script type="application/ld+json">${JSON.stringify(jsonld)}</script>`, ver: VER, theme,
-    a11yLink: `<a href="${l === "he" ? "/accessibility" : "/en/accessibility"}">${L.a11y_link}</a>`, privacyHref: l === "he" ? "/privacy" : "/en/privacy", contactBtn: contactBtn(l), homeHref: homePath(l), langHref: isCountry ? urlPath(c, other) : homePath(other),
+    elecLink: isCountry ? "" : `<a class="elec-link" href="${l === "he" ? "/electricity" : "/en/electricity"}">${L.elec_link}</a>`, a11yLink: `<a href="${l === "he" ? "/accessibility" : "/en/accessibility"}">${L.a11y_link}</a>`, privacyHref: l === "he" ? "/privacy" : "/en/privacy", contactBtn: contactBtn(l), homeHref: homePath(l), langHref: isCountry ? urlPath(c, other) : homePath(other),
     h1_place: isCountry ? S.placeOf(c, l, L, false) + "?" : L.h1_abroad,
     heroP: isCountry ? `<span data-nosnippet>${answerSentence(c, l, true)}</span>` : L.hero_p,
     quickAria: L.quick_aria_favs, brand: BRAND, quickHtml,
@@ -265,8 +268,8 @@ function contactBtn(l) {
 function buildDoc(l, kind = "privacy") {
   const L = I18N[l];
   const other = l === "he" ? "en" : "he";
-  const isA = kind === "a11y";
-  const hePath = isA ? "/accessibility" : "/privacy", enPath = isA ? "/en/accessibility" : "/en/privacy";
+  const isA = kind === "a11y", isE = kind === "elec";
+  const hePath = isE ? "/electricity" : isA ? "/accessibility" : "/privacy", enPath = isE ? "/en/electricity" : isA ? "/en/accessibility" : "/en/privacy";
   const canonical = SITE + (l === "he" ? hePath : enPath);
   const name = (SITE_CFG.operatorName || "").trim();
   const email = (SITE_CFG.contactEmail || "").trim();
@@ -278,19 +281,41 @@ function buildDoc(l, kind = "privacy") {
         ? (isA ? `<p>רכז/ת נגישות: ${name ? esc(name) + ", " : ""}דוא״ל <a href="mailto:${esc(email)}">${esc(email)}</a></p>` : `<h2>יצירת קשר</h2><p>לשאלות או לבקשות בנושא פרטיות: <a href="mailto:${esc(email)}">${esc(email)}</a></p>`)
         : (isA ? `<p>Accessibility contact: ${name ? esc(name) + ", " : ""}email <a href="mailto:${esc(email)}">${esc(email)}</a></p>` : `<h2>Contact</h2><p>For privacy questions or requests: <a href="mailto:${esc(email)}">${esc(email)}</a></p>`))
     : "";
-  const content = render(read(`src/${isA ? "a11y" : "privacy"}.${l}.html`), { operator, contact_section: contact });
+  const content = render(read(`src/${isE ? "electricity" : isA ? "a11y" : "privacy"}.${l}.html`), { operator, contact_section: contact, ver: VER });
   const date = new Intl.DateTimeFormat(L.date_locale, { day: "numeric", month: "long", year: "numeric" })
     .format(new Date((isA ? SITE_CFG.a11yUpdated || SITE_CFG.privacyUpdated : SITE_CFG.privacyUpdated) + "T00:00:00"));
   const vars = {
     ...Object.fromEntries(Object.entries(L).filter(([, v]) => typeof v === "string")),
-    lang: l, dir: L.dir, title: esc(isA ? L.a11y_title : L.privacy_title), description: esc(isA ? L.a11y_desc : L.privacy_desc), canonical,
-    privacy_h1: isA ? L.a11y_h1 : L.privacy_h1, privacy_lead: isA ? L.a11y_lead : L.privacy_lead, a11yLink: `<a href="${l === "he" ? "/accessibility" : "/en/accessibility"}">${L.a11y_link}</a>`,
+    lang: l, dir: L.dir, title: esc(isE ? L.elec_title : isA ? L.a11y_title : L.privacy_title), description: esc(isE ? L.elec_desc : isA ? L.a11y_desc : L.privacy_desc), canonical,
+    robots: isE && !SITE_CFG.electricityIndexable ? '<meta name="robots" content="noindex">' : "",
+    privacy_h1: isE ? L.elec_h1 : isA ? L.a11y_h1 : L.privacy_h1, privacy_lead: isE ? L.elec_lead : isA ? L.a11y_lead : L.privacy_lead, a11yLink: `<a href="${l === "he" ? "/accessibility" : "/en/accessibility"}">${L.a11y_link}</a>`,
     alternates: alternates(hePath, enPath), ogImage: SITE + (l === "he" ? "/og.png" : "/og-en.png"),
     ver: VER, brand: BRAND, homeHref: homePath(l), langHref: l === "he" ? enPath : hePath,
-    privacyHref: l === "he" ? "/privacy" : "/en/privacy", contactBtn: contactBtn(l), updated_line: `${L.updated_label} ${esc(date)}`, content,
+    privacyHref: l === "he" ? "/privacy" : "/en/privacy", contactBtn: contactBtn(l), updated_line: isE ? "" : `${L.updated_label} ${esc(date)}`, content,
   };
   void other;
   return render(DOC_TEMPLATE, vars);
+}
+
+
+/* ---------- power plug page ---------- */
+function buildElectricity(l) {
+  const L = I18N[l], other = l === "he" ? "en" : "he";
+  const hePath = "/electricity", enPath = "/en/electricity";
+  const canonical = SITE + (l === "he" ? hePath : enPath);
+  const email = (SITE_CFG.contactEmail || "").trim();
+  const content = render(read(`src/electricity.${l}.html`), {});
+  const vars = {
+    ...Object.fromEntries(Object.entries(L).filter(([, v]) => typeof v === "string")),
+    lang: l, dir: L.dir, title: esc(L.elec_title), description: esc(L.elec_desc), canonical,
+    robots: SITE_CFG.electricityIndexable ? "" : '<meta name="robots" content="noindex">',
+    alternates: alternates(hePath, enPath), ogImage: SITE + (l === "he" ? "/og.png" : "/og-en.png"),
+    ver: VER, brand: BRAND, homeHref: homePath(l), selfHref: l === "he" ? hePath : enPath, langHref: l === "he" ? enPath : hePath,
+    privacyHref: l === "he" ? "/privacy" : "/en/privacy", contactBtn: contactBtn(l),
+    a11yLink: `<a href="${l === "he" ? "/accessibility" : "/en/accessibility"}">${L.a11y_link}</a>`, content,
+  };
+  void email; void other;
+  return render(ELEC_TEMPLATE, vars);
 }
 
 /* ---------- output ---------- */
@@ -301,6 +326,10 @@ write("privacy/index.html", buildDoc("he"));
 write("en/privacy/index.html", buildDoc("en"));
 write("accessibility/index.html", buildDoc("he", "a11y"));
 write("en/accessibility/index.html", buildDoc("en", "a11y"));
+write("electricity/index.html", buildElectricity("he"));
+write("en/electricity/index.html", buildElectricity("en"));
+write("elec.js", "window.ELEC=" + JSON.stringify(ELEC) + ";window.ELEC_CFG=" + JSON.stringify({ links: Object.fromEntries(Object.entries(SITE_CFG.elecLinks || {}).filter(([k, v]) => k !== "note" && v)), disclosure: !!SITE_CFG.affiliateDisclosure }) + ";");
+write("electricity.js", electricityJs);
 write("en/index.html", buildPage("en", "home"));
 for (const c of data) {
   write(`tip/${c.slug}/index.html`, buildPage("he", "country", c));
@@ -336,5 +365,5 @@ ${data.map((c) => urlEntry(urlPath(c, "he"), urlPath(c, "en"), c.verified)).join
 write("sitemap.xml", sitemap);
 write("robots.txt", `User-agent: *\nAllow: /\nSitemap: ${SITE}/sitemap.xml\n`);
 
-const pages = 6 + data.length * 2;
+const pages = 8 + data.length * 2;
 console.log(`Kama Tip build OK: ${data.length} countries, ${pages} pages, version ${VER}`);
