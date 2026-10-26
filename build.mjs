@@ -244,7 +244,7 @@ function buildPage(l, kind, c) {
     lang: l, dir: L.dir, title: esc(title), description: esc(description), canonical,
     alternates: alternates(hePath, enPath), ogImage: SITE + (l === "he" ? "/og.png" : "/og-en.png"),
     jsonld: `<script type="application/ld+json">${JSON.stringify(jsonld)}</script>`, ver: VER, theme,
-    elecLink: isCountry ? "" : `<a class="elec-link" href="${l === "he" ? "/electricity" : "/en/electricity"}">${L.elec_link}</a>`, a11yLink: `<a href="${l === "he" ? "/accessibility" : "/en/accessibility"}">${L.a11y_link}</a>`, privacyHref: l === "he" ? "/privacy" : "/en/privacy", contactBtn: contactBtn(l), homeHref: homePath(l), langHref: isCountry ? urlPath(c, other) : homePath(other),
+    elecHref: l === "he" ? "/electricity" : "/en/electricity", elecLink: isCountry ? "" : `<a class="elec-link" href="${l === "he" ? "/electricity" : "/en/electricity"}">${L.elec_link}</a>`, a11yLink: `<a href="${l === "he" ? "/accessibility" : "/en/accessibility"}">${L.a11y_link}</a>`, privacyHref: l === "he" ? "/privacy" : "/en/privacy", contactBtn: contactBtn(l), homeHref: homePath(l), langHref: isCountry ? urlPath(c, other) : homePath(other),
     h1_place: isCountry ? S.placeOf(c, l, L, false) + "?" : L.h1_abroad,
     heroP: isCountry ? `<span data-nosnippet>${answerSentence(c, l, true)}</span>` : L.hero_p,
     quickAria: L.quick_aria_favs, brand: BRAND, quickHtml,

@@ -40,10 +40,11 @@
 </head>
 <body>
 <div class="wrap">
-  <header class="top">
+  <header class="top has-nav">
     <a class="logo" href="{{homeHref}}" aria-label="{{brand}}" dir="ltr"><svg class="globe" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><circle cx="24" cy="24" r="20"/><ellipse cx="24" cy="24" rx="9" ry="20"/><path d="M5 17.5h38M5 30.5h38" opacity=".55"/></g><circle cx="24" cy="24" r="11" fill="currentColor"/><text x="24" y="31" text-anchor="middle" font-size="19" font-weight="800" font-family="Arial,Helvetica,sans-serif" style="fill:var(--accent)">$</text></svg><span class="wm"><span class="rot">Kama</span> Tip?</span></a>
     <div class="right">
       <small>{{tagline}}</small>
+      <a class="navlink" href="{{elecHref}}">{{elec_link}}</a>
       <a class="langbtn" id="lang-toggle" href="{{langHref}}" hreflang="{{other_lang}}" lang="{{other_lang}}" aria-label="{{lang_aria}}">{{lang_label}}</a>
     </div>
   </header>
@@ -105,6 +106,7 @@
         <div class="share-alt" id="share-alt" hidden></div>
         <div class="share-msg" id="share-msg" role="status" aria-live="polite"></div>
         <details class="src"><summary>{{src_summary}} <span class="conf" id="conf"></span></summary><ul id="srcs"></ul><div id="verified"></div></details>
+        <a class="elec-cta" id="elec-cta" href="{{elecHref}}">{{elec_link}}</a>
       </div>
     </form>
     </div>
