@@ -7,6 +7,7 @@
   var T = he ? {
     pick: "בחרו מדינה…", type: "סוג", fits_h: "התקע הישראלי בדרך כלל מתאים",
     fits_p: "בשקעים של {place} אפשר להכניס תקע עם שני פינים עגולים (סוג C), כמו של רוב המטענים לטלפון, בלי מתאם. תקע שטוח עם שלוש יציאות (סוג H) לא ייכנס, ולמכשירים כאלה תצטרכו מתאם.",
+    home_h: "זה השקע שאתם מכירים", home_p: "בישראל לא צריך מתאם. בחרו מדינת יעד כדי לראות אם צריך מתאם שם.",
     need_h: "צריך מתאם", need_p: "השקעים ב{place} שונים מהישראליים. כדי לחבר מטען או מכשיר מישראל תצטרכו מתאם לסוג {t}.",
     volt: "מתח", same_v: "כמו בישראל, אין בעיה לחבר מכשירים ישראליים.",
     low_v: "המתח נמוך מהישראלי. טלפונים, מחשבים ומצלמות עובדים בדרך כלל על 100–240 וולט ואין בעיה, אבל מכשירים שמיועדים ל-230 וולט בלבד, כמו מייבש שיער או מחליק שיער, לא יעבדו כראוי ועלולים להינזק. בדקו את הכיתוב על המטען.",
@@ -18,6 +19,7 @@
   } : {
     pick: "Choose a country…", type: "Type", fits_h: "Your Israeli plug usually fits",
     fits_p: "Sockets in {place} take a two-round-pin plug (type C), like most phone chargers, with no adapter. A flat three-pin plug (type H) won't fit, so devices with one need an adapter.",
+    home_h: "This is the socket you know", home_p: "No adapter needed in Israel. Pick a destination to see whether you need one there.",
     need_h: "You need an adapter", need_p: "Sockets in {place} differ from Israeli ones. To plug in a charger or device from Israel you'll need a type {t} adapter.",
     volt: "Voltage", same_v: "Same as Israel, so Israeli devices work fine.",
     low_v: "Voltage is lower than in Israel. Phones, laptops and cameras usually accept 100–240 V and are fine, but devices rated for 230 V only, such as hair dryers and straighteners, won't work properly and could be damaged. Check the label on your charger.",
@@ -74,19 +76,21 @@
     var warn = vs.length > 1 || v0 < 200 || v0 > 242;
     var q1 = he ? T.q_type.replace("{t}", main) : T.q_type.replace("{t}", main), q2 = he ? T.q_uni : T.q_uni;
     var aq1 = T.ali_q_type.replace("{t}", main), aq2 = T.ali_q_uni;
+    var home = slug === "israel";
     var buy = "";
     var mk = function (label, hq, aq) {
       var l = link("ksp", hq) + link("aliexpress", aq);
       return l ? '<div class="buy-row"><span>' + label + "</span>" + l + "</div>" : "";
     };
-    buy = fits ? mk(T.universal, q2, aq2) : mk(T.buy_for.replace("{t}", main), q1, aq1) + mk(T.universal, q2, aq2);
+    if (home) buy = "";
+    else buy = fits ? mk(T.universal, q2, aq2) : mk(T.buy_for.replace("{t}", main), q1, aq1) + mk(T.universal, q2, aq2);
     box.innerHTML =
       '<div class="e-card"><h2 class="e-title"><span aria-hidden="true">' + c.flag + "</span> " + (he ? c.he : c.en) + "</h2>" +
       '<div class="plugs">' + e.types.map(function (t) { return '<figure class="plug">' + svg(t) + "<figcaption>" + T.type + " <b>" + t + "</b></figcaption></figure>"; }).join("") + "</div>" +
-      '<div class="verdict ' + (fits ? "ok" : "need") + '"><b>' + (fits ? T.fits_h : T.need_h) + "</b><p>" +
-      (fits ? T.fits_p : T.need_p).replace("{place}", place).replace("{t}", main) + "</p></div>" +
+      '<div class="verdict ' + (fits ? "ok" : "need") + '"><b>' + (home ? T.home_h : fits ? T.fits_h : T.need_h) + "</b><p>" +
+      (home ? T.home_p : (fits ? T.fits_p : T.need_p).replace("{place}", place).replace("{t}", main)) + "</p></div>" +
       '<dl class="e-rows"><dt>' + T.volt + "</dt><dd dir=\"ltr\">" + e.v + " V</dd><dt>" + T.hz + "</dt><dd dir=\"ltr\">" + e.hz + " Hz</dd></dl>" +
-      '<p class="vnote' + (warn ? " warn" : "") + '">' + msg + "</p>" +
+      (home ? "" : '<p class="vnote' + (warn ? " warn" : "") + '">' + msg + "</p>") +
       (buy ? '<div class="buy"><h3>' + T.buy + "</h3>" + buy + (CFG.disclosure ? '<p class="disc">' + T.disc + "</p>" : "") + "</div>" : "") +
       '<p class="vnote">' + T.mhz + ": " + T.note + "</p>" +
       '<a class="tip-cta" href="' + (he ? "" : "/en") + "/tip/" + c.slug + '">' + window.Shared.fmt(window.I18N[he ? "he" : "en"].tip_cta, { place: window.Shared.placeOf(c, he ? "he" : "en", window.I18N[he ? "he" : "en"], false) }) + "</a></div>";
