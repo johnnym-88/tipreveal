@@ -299,6 +299,34 @@ function buildDoc(l, kind = "privacy") {
 
 
 /* ---------- power plug page ---------- */
+
+/* ---------- electricity: static per-country text (SEO) ---------- */
+const PLUG_DESC = {
+  he: { A: "שני פינים שטוחים מקבילים", B: "שני פינים שטוחים ופין הארקה עגול", C: "שני פינים עגולים (כמו רוב מטעני הטלפון)", D: "שלושה פינים עגולים גדולים", E: "שני פינים עגולים וחור להארקה", F: "שני פינים עגולים עם קפיצים להארקה בצדדים (שוקו)", G: "שלושה פינים מלבניים (התקן הבריטי)", H: "שלושה פינים שטוחים (התקן הישראלי הישן)", I: "שני פינים שטוחים בזווית ופין הארקה", J: "שלושה פינים עגולים (התקן השווייצרי)", K: "שני פינים עגולים ופין הארקה (התקן הדני)", L: "שלושה פינים עגולים בשורה (התקן האיטלקי)", M: "שלושה פינים עגולים גדולים (התקן הדרום־אפריקאי)", N: "שלושה פינים עגולים (התקן הברזילאי)", O: "שלושה פינים (התקן התאילנדי)" },
+  en: { A: "two flat parallel pins", B: "two flat pins plus a round earth pin", C: "two round pins (like most phone chargers)", D: "three large round pins", E: "two round pins and an earth hole", F: "two round pins with side earth clips (Schuko)", G: "three rectangular pins (the British standard)", H: "three flat pins (the old Israeli standard)", I: "two angled flat pins plus earth", J: "three round pins (the Swiss standard)", K: "two round pins plus earth (the Danish standard)", L: "three round pins in a row (the Italian standard)", M: "three large round pins (the South African standard)", N: "three round pins (the Brazilian standard)", O: "three pins (the Thai standard)" },
+};
+const FITS_C = "CEFHJKLN";
+function elecFacts(c, l) {
+  const L = I18N[l], e = ELEC[c.slug], he = l === "he";
+  const place = S.placeOf(c, l, L, false);
+  const types = e.types, fits = types.some((t) => FITS_C.includes(t));
+  const vs = String(e.v).match(/\d+/g).map(Number), v0 = vs[0];
+  const typeList = types.map((t) => he ? `סוג ${t} – ${PLUG_DESC.he[t]}` : `Type ${t} – ${PLUG_DESC.en[t]}`);
+  const vnote = vs.length > 1 ? (he ? "המתח משתנה בין אזורים ומבנים, ולכן כדאי לבדוק את המכשיר לפני החיבור." : "Voltage varies between areas and buildings, so check your device before plugging in.")
+    : Math.abs(v0 - 230) <= 12 ? (he ? "המתח זהה בעיקרו למתח בישראל, ולכן מכשירים ישראליים יעבדו כרגיל." : "The voltage is essentially the same as in Israel, so Israeli devices work as usual.")
+    : v0 < 200 ? (he ? "המתח נמוך מהישראלי. רוב המטענים של טלפונים ומחשבים תומכים בטווח של 100–240 וולט, אבל מכשירי חימום כמו מייבש שיער עלולים לא לעבוד טוב, ולכן כדאי לבדוק את התווית על המכשיר." : "The voltage is lower than in Israel. Most phone and laptop chargers accept 100–240 V, but heating devices such as hair dryers may not work well, so check the label on your device.")
+    : (he ? "המתח גבוה מהישראלי. בדקו שהתווית על המכשיר תומכת במתח הזה לפני החיבור. רוב המטענים של טלפונים ומחשבים תומכים בטווח של 100–240 וולט." : "The voltage is higher than in Israel. Check that the label on your device supports it before plugging in. Most phone and laptop chargers accept 100–240 V.");
+  const verdict = fits ? (he ? "התקע הישראלי (סוג C, שני פינים עגולים) נכנס לשקעים האלה, ולכן בדרך כלל לא צריך מתאם." : "The Israeli plug (type C, two round pins) fits these sockets, so you usually don't need an adapter.")
+    : (he ? `השקעים שונים מהישראליים, ולכן תצטרכו מתאם לסוג ${types[0]}. מתאם משנה רק את צורת התקע ולא ממיר מתח.` : `The sockets differ from Israeli ones, so you'll need a type ${types[0]} adapter. An adapter only changes the plug shape and doesn't convert voltage.`);
+  const intro = he ? `${place} משתמשים ב${types.length > 1 ? "שקעים מהסוגים" : "שקע מסוג"} ${types.join(", ")}. המתח הוא ${e.v} וולט והתדר ${e.hz} הרץ.`
+    : `${place.charAt(0).toUpperCase() + place.slice(1)}, the sockets are ${types.length > 1 ? "types" : "type"} ${types.length > 1 ? types.slice(0, -1).join(", ") + " and " + types[types.length - 1] : types[0]}. The voltage is ${e.v} V at ${e.hz} Hz.`;
+  const title = he ? `איזה שקע חשמל יש ${place}? סוג שקע, מתח ומתאם | Kama Tip` : `Which power plug ${place}? Socket type, voltage and adapter | Kama Tip`;
+  const desc = he ? `${place}: שקעים מסוג ${types.join(", ")}, מתח ${e.v} וולט. ${fits ? "בדרך כלל לא צריך מתאם לתקע הישראלי." : "צריך מתאם לתקע הישראלי."}`
+    : `${place.charAt(0).toUpperCase() + place.slice(1)}: type ${types.join("/")} sockets, ${e.v} V. ${fits ? "You usually don't need an adapter for Israeli plugs." : "You need an adapter for Israeli plugs."}`;
+  const h2 = he ? `סוגי השקעים ${place}` : `Socket types ${place}`;
+  const html = `<h2>${esc(h2)}</h2>\n  <p>${esc(intro)}</p>\n  <ul>${typeList.map((x) => `<li>${esc(x)}</li>`).join("")}</ul>\n  <p>${esc(verdict)}</p>\n  <p>${esc(vnote)}</p>`;
+  return { place, title, desc, html };
+}
 function buildElectricity(l, c) {
   const L = I18N[l], other = l === "he" ? "en" : "he";
   const sfx = c ? "/" + c.slug : "";
@@ -306,9 +334,11 @@ function buildElectricity(l, c) {
   const canonical = SITE + (l === "he" ? hePath : enPath);
   const email = (SITE_CFG.contactEmail || "").trim();
   const content = render(read(`src/electricity.${l}.html`), {});
+  const F = c ? elecFacts(c, l) : null;
   const vars = {
     ...Object.fromEntries(Object.entries(L).filter(([, v]) => typeof v === "string")),
-    lang: l, dir: L.dir, title: esc(L.elec_title), description: esc(L.elec_desc), canonical,
+    lang: l, dir: L.dir, title: esc(F ? F.title : L.elec_title), description: esc(F ? F.desc : L.elec_desc), canonical,
+    seo: F ? F.html : "", e_h1_place: F ? F.place + "?" : L.e_h1_place,
     robots: SITE_CFG.electricityIndexable ? "" : '<meta name="robots" content="noindex">',
     alternates: alternates(hePath, enPath), ogImage: SITE + (l === "he" ? "/og.png" : "/og-en.png"),
     ver: VER, brand: BRAND, homeHref: homePath(l), selfHref: l === "he" ? hePath : enPath, langHref: l === "he" ? enPath : hePath,
@@ -364,7 +394,7 @@ const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 ${urlEntry("/", "/en", lastmod)}
 ${urlEntry("/privacy", "/en/privacy", SITE_CFG.privacyUpdated)}
 ${urlEntry("/accessibility", "/en/accessibility", SITE_CFG.a11yUpdated || SITE_CFG.privacyUpdated)}
-${data.map((c) => urlEntry(urlPath(c, "he"), urlPath(c, "en"), c.verified)).join("\n")}
+${SITE_CFG.electricityIndexable ? [urlEntry("/electricity", "/en/electricity", lastmod), ...data.map((c) => urlEntry("/electricity/" + c.slug, "/en/electricity/" + c.slug, lastmod))].join("\n") + "\n" : ""}${data.map((c) => urlEntry(urlPath(c, "he"), urlPath(c, "en"), c.verified)).join("\n")}
 </urlset>
 `;
 write("sitemap.xml", sitemap);
